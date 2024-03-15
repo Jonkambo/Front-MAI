@@ -1,0 +1,68 @@
+.btn {
+    background-color: var(--buttons-links);
+    color: var(--bg-color);
+    padding: 22px 50px;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: var(--hower-btn);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.light-bth {
+    background-color: var(--bg-color);
+    color: var(--buttons-links);
+    outline: 1px solid var(--buttons-links);
+    padding: 22px 50px;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: var(--buttons-links);
+        color: var(--bg-color);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.dark-btn {
+    background-color: var(--text);
+    color: var(--bg-color);
+    padding: 22px 50px;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: var(--light-background);
+        color: var(--text);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.dark-light-btn {
+    background-color: var(--bg-color);
+    color: var(--text);
+    padding: 22px 50px;
+    outline: 1px solid var(--text);
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: var(--text);
+        color: var(--bg-color);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}

@@ -1,0 +1,94 @@
+.h1 {
+    font-family: Roboto;
+    font-size: 66px;
+    color: var(--text);
+    margin: 0;
+}
+
+.h2 {
+    font-family: Roboto;
+    font-size: 41px;
+    color: var(--text);
+    margin: 0;
+}
+
+.h3 {
+    font-family: Roboto;
+    font-size: 26px;
+    color: var(--text);
+    line-height: 140%;
+    margin: 0;
+}
+
+.h4 {
+    font-family: Roboto;
+    font-size: 16px;
+    color: var(--text);
+    margin: 0;
+    line-height: 140%;
+}
+
+
+@media (max-width: $tablet-bp) {
+    .h1 {
+        font-family: Roboto;
+        font-size: 41px;
+        color: var(--text);
+        margin: 0;
+    }
+    
+    .h2 {
+        font-family: Roboto;
+        font-size: 36px;
+        color: var(--text);
+        margin: 0;
+    }
+    
+    .h3 {
+        font-family: Roboto;
+        font-size: 22px;
+        color: var(--text);
+        line-height: 140%;
+        margin: 0;
+    }
+    
+    .h4 {
+        font-family: Roboto;
+        font-size: 16px;
+        color: var(--text);
+        margin: 0;
+        line-height: 140%;
+    }
+}
+
+@media (max-width: $mobile-bp) {
+    .h1 {
+        font-family: Roboto;
+        font-size: 30px;
+        color: var(--text);
+        margin: 0;
+    }
+    
+    .h2 {
+        font-family: Roboto;
+        font-size: 26px;
+        color: var(--text);
+        margin: 0;
+    }
+    
+    .h3 {
+        font-family: Roboto;
+        font-size: 22px;
+        color: var(--text);
+        line-height: 140%;
+        margin: 0;
+    }
+    
+    .h4 {
+        font-family: Roboto;
+        font-size: 16px;
+        color: var(--text);
+        margin: 0;
+        line-height: 140%;
+    }
+}
