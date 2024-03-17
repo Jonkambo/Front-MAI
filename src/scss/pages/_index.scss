@@ -141,8 +141,14 @@
 
 .areas-study {
 
+    div {
+        width: 870px;
+    }
+
     article {
         padding-left: 130px;
+        display: flex;
+        margin-bottom: 200px;
     }
 
     h2 {
@@ -168,6 +174,7 @@
             left: -130px;
             font-family: Roboto;
             font-size: 16px;
+            font-weight: 300;
             line-height: 140%;
             margin: 0;
             color: var(--text);
@@ -180,8 +187,8 @@
         line-height: 140%;
         margin: 0;
         color: var(--text);
-        margin-bottom: 10px;
-
+        margin-bottom: 25px;
+        
         b {
             font-weight: bold;
         }
@@ -193,22 +200,21 @@
         }
     }
 
-    
-
     button {
         margin-bottom: 100px;
-        background-color: var(--buttons-links);
-        color: var(--bg-color);
+        background-color: var(--bg-color);
+        color: var(--buttons-links);
+        outline: 1px solid var(--buttons-links);
         padding: 22px 50px;
         transition: all 0.2s ease-in-out;
         text-transform: uppercase;
         text-decoration: none;
         border: none;
-        outline: none;
         cursor: pointer;
     
         &:hover {
-            background-color: var(--hower-btn);
+            background-color: var(--buttons-links);
+            color: var(--bg-color);
         }
     
         &:active {
@@ -216,5 +222,107 @@
         }
     }
 
+    ol {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 50px;
+        margin: 50px 0 100px 0;
 
+        p {
+            font-family: Roboto;
+            font-size: 14px;
+            margin: 0;
+            color: var(--text);
+
+            span {
+                font-size: 41px;
+                font-weight: bold;
+            }
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 15px;
+
+        li {
+            font-family: Roboto;
+            font-size: 16px;
+            line-height: 140%;
+            color: var(--text);
+            margin-bottom: 25px;
+        }
+    }
+
+    picture {
+        width: 770px;
+        margin-left: 100px;
+    }
+}
+
+.military-department {
+    background-color: var(--light-background);
+    padding: 100px 0;
+}
+
+.additional-info {
+    display: flex;
+
+    article {
+        padding-left: 130px;
+        width: 870px;
+
+        h2 {
+            font-family: Roboto;
+            font-size: 41px;
+            color: var(--text);
+            margin: 0;
+            margin-bottom: 100px;
+        }
+
+        p {
+            font-family: Roboto;
+            font-size: 16px;
+            line-height: 140%;
+            color: var(--text);
+            margin: 0;
+            margin-bottom: 25px;
+        }
+
+        button {
+            margin-top: 50px;
+            background-color: var(--bg-color);
+            color: var(--buttons-links);
+            outline: 1px solid var(--buttons-links);
+            padding: 22px 50px;
+            transition: all 0.2s ease-in-out;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        
+            &:hover {
+                background-color: var(--buttons-links);
+                color: var(--bg-color);
+            }
+        
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+    }
+
+    article:nth-child(2) {
+        width: 770px;
+        padding-left: 0;
+        margin-left: 100px;
+    }
 }
