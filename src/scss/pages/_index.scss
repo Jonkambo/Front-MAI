@@ -1,3 +1,7 @@
+/**
+* TODO: Узнать куда пихать grid, изменить hover-состояние кнопки на корректное
+ */
+
 .articles {
 
     &__header {
@@ -45,284 +49,139 @@
     width: 420px;
 
     &__img {
+        display: flex;
         margin-bottom: 30px;
         width: 100%;
         height: 235px;
-        display: flex;
         justify-content: center;
         overflow: hidden;
+        order: 0;
     }
 
     &__date {
         margin-bottom: 12px;
+        order: 1;
     }
 
     &__title {
         margin-bottom: 30px;
         transition: .3s all ease-in-out;
+        order: 2;
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--hower-btn);
         }
+    }
+
+    &__info {
+        order: 3;
     }
 }
 
-.admission-rules {
+
+.grid {
     display: flex;
 
-    h2 {
-        font-family: Roboto;
-        font-size: 41px;
-        color: var(--text);
-        margin: 0;
-        margin-bottom: 100px;
+    &:last-child {
+        margin-bottom: 0;
     }
 
-    p {
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 140%;
-        margin: 0;
-        color: var(--text);
-        margin-bottom: 50px;
-    }
-    
-    li {
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 140%;
-        margin: 0;
-        color: var(--text);
-    }
-
-    h3 {
-        font-family: Roboto;
-        font-size: 26px;
-        color: var(--text);
-        line-height: 140%;
-        margin: 0;
-        margin-bottom: 25px;
-    }
-
-    a {
-        display: inline-block;
-        text-decoration: none;
-        color: var(--buttons-links);
-    }
-
-    table {
-        margin-bottom: 50px;
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    tr:nth-child(2n - 1) {
-        background: var(--light-background);
-    }
-
-    td {
-        padding: 16px 30px;
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 140%;
-        margin: 0;
-        color: var(--text);
-    }
-
-    div {
+    &__col-left {
         width: 870px;
+
+        &_pl {
+            padding-left: 130px;
+        }
     }
 
-    picture {
-        margin-left: 100px;
+    &__col-right {
         width: 770px;
+        margin-left: 100px;
     }
 }
 
 .areas-study {
 
-    div {
-        width: 870px;
+    &__title {
+        margin-bottom: 100px;
     }
 
-    article {
+    &__card {
         padding-left: 130px;
-        display: flex;
+    }
+
+    &__img {
+        position: sticky;
+        top: 0;
+        bottom: -50px;
+    }
+
+    &__direction-card {
         margin-bottom: 200px;
     }
+}
 
-    h2 {
-        font-family: Roboto;
-        font-size: 41px;
-        color: var(--text);
-        margin: 0;
-        margin-bottom: 100px;
-    }
+.study-card {
 
-    h3 {
-        position: relative;
-        font-family: Roboto;
-        font-size: 26px;
-        color: var(--text);
-        line-height: 140%;
-        margin: 0;
+    &__title {
         margin-bottom: 50px;
-
-        span {
-            position: absolute;
-            bottom: 0;
-            left: -130px;
-            font-family: Roboto;
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 140%;
-            margin: 0;
-            color: var(--text);
-        }
+        padding-left: 130px;
+        position: relative;
     }
 
-    p {
-        font-family: Roboto;
+    &__id-class {
+        position: absolute;
         font-size: 16px;
-        line-height: 140%;
-        margin: 0;
-        color: var(--text);
-        margin-bottom: 25px;
-        
-        b {
-            font-weight: bold;
-        }
+        font-weight: normal;
+        bottom: 4px;
+        left: 0;
+    }
 
-        a {
-            color: var(--buttons-links);
-            display: inline-block;
-            text-decoration: none;
+    &__info {
+        margin-bottom: 10px;
+
+        & > strong {
+            font-weight: 500;
         }
     }
 
-    button {
-        margin-bottom: 100px;
-        background-color: var(--bg-color);
+    &__link {
         color: var(--buttons-links);
-        outline: 1px solid var(--buttons-links);
-        padding: 22px 50px;
-        transition: all 0.2s ease-in-out;
-        text-transform: uppercase;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-    
+        transition: .3s all ease-in-out;
+
         &:hover {
-            background-color: var(--buttons-links);
-            color: var(--bg-color);
-        }
-    
-        &:active {
-            transform: scale(0.98);
+            color: var(--hower-btn);
         }
     }
 
-    ol {
-        list-style: none;
-        padding: 0;
+    &__btn {
+        margin-bottom: 100px;
+    }
+
+    &__direction-info {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 50px;
+        grid-template-columns: repeat(3, 200px);
+        gap: 20px 50px;
         margin: 50px 0 100px 0;
 
-        p {
-            font-family: Roboto;
-            font-size: 14px;
-            margin: 0;
-            color: var(--text);
-
-            span {
-                font-size: 41px;
-                font-weight: bold;
-            }
+        span {
+            font-size: 41px;
+            font-weight: 500;
         }
-
-        li {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-    }
-
-    ul {
-        margin: 0;
-        padding-left: 15px;
-
-        li {
-            font-family: Roboto;
-            font-size: 16px;
-            line-height: 140%;
-            color: var(--text);
-            margin-bottom: 25px;
-        }
-    }
-
-    picture {
-        width: 770px;
-        margin-left: 100px;
     }
 }
 
 .military-department {
-    background-color: var(--light-background);
-    padding: 100px 0;
-}
 
-.additional-info {
-    display: flex;
-
-    article {
-        padding-left: 130px;
-        width: 870px;
-
-        h2 {
-            font-family: Roboto;
-            font-size: 41px;
-            color: var(--text);
-            margin: 0;
-            margin-bottom: 100px;
-        }
-
-        p {
-            font-family: Roboto;
-            font-size: 16px;
-            line-height: 140%;
-            color: var(--text);
-            margin: 0;
-            margin-bottom: 25px;
-        }
-
-        button {
-            margin-top: 50px;
-            background-color: var(--bg-color);
-            color: var(--buttons-links);
-            outline: 1px solid var(--buttons-links);
-            padding: 22px 50px;
-            transition: all 0.2s ease-in-out;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-        
-            &:hover {
-                background-color: var(--buttons-links);
-                color: var(--bg-color);
-            }
-        
-            &:active {
-                transform: scale(0.98);
-            }
-        }
+    &__title {
+        margin-bottom: 100px;
     }
 
-    article:nth-child(2) {
-        width: 770px;
-        padding-left: 0;
-        margin-left: 100px;
+    &__info {
+        margin-bottom: 25px;
+    }
+
+    &__btn {
+        margin-top: 50px;
     }
 }

@@ -1,0 +1,117 @@
+.content {
+
+    h1 {
+        @extend .h1;
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    h2 {
+        @extend .h2;
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h3 {
+        @extend .h3;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h4 {
+        @extend .h4;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        @extend .regular-text;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            @extend .reset-link;
+            color: var(--buttons-links);
+        }
+
+        b {
+            font-weight: bold;
+        }
+    }
+
+    ul, ol {
+        @extend .regular-text;
+        margin-bottom: 25px;
+        padding-left: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    a {
+        @extend .reset-link, .regular-text;
+        color: var(--buttons-links);
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: var(--hower-btn);
+        }
+    }
+
+    table {
+        @extend .regular-text;
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        tr:nth-child(2n - 1) {
+            background: var(--light-background);
+        }
+
+        td {
+            padding: 16px 30px;
+        }
+    }
+
+    button {
+        @extend .btn;
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

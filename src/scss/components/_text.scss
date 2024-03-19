@@ -1,31 +1,31 @@
 .default-text {
+    margin: 0;
     font-family: Roboto;
     font-size: 26px;
-    margin: 0;
     color: var(--text);
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .light-text {
+    margin: 0;
     font-family: Roboto;
     font-size: 26px;
     font-weight: 300;
-    margin: 0;
     color: var(--text);
 }
 
 .regular-text {
+    margin: 0;
     font-family: Roboto;
     font-size: 16px;
     line-height: 140%;
-    margin: 0;
     color: var(--text);
 }
 
 .regular-small-text {
+    margin: 0;
     font-family: Roboto;
     font-size: 14px;
-    margin: 0;
     color: var(--text);
 }
 
@@ -35,62 +35,62 @@
         font-size: 22px;
         margin: 0;
         color: var(--text);
-        font-weight: bold;
+        font-weight: 500;
     }
-    
+
     .light-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 22px;
         font-weight: 300;
-        margin: 0;
         color: var(--text);
     }
-    
+
     .regular-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 16px;
         line-height: 140%;
-        margin: 0;
         color: var(--text);
     }
-    
+
     .regular-small-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 14px;
-        margin: 0;
         color: var(--text);
     }
 }
 
 @media (max-width: $mobile-bp) {
     .default-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 16px;
-        margin: 0;
         color: var(--text);
-        font-weight: bold;
+        font-weight: 500;
     }
-    
+
     .light-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 16px;
         font-weight: 300;
-        margin: 0;
         color: var(--text);
     }
-    
+
     .regular-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 14px;
         line-height: 140%;
-        margin: 0;
         color: var(--text);
     }
-    
+
     .regular-small-text {
+        margin: 0;
         font-family: Roboto;
         font-size: 14px;
-        margin: 0;
         color: var(--text);
     }
 }
