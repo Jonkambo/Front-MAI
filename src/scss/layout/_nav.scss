@@ -1,0 +1,45 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80px;
+    padding: 50px 0;
+    background-color: var(--dark-blue-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10000;
+
+    &__btn {
+        margin-bottom: 50px;
+        transition: .3s all ease-in-out;
+
+        &:first-child {
+            margin-bottom: 85px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover img {
+            fill: var(--buttons-links);
+        }
+    }
+
+    &__social-nav {
+        margin-top: auto;
+    }
+
+    &__social-link {
+        margin-bottom: 50px;
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            fill: var(--buttons-links);
+        }
+    }
+}
+
+
