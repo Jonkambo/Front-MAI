@@ -28,9 +28,16 @@
             color: var(--bg-color);
             border-color: var(--buttons-links);
         }
+    }
 
-        &:active {
-            transform: scale(0.98);
+    &_transparent {
+        background: 0 0;
+        color: var(--buttons-links);
+
+        &:hover {
+            background: var(--buttons-links);
+            color: var(--bg-color);
+            border-color: var(--buttons-links);
         }
     }
 }
