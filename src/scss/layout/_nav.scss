@@ -23,7 +23,8 @@
             margin-bottom: 0;
         }
 
-        &:hover img {
+        &:hover > svg {
+            transition: .3s all ease-in-out;
             fill: var(--buttons-links);
         }
     }
@@ -36,7 +37,8 @@
         margin-bottom: 50px;
         transition: .3s all ease-in-out;
 
-        &:hover {
+        &:hover > svg {
+            transition: .3s all ease-in-out;
             fill: var(--buttons-links);
         }
     }

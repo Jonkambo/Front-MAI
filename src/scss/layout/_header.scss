@@ -20,15 +20,17 @@
             color: var(--buttons-links);
             transition: .3s all ease-in-out;
         }
-
-        &:hover ~ .submenu {
-            display: block;
-            transition: .3s all ease-in-out;
-        }
     }
 
     &__item {
         position: relative;
+        transition: .3s all ease-in-out;
+
+        &:hover .submenu {
+            animation: .3s show-header-submenu ease-in-out;
+            display: block;
+            transition: .3s all ease-in-out;
+        }
     }
 }
 
@@ -40,16 +42,21 @@
     width: 215px;
 
     &__item {
-        padding: 12.5px 15px;
         background: var(--light-background);
         cursor: pointer;
     }
 
     &__link {
+        padding: 12.5px 15px;
         transition: .3s all ease-in-out;
 
         &:hover {
             color: var(--buttons-links);
         }
     }
+}
+
+@keyframes show-header-submenu {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

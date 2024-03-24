@@ -1,7 +1,5 @@
 /**
-* TODO: Узнать куда пихать grid, анимация на кнопки навигации
-* TODO: нормальное расположение кнопок личного кабинета
-* TODO: Футер
+* TODO: Узнать куда пихать grid
  */
 
 .first-section {
@@ -26,7 +24,6 @@
 
     &__buttons {
         display: flex;
-        margin-bottom: 154px;
         gap: 25px;
     }
 
@@ -34,10 +31,17 @@
         display: flex;
         align-items: end;
         justify-content: space-between;
+        margin-top: auto;
     }
 
     &__account-link {
         width: 238px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 }
 
