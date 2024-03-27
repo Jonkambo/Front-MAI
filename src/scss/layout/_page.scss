@@ -1,0 +1,123 @@
+.page {
+    margin-bottom: 100px;
+
+    &__title {
+        @extend .h1;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+}
+
+.article-page {
+
+    &__return {
+        @extend .regular-text, .reset-link;
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--buttons-links);
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            color: var(--hower-btn);
+        }
+
+        &:hover > svg {
+            transition: .3s all ease-in-out;
+            fill: var(--hower-btn);
+        }
+
+        & > svg {
+            margin-right: 30px;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__title {
+        @extend .h1;
+        padding: 50px 0;
+    }
+
+    &__date {
+        @extend .regular-text;
+        font-weight: 300;
+    }
+
+    &__main-img {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    &__info {
+        margin-left: 250px;
+
+        & p {
+            @extend .regular-text;
+            margin-bottom: 20px;
+            max-width: 870px;
+
+            &:last-child {
+                margin-bottom: 100px;
+            }
+
+            a {
+                @extend .reset-link;
+                color: var(--buttons-links);
+            }
+
+            b {
+                font-weight: bold;
+            }
+
+            strong {
+                font-weight: 500;
+            }
+        }
+
+        ul, ol {
+            @extend .regular-text;
+            margin-bottom: 20px;
+            padding-left: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            li {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        a {
+            @extend .reset-link, .regular-text;
+            color: var(--buttons-links);
+            margin-bottom: 20px;
+            transition: .3s all ease-in-out;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                color: var(--hower-btn);
+            }
+        }
+    }
+
+    &__btn-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 150px 100px;
+
+    }
+
+    &__prev {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,21 @@
+.news-page {
+
+    &__articles {
+        margin-bottom: 100px;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+}
+
+.cards {
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px 20px;
+    }
+}

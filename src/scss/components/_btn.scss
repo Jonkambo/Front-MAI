@@ -1,4 +1,5 @@
 .btn {
+    @extend .reset-link, .reset-btn;
     background-color: var(--buttons-links);
     color: var(--bg-color);
     padding: 21px 49px;
@@ -39,5 +40,75 @@
             color: var(--bg-color);
             border-color: var(--buttons-links);
         }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__page, &__divider {
+        @extend .regular-text, .reset-link;
+        margin-right: 30px;
+        font-weight: 500;
+        line-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        transition: .3s all ease-in-out;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+
+
+        &_active {
+            color: var(--buttons-links);
+        }
+    }
+
+    &__page:hover {
+        color: var(--buttons-links);
+    }
+
+    &__divider {
+        cursor: text;
+    }
+
+    &__group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:hover {
+            fill: var(--buttons-links);
+        }
+    }
+
+    &__next, &__prev {
+        @extend .reset-link;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        transition: .3s all ease-in-out;
+
+        &:hover > svg {
+            transition: .3s all ease-in-out;
+            fill: var(--buttons-links);
+        }
+    }
+
+    &__prev {
+        margin-right: 30px;
+        transform: rotate(180deg);
+    }
+
+    &__next {
+        margin-left: 30px;
     }
 }
