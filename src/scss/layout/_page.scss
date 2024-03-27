@@ -6,6 +6,24 @@
         padding-top: 50px;
         padding-bottom: 100px;
     }
+
+    &__subtitle {
+        @extend .regular-text;
+        margin-top: 100px;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        font-weight: 500;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__text {
+        @extend .regular-text;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 .article-page {
@@ -119,5 +137,17 @@
 
     &__prev {
         margin-left: auto;
+    }
+}
+
+.honored-card {
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        width: 572px;
     }
 }
