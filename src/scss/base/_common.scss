@@ -35,3 +35,20 @@
 .main, .header, .footer {
     margin-right: 80px;
 }
+
+.common-ul-list {
+    margin-bottom: 50px;
+    padding-left: 25px;
+
+    & > li {
+        @extend .regular-text;
+    }
+}
+
+.angle {
+    margin-left: 25px;
+    width: 15px;
+    height: 15px;
+    transition: .3s all ease-in-out;
+    transform: rotate(180deg);
+}

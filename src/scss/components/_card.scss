@@ -34,3 +34,78 @@
         order: 3;
     }
 }
+
+.abitur-directions-card {
+    width: 420px;
+    height: 300px;
+    padding: 20px 30px;
+    border: 1px solid var(--buttons-links);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+
+    &__group-code {
+        @extend .regular-text;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        @extend .h4;
+        height: 44px;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        @extend .regular-text;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & strong {
+            &__title {
+                @extend .h4;
+                margin-bottom: 25px;
+            }
+
+            &__text {
+                @extend .regular-text;
+
+            }
+            font-weight: 500;
+        }
+
+        a {
+            @extend .reset-link;
+            color: var(--buttons-links);
+            transition: .3s all ease-in-out;
+
+            &:hover {
+                color: var(--hower-btn);
+            }
+        }
+    }
+}
+
+.abitur-proceed-card {
+    width: 420px;
+
+    &__title {
+        @extend .h4;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        @extend .regular-text;
+        margin-bottom: 20px;
+
+        & a {
+            @extend .reset-link, .regular-text;
+            color: var(--buttons-links);
+            transition: .3s all ease-in-out;
+
+            &:hover {
+                color: var(--hower-btn);
+            }
+        }
+    }
+}
