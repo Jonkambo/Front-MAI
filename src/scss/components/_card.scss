@@ -109,3 +109,83 @@
         }
     }
 }
+
+
+.places-card {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--buttons-links);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__col-left {
+        max-width: 318px;
+        width: 100%;
+        margin-right: 50px;
+
+        & h3 {
+            @extend .h3;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+    }
+
+    &__free, &__paid {
+
+        & h4 {
+            @extend .h4;
+            margin-bottom: 10px;
+        }
+
+        & table {
+            border-bottom: 1px solid var(--scroll);
+            border-collapse: collapse;
+
+            & td {
+                padding: 10px 10px 7px;
+                vertical-align: top;
+                text-align-last: left;
+            }
+        }
+
+        & thead {
+
+            & tr {
+
+                &:first-child {
+                    background-color: var(--light-background);
+
+                    & td {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            & td {
+                padding: 10px 10px 7px;
+                vertical-align: top;
+                text-align-last: left;
+                font-size: 14px;
+            }
+        }
+
+
+
+        & tbody {
+
+            & td {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}

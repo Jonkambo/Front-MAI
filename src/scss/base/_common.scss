@@ -37,11 +37,30 @@
 }
 
 .common-ul-list {
-    margin-bottom: 50px;
+    list-style-type: disc;
+    margin-bottom: 20px;
     padding-left: 25px;
 
     & > li {
         @extend .regular-text;
+    }
+
+    & > h4 {
+        @extend .h4;
+    }
+}
+
+.common-ol-list {
+    list-style-type: decimal;
+    padding-left: 25px;
+    margin-bottom: 20px;
+
+    & > li {
+        @extend .regular-text;
+    }
+
+    & > h4 {
+        @extend .h4;
     }
 }
 
@@ -51,4 +70,92 @@
     height: 15px;
     transition: .3s all ease-in-out;
     transform: rotate(180deg);
+}
+
+.table {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+
+    & tr {
+        vertical-align: top;
+    }
+
+    & tr:nth-child(2n - 1) {
+        background-color: var(--light-background);
+    }
+
+    & th {
+        font-weight: 400;
+        padding: 16px 30px;
+        background: var(--dark-blue-background);
+        color: var(--bg-color);
+        text-align: left;
+    }
+
+    & td {
+        padding: 16px 30px;
+        color: var(--text);
+    }
+}
+
+.dropdown-list {
+    @extend .reset-list;
+
+    &__link {
+        @extend .reset-link;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--text);
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            transition: .3s all ease-in-out;
+            color: var(--buttons-links);
+
+            & svg {
+                transition: .3s all ease-in-out;
+                fill: var(--buttons-links);
+            }
+        }
+
+        & h4 {
+            @extend .h4;
+        }
+
+        &:active svg {
+            transition: .3s all ease-in-out;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__item {
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+
+    & h4 {
+        @extend .h4;
+    }
+
+    &__info {
+        // height: auto;
+        height: 0;
+    }
+}
+
+.common-link {
+    @extend .reset-link;
+    color: var(--buttons-links);
+    transition: .3s all ease-in-out;
+
+    &:hover {
+        transition: .3s all ease-in-out;
+        color: var(--hower-btn);
+    }
 }

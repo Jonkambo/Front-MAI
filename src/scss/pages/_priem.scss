@@ -1,0 +1,152 @@
+.priem-comp {
+    padding-bottom: 50px;
+
+    &__section {
+        padding: 50px 0;
+    }
+
+    &__title {
+        @extend .h1;
+        color: var(--bg-color);
+        width: 808px;
+        margin-bottom: 50px;
+    }
+
+    &__subtitle {
+        @extend .h3;
+        color: var(--bg-color);
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        @extend .regular-text;
+        color: var(--bg-color);
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        @extend .reset-link, .regular-text;
+        color: var(--bg-color);
+        position: relative;
+
+        &_selection {
+            transition: .3s all ease-in-out;
+            font-weight: 500;
+            line-height: normal;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: var(--bg-color);
+                opacity: 0;
+                transition: .3s all ease-in-out;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__group {
+        display: flex;
+    }
+
+    &__section-title {
+        margin-bottom: 50px;
+
+        & h3 {
+            @extend .h3;
+        }
+
+        & p {
+            padding: 0;
+            margin: 0;
+
+            & strong, & b {
+                font-weight: normal;
+            }
+        }
+    }
+
+    &__priem-places {
+        width: 100%;
+    }
+}
+
+.priem-header {
+    padding: 50px;
+    background-color: var(--buttons-links);
+    position: relative;
+
+    &__group {
+        display: flex;
+        width: 790px;
+        justify-content: space-between;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 10%;
+        right: 12%;
+        overflow: hidden;
+    }
+
+    &__section {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+}
+
+.priem-ul-links {
+    @extend .reset-list;
+    margin-top: 7px;
+
+    &__item {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.priem-content {
+    width: 1320px;
+}
+
+.priem-score {
+
+    &__subtitle {
+        @extend .h4;
+        margin-bottom: 15px;
+    }
+}
+
+.priem-exam, .priem-info, .priem-orders, .priem-docs, .priem-places, .priem-questions {
+
+    &__subtitle {
+        @extend .h4;
+        margin-bottom: 25px;
+        margin-top: 50px;
+    }
+
+    &__text {
+        @extend .regular-text;
+        margin-bottom: 20px;
+    }
+
+    &__dropdown-list {
+        margin-top: 50px;
+    }
+}
