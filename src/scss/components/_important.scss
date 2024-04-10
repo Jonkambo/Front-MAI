@@ -102,6 +102,11 @@
         gap: 5px;
         transition: .3s all ease-in-out;
 
+        & svg {
+            height: 20px;
+            width: 20px;
+        }
+
         &:hover {
             color: var(--buttons-links);
             transition: .3s all ease-in-out;
