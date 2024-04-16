@@ -1,3 +1,19 @@
+.text {
+    color: var(--text);
+
+    &_important {
+        color: var(--important) !important;
+    }
+
+    &_bold {
+        font-weight: 600;
+    }
+
+    &_link {
+        @extend .reset-link;
+    }
+}
+
 .default-text {
     margin: 0;
     font-family: Roboto;

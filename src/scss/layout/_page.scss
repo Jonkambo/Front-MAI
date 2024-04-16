@@ -48,6 +48,26 @@
             }
         }
     }
+
+    &__row {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__ol-list {
+        @extend .reset-list;
+        list-style: auto;
+        margin-left: 30px;
+
+        & li {
+            padding-left: 5px;
+            position: relative;
+            line-height: 140%;
+        }
+    }
 }
 
 .article-page {
