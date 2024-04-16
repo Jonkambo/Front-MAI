@@ -203,3 +203,43 @@
         margin-bottom: 100px;
     }
 }
+
+.contacts {
+    margin-bottom: 100px;
+
+    &__map {
+        height: 580px;
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 550px;
+
+    &__group {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        @extend .h4;
+    }
+
+    &__dropdown-list {
+        margin-bottom: 50px;
+        margin-top: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__links-group {
+        display: flex;
+    }
+}

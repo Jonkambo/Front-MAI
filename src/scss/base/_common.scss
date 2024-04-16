@@ -132,6 +132,10 @@
             transition: .3s all ease-in-out;
             transform: rotate(180deg);
         }
+
+        & h3 {
+            @extend .h3;
+        }
     }
 
     &__item {
@@ -144,8 +148,8 @@
     }
 
     &__info {
-        // height: auto;
-        height: 0;
+        height: auto;
+        // height: 0;
     }
 }
 
@@ -153,17 +157,10 @@
     @extend .reset-link;
     color: var(--buttons-links);
     transition: .3s all ease-in-out;
+    display: inline;
 
     &:hover {
         transition: .3s all ease-in-out;
         color: var(--hower-btn);
     }
-}
-
-.text-bold {
-    font-weight: 600;
-}
-
-.text-important {
-    color: var(--important) !important;
 }
