@@ -1,0 +1,20 @@
+.page-not-found {
+    margin-bottom: 100px;
+
+    &__img {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 60px;
+    }
+
+    &__title {
+        @extend .h1;
+        margin-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    &__text {
+        @extend .light-text;
+        margin-bottom: 50px;
+    }
+}

@@ -28,7 +28,35 @@
     <!-- End Header -->
 
     <!-- Main -->
-    <main class="main"></main>
+    <main class="main">
+        <section class="page-not-found">
+            <div class="container container_flex">
+                <div class="grid__col-left">
+
+                    <object data="/img/404.svg" type="image/svg+xml" class="page-not-found__img">
+                        <picture>
+                            <source srcset="./assets/images/404/404.avif" type="image/avif">
+                            <source srcset="./assets/images/404/404.webp" type="image/webp">
+                            <img src="/assets/images/404/404.png" width="730" height="581" alt="Ошибка 404. Страница не найдена">
+                        </picture>
+                    </object>
+                </div>
+                <div class="grid__col-right">
+                    <h1 class="page-not-found__title page__title">
+                        Что-то пошло не так...
+                    </h1>
+
+                    <p class="page-not-found__text">Страница, на которую вы пытаетесь попасть, не
+                        существует или была удалена.
+                    </p>
+
+                    <a class="page-not-found__btn btn btn_transparent" href="/">
+                        Перейти на главную
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- End Main -->
 
     <!-- Footer -->
