@@ -191,6 +191,29 @@
     }
 }
 
+.honored-card {
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        width: 572px;
+    }
+
+    & p {
+        @extend .regular-text;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+
+        &:last-child {
+            padding-bottom: 100px;
+        }
+    }
+}
+
+
 .direction-card {
     margin-bottom: 100px;
 

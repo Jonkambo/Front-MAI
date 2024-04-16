@@ -8,21 +8,45 @@
     }
 
     &__subtitle {
-        @extend .regular-text;
+        @extend .h3;
         margin-top: 100px;
         margin-bottom: 25px;
-        padding-bottom: 20px;
         font-weight: 500;
 
         &:first-child {
             margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
     &__text {
         @extend .regular-text;
         margin-bottom: 20px;
-        padding-bottom: 20px;
+    }
+
+    &__list {
+        @extend .reset-list;
+        margin-bottom: 20px;
+
+        & li {
+            padding-left: 25px;
+            position: relative;
+            line-height: 140%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 9.5px;
+                left: 11px;
+                width: 3px;
+                height: 3px;
+                background-color: var(--text);
+                border-radius: 50%;
+            }
+        }
     }
 }
 
@@ -140,14 +164,22 @@
     }
 }
 
-.honored-card {
-    margin-bottom: 100px;
+.faculty-page {
 
-    &:last-child {
-        margin-bottom: 0;
+    &__subimg {
+        width: 400px;
     }
 
     &__img {
-        width: 572px;
+        display: block;
+        margin-bottom: 250px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__row {
+        margin-bottom: 100px;
     }
 }
