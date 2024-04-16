@@ -1,0 +1,9 @@
+.depart {
+    margin-bottom: 100px;
+
+    &__title {
+        @extend .h1;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+}
