@@ -134,6 +134,7 @@
 }
 
 .priem-exam, .priem-info, .priem-orders, .priem-docs, .priem-places, .priem-questions {
+    transition: .3s all ease-in-out;
 
     &__subtitle {
         @extend .h4;
@@ -148,5 +149,15 @@
 
     &__dropdown-list {
         margin-top: 50px;
+
+        & a.dropdown-list__link:hover h4 {
+            transition: .3s all ease-in-out;
+            color: var(--buttons-links);
+        }
     }
+}
+
+.dropdown-list+h4 {
+    font-weight: 500;
+    margin-top: 25px;
 }

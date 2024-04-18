@@ -49,5 +49,8 @@
     "browserslist": [
         "last 5 versions",
         "ie >= 11"
-    ]
+    ],
+    "dependencies": {
+        "gsap": "^3.12.5"
+    }
 }

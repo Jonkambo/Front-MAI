@@ -167,27 +167,3 @@
         }
     }
 }
-
-.breadcrums {
-    @extend .reset-list;
-    display: flex;
-
-    &__link {
-        @extend .reset-link;
-        color: var(--buttons-links);
-        transition: .3s all ease-in-out;
-
-        &:hover {
-            color: var(--hower-btn);
-        }
-
-        &_active {
-            color: var(--text);
-            pointer-events: none;
-        }
-    }
-
-    &__divider {
-        margin: 0 5px;
-    }
-}

@@ -36,6 +36,36 @@
     margin-right: 80px;
 }
 
+.text-nums {
+    font-size: 37px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.breadcrums {
+    @extend .reset-list;
+    display: flex;
+
+    &__link {
+        @extend .reset-link;
+        color: var(--buttons-links);
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            color: var(--hower-btn);
+        }
+
+        &_active {
+            color: var(--text);
+            pointer-events: none;
+        }
+    }
+
+    &__divider {
+        margin: 0 5px;
+    }
+}
+
 .common-ul-list {
     list-style-type: disc;
     margin-bottom: 20px;
@@ -62,14 +92,6 @@
     & > h4 {
         @extend .h4;
     }
-}
-
-.angle {
-    margin-left: 25px;
-    width: 15px;
-    height: 15px;
-    transition: .3s all ease-in-out;
-    transform: rotate(180deg);
 }
 
 .table {
@@ -114,27 +136,69 @@
         color: var(--text);
         transition: .3s all ease-in-out;
 
-        &:hover {
-            transition: .3s all ease-in-out;
-            color: var(--buttons-links);
+        &:hover span::after, &:hover span::before {
+            background: var(--buttons-links);
+        }
 
-            & svg {
+        & span.small-angle::after, & span.small-angle::before {
+            width: 10px;
+        }
+
+        & span.small-angle::after {
+            left: 7px;
+        }
+
+        & span.small-angle {
+            width: 15px;
+        }
+
+        & span {
+            width: 24px;
+            height: 1px;
+            display: block;
+            position: relative;
+            transition: .3s all ease-in-out;
+            margin-left: 25px;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 14px;
+                height: 1px;
+                background: var(--text);
+                transform-origin: center center;
                 transition: .3s all ease-in-out;
-                fill: var(--buttons-links);
+            }
+
+            &::before {
+                transform: rotate(45deg);
+                left: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                left: 10px;
             }
         }
 
+
         & h4 {
             @extend .h4;
-        }
-
-        &:active svg {
             transition: .3s all ease-in-out;
-            transform: rotate(180deg);
         }
 
         & h3 {
             @extend .h3;
+        }
+
+        &_active {
+            color: var(--buttons-links) !important;
+
+            & span {
+                transition: .3s all ease-in-out;
+                transform: rotate(-180deg);
+            }
         }
     }
 
@@ -143,13 +207,12 @@
         margin-bottom: 25px;
     }
 
-    & h4 {
-        @extend .h4;
+    &__info {
+        height: 0;
     }
 
-    &__info {
-        height: auto;
-        // height: 0;
+    & h4 {
+        @extend .h4;
     }
 }
 

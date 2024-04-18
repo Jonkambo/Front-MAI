@@ -1,0 +1,30 @@
+import gsap from "gsap";
+
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    //Открытие h3 пункта списка
+    const links = document.querySelectorAll(".dropdown-list__link");
+
+    function toggleAnimationList(link, active, data, minHeight, minOpacity) {
+      if (!link.classList.contains(active)) {
+        link.classList.add(active);
+        gsap.to(data, {
+          height: "auto",
+        });
+      } else {
+        link.classList.remove(active);
+        gsap.to(data, {
+          height: minHeight,
+        });
+      }
+    }
+
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        toggleAnimationList(link, "dropdown-list__link_active", link.nextElementSibling, 0, 1);
+      });
+    });
+  });
+
+export default dropdownListAnimation

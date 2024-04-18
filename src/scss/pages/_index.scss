@@ -1,11 +1,7 @@
 /**
 * TODO: Узнать куда пихать grid
 * TODO: Разобраться с анимкой перехода на след страницу новостей
-* TODO: Нормально ли расположил стили пагинации (в btn)
 * TODO: Узнать почему у svg кривая анимка (ссылка на скачивание) + "Назад к новостям"
-* TODO: Розобраться с abitur, dropdown ссылки, жирность
-* TODO: Как сделать в тексте чтобы не ставились пробелы (priem, docs, link)
-* TODO: "Направления подготовки и перечень вступительных испытаний" в "priem" анимка кривая
 */
 
 .first-section {
@@ -174,16 +170,35 @@
     }
 
     &__direction-info {
-        display: grid;
-        grid-template-columns: repeat(3, 200px);
-        grid-auto-flow: dense;
-        gap: 20px 50px;
-        margin: 50px 0 100px 0;
 
-        span {
-            font-size: 41px;
-            font-weight: 500;
+        margin: 50px 0 100px 0;
+        color: var(--text);
+    }
+}
+
+.direction-info {
+    display: flex;
+    justify-content: flex-start;
+
+    &__group {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
         }
+    }
+
+    &__text {
+        @extend .regular-small-text;
+        margin-bottom: 20px;
+    }
+
+    &__subtext {
+        @extend .regular-small-text;
+    }
+
+    &__paid, &__cost {
+        margin-left: 75px;
     }
 }
 

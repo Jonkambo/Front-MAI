@@ -147,24 +147,49 @@
         @extend .reset-link, .regular-text;
         font-weight: 500;
         color: var(--buttons-links);
-        transition: .3s all ease-in-out;
         position: relative;
+        display: inline;
+        border-bottom: 1px solid transparent;
+        transition: .3s all ease-in-out;
 
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 1px;
-            background-color: var(--buttons-links);
-            opacity: 0;
-            transition: .3s all ease-in-out;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: 0;
+        //     width: 100%;
+        //     height: 1px;
+        //     background-color: var(--buttons-links);
+        //     opacity: 0;
+        //     transition: .3s all ease-in-out;
+        // }
 
-        &:hover::before {
-            transition: .3s all ease-in-out;
-            opacity: 1;
+        // &:hover::before {
+        //     transition: .3s all ease-in-out;
+        //     opacity: 1;
+        // }
+
+        &:hover, &_active {
+            border-bottom: 1px solid var(--buttons-links);
         }
+    }
+}
+
+.abitur-faq {
+
+    &__text {
+        @extend .regular-text;
+        margin-bottom: 20px;
+        width: 870px;
+        padding-left: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 25px;
+        }
+    }
+
+    &__dropdown-list .dropdown-list__item {
+        margin-bottom: 0;
     }
 }
