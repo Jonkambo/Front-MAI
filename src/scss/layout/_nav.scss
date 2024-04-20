@@ -44,4 +44,24 @@
     }
 }
 
+@media (max-width: $third-bp) {
+    .nav {
+        position: absolute;
+        display: none;
+        width: 0;
+        height: 0;
 
+        &__MAI-logo {
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+    .nav {
+
+        &__MAI-logo {
+            width: 100px;
+        }
+    }
+}

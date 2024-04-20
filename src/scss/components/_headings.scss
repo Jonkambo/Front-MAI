@@ -32,8 +32,7 @@
     font-weight: 500;
 }
 
-
-@media (max-width: $tablet-bp) {
+@media (max-width: $fourth-bp) {
     .h1 {
         font-size: 41px;
     }
@@ -47,7 +46,7 @@
     }
 }
 
-@media (max-width: $mobile-bp) {
+@media (max-width: $fifth-bp) {
     .h1 {
         font-size: 30px;
     }

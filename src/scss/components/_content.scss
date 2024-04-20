@@ -120,3 +120,13 @@
         }
     }
 }
+
+@media (max-width: $fourth-bp) {
+
+    .content {
+
+        h3 {
+            margin-bottom: 30px;
+        }
+    }
+}

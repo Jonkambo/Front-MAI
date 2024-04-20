@@ -36,10 +36,24 @@
     margin-right: 80px;
 }
 
+@media (max-width: $third-bp) {
+
+    .main, .header, .footer {
+        margin-right: 0;
+    }
+}
+
 .text-nums {
     font-size: 37px;
     font-weight: 500;
     line-height: 100%;
+}
+
+@media (max-width: $third-bp) {
+
+    .text-nums {
+        font-size: 30px
+    }
 }
 
 .breadcrums {

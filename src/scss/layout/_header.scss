@@ -10,6 +10,22 @@
     }
 }
 
+@media (max-width: $first-bp) {
+    .header {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: $third-bp) {
+    .header {
+        
+        &__menu {
+            display: none;
+            position: absolute;
+        }
+    }
+}
+
 .menu-index {
 
     &__link {

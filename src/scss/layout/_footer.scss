@@ -57,6 +57,64 @@
     }
 }
 
+@media (max-width: $second-bp) {
+
+    .footer {
+
+        &__col-contacts {
+            margin-left: 40px;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .footer {
+
+        &__divider {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        &__contacts {
+            flex-direction: column;
+        }
+
+        & .grid {
+            flex-direction: row;
+        }
+
+        &__col-contacts {
+            margin-left: 0;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $fifth-bp) {
+
+    .footer {
+
+        & .grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & .grid__col-left, & .grid__col-rigth {
+            width: 100%;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+}
+
 .footer-menu {
     display: flex;
     justify-content: space-between;
@@ -79,6 +137,45 @@
 
         &:hover {
             color: var(--buttons-links);
+        }
+    }
+}
+
+@media (max-width: $first-bp) {
+
+    .footer-menu {
+
+        &__item {
+            margin-right: 67px;
+        }
+    }
+}
+
+@media (max-width: $second-bp) {
+
+    .footer-menu {
+
+        &__item {
+            margin-right: 28px;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .footer-menu {
+        display: none;
+        position: absolute;
+        height: 0;
+        width: 0;
+    }
+}
+@media (max-width: $second-bp) {
+
+    .footer-menu {
+
+        &__item {
+            margin-right: 28px;
         }
     }
 }
@@ -150,6 +247,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 100px;
+    margin-top: 86px;
 
     &__link {
         color: var(--bg-color);
@@ -166,6 +264,28 @@
     }
 }
 
+@media (max-width: $second-bp) {
+
+    .footer-links {
+
+        column-gap: 70px;
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__link {
+            width: 100%;
+        }
+    }
+}
+
+
+
 .copyright {
     display: flex;
     justify-content: space-between;
@@ -181,6 +301,17 @@
 
         &:hover {
             color: var(--buttons-links);
+        }
+    }
+}
+
+@media (max-width: $fifth-bp) {
+
+    .copyright {
+        flex-direction: column;
+
+        &__text:last-child {
+            margin-top: 30px;
         }
     }
 }

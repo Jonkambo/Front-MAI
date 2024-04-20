@@ -45,68 +45,22 @@
     color: var(--text);
 }
 
-@media (max-width: $tablet-bp) {
-    .default-text {
-        font-family: Roboto;
+@media (max-width: $fourth-bp) {
+    .default-text, .light-text {
         font-size: 22px;
-        margin: 0;
-        color: var(--text);
-        font-weight: 500;
-    }
-
-    .light-text {
-        margin: 0;
-        font-family: Roboto;
-        font-size: 22px;
-        font-weight: 300;
-        color: var(--text);
-    }
-
-    .regular-text {
-        margin: 0;
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 140%;
-        color: var(--text);
-    }
-
-    .regular-small-text {
-        margin: 0;
-        font-family: Roboto;
-        font-size: 14px;
-        color: var(--text);
     }
 }
 
-@media (max-width: $mobile-bp) {
-    .default-text {
-        margin: 0;
-        font-family: Roboto;
+@media (max-width: $fifth-bp) {
+    .default-text, .light-text {
         font-size: 16px;
-        color: var(--text);
-        font-weight: 500;
-    }
-
-    .light-text {
-        margin: 0;
-        font-family: Roboto;
-        font-size: 16px;
-        font-weight: 300;
-        color: var(--text);
     }
 
     .regular-text {
-        margin: 0;
-        font-family: Roboto;
         font-size: 14px;
-        line-height: 140%;
-        color: var(--text);
     }
 
     .regular-small-text {
-        margin: 0;
-        font-family: Roboto;
-        font-size: 14px;
-        color: var(--text);
+        font-size: 12px;
     }
 }

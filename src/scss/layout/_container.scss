@@ -3,6 +3,7 @@
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+    // display: flex;
 
 
     &_block {
@@ -11,5 +12,42 @@
 
     &_flex {
         display: flex;
+    }
+}
+
+@media (max-width: $first-bp) {
+
+    .container {
+        max-width: 1460px;
+    }
+}
+
+@media (max-width: $second-bp) {
+
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .container {
+        max-width: 1000px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .container {
+        max-width: 640px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .container {
+        max-width: 100%;
     }
 }

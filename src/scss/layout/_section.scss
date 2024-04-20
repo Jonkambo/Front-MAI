@@ -5,3 +5,17 @@
         margin-bottom: 100px;
     }
 }
+
+@media (max-width: $third-bp) {
+
+    .section {
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .section {
+        margin-bottom: 100px;
+    }
+}
