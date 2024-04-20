@@ -213,6 +213,33 @@
     }
 }
 
+@media (max-width: $third-bp) {
+
+    .honored-card {
+
+        & .grid {
+            flex-direction: row;
+        }
+
+        &__img {
+            width: 460px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .honored-card {
+
+        & .grid {
+            flex-direction: column-reverse;
+        }
+
+        &__img {
+            margin-bottom: 50px;
+        }
+    }
+}
 
 .direction-card {
     margin-bottom: 100px;
