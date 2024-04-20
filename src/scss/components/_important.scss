@@ -120,6 +120,7 @@
 
     &__table-info {
         margin-bottom: 50px;
+        overflow-x: auto;
 
         &:last-child {
             margin-bottom: 0;
@@ -164,6 +165,22 @@
 
         & th {
             color: var(--bg-color);
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+    .important {
+        &__text {
+            width: 100%;
+        }
+
+        &__file {
+            width: 100%;
+        }
+
+        &__main-title {
+            padding-bottom: 50px;
         }
     }
 }

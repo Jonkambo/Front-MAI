@@ -59,6 +59,7 @@
 .breadcrums {
     @extend .reset-list;
     display: flex;
+    flex-wrap: wrap;
 
     &__link {
         @extend .reset-link;
@@ -77,6 +78,10 @@
 
     &__divider {
         margin: 0 5px;
+    }
+
+    &__item, &__link, &_divider {
+        display: inline;
     }
 }
 
