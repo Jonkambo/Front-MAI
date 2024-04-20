@@ -184,6 +184,57 @@
     }
 }
 
+@media (max-width: $second-bp) {
+  
+    .article-page {
+        &__info {
+            margin-left: 0;
+        }
+
+        &__btn-group {
+          margin: 0;
+          margin-bottom: 100px;
+        }
+    }
+}
+  
+@media (max-width: $fourth-bp) {
+
+    .article-page {
+
+        &__title {
+            padding-bottom: 25px;
+        }
+    
+        &__date {
+            margin-bottom: 25px;
+        }
+    
+        &__main-img {
+            margin-bottom: 50px;
+        }
+    
+        &__prev,
+        &__next {
+            padding: 22px 9px;
+            width: auto;
+        }
+
+        &__info {
+
+            img, picture {
+                margin-bottom: 50px;
+            }
+        
+            p, a, ul, ol {
+                &:last-child {
+                padding-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
 .faculty-page {
 
     &__subimg {

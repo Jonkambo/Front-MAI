@@ -112,3 +112,17 @@
         margin-left: 30px;
     }
 }
+
+@media (max-width: $fourth-bp) {
+    .pagination {
+        &__page,
+        &__divider,
+        &__prev {
+            margin-right: 15px;
+        }
+
+        &__next {
+            margin-left: 15px;
+        }
+    }
+}
