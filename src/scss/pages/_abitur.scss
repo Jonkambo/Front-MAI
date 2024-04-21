@@ -118,6 +118,21 @@
     top: 50px;
 }
 
+@media (max-width: $first-bp) {
+    .select-info {
+        width: 410px;
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .select-info {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+}
+
 .abitur-nav {
     @extend .reset-list;
     margin: 0;
@@ -171,6 +186,37 @@
 
         &:hover, &_active {
             border-bottom: 1px solid var(--buttons-links);
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .abitur-nav {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 100px;
+        
+        &__item {
+            width: 345px;
+            margin-bottom: 0;
+        }
+    
+        &__link {
+            &:hover, &_active {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+    .abitur-nav {
+        column-gap: 20px;
+
+        &__item {
+            width: 300px;
         }
     }
 }

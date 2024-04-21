@@ -19,3 +19,39 @@
         width: 1320px;
     }
 }
+
+@media (max-width: $first-bp) {
+    .edu-direc {
+        &__content {
+            width: 1000px;
+        }
+    }
+}
+
+@media (max-width: $second-bp) {
+
+    .edu-direc {
+        &__content {
+            width: 870px;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .edu-direc {
+        &__group {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+  
+        &__main-img {
+            margin-bottom: 50px;
+        }
+
+        &__content {
+            width: 100%;
+        }
+    }
+}
+  
