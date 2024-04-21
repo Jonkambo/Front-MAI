@@ -444,3 +444,55 @@
         }
     }
 }
+
+
+
+.metod-compl-page {
+
+    & .table {
+        width: 1133px;
+
+        tr td:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 560px;
+        }
+
+        tr td:nth-child(1) {
+            width: 230px;
+        }
+
+        tr td:nth-child(3) {
+            width: 400px;
+        }
+    }
+
+    .important {
+        &__info-title {
+            width: 870px;
+            @extend .light-text;
+            padding-top: 0;
+        }
+    }
+}
+
+@media (max-width: $second-bp) {
+    .metod-compl-page {
+
+        &__table {
+            overflow-x: auto;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+    .metod-compl-page {
+
+        .important {
+            &__info-title {
+                width: 100%;
+            }
+        }
+    }
+}
