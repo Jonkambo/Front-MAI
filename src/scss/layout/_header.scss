@@ -18,7 +18,7 @@
 
 @media (max-width: $third-bp) {
     .header {
-        
+
         &__menu {
             display: none;
             position: absolute;
@@ -43,19 +43,22 @@
         transition: .3s all ease-in-out;
 
         &:hover .submenu {
-            animation: .3s show-header-submenu ease-in-out;
-            display: block;
             transition: .3s all ease-in-out;
+            opacity: 1;
+            pointer-events: auto;
         }
     }
 }
 
 .submenu {
-    display: none;
+    display: block;
     position: absolute;
     margin-left: -15px;
     padding-top: 20px;
     width: 215px;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+    pointer-events: none;
 
     &__item {
         background: var(--light-background);
@@ -70,9 +73,4 @@
             color: var(--buttons-links);
         }
     }
-}
-
-@keyframes show-header-submenu {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }

@@ -47,14 +47,6 @@
             width: 640px;
         }
     }
-  
-    .abitur-faq {
-        &__dropdown-list {
-            .dropdown-list__link {
-                width: 860px;
-            }
-        }
-    }
 }
 
 @media (max-width: $third-bp) {
@@ -79,17 +71,17 @@
     .abitur-header {
         flex-wrap: wrap;
         margin-bottom: 0;
-    
+
         &__picture {
             order: 1;
             width: 100%;
-    
+
             img {
             width: 100%;
             height: 100%;
             }
       }
-  
+
         &__items {
             order: 2;
             width: 100%;
@@ -151,7 +143,7 @@
 }
 
 @media (max-width: $third-bp) {
-    
+
     .abitur-page .select-info {
         display: none;
     }
@@ -192,8 +184,8 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
-  
+@media (max-width: $second-bp) {
+
     .abitur-courses {
         &__text {
             width: 100%;
@@ -219,7 +211,7 @@
 }
 
 @media (max-width: $fifth-bp) {
-    
+
     .how-proceed {
         &__items {
             row-gap: 50px;
@@ -336,7 +328,6 @@
 @media (max-width: $second-bp) {
 
     .abitur-nav {
-    //   width: 410px;
       padding-left: 30px;
     }
 }
@@ -348,12 +339,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px 100px;
-        
+        padding-left: 0;
+
         &__item {
             width: 345px;
             margin-bottom: 0;
         }
-    
+
         &__link {
             &:hover, &_active {
                 border-bottom: 1px solid transparent;
@@ -392,7 +384,7 @@
 }
 
 @media (max-width: $second-bp) {
-  
+
     .abitur-faq {
         &__dropdown-list {
             .dropdown-list__link {
@@ -402,13 +394,13 @@
     }
 }
 
-@media (max-width: $fourth-bp) {   
-  
+@media (max-width: $third-bp) {
+
     .abitur-faq {
-        
+
         &__dropdown-list {
             .dropdown-list__link {
-            width: 610px;
+            width: 100%;
             }
         }
 
@@ -419,17 +411,17 @@
     }
 }
 
-@media (max-width: $fifth-bp) {
+@media (max-width: $fourth-bp) {
     .abitur-faq {
         &__dropdown-list {
             .dropdown-list__link {
                 width: auto;
                 justify-content: space-between;
-        
+
                 h4 {
                     width: 256px;
                 }
-    
+
                 .small-angle {
                     width: 17px;
                     margin-left: 0;

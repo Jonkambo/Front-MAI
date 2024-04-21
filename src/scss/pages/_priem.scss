@@ -78,6 +78,71 @@
     }
 }
 
+@media (max-width: $second-bp) {
+
+    .priem-comp {
+        &__group {
+            flex-wrap: wrap;
+            width: 100%;
+
+            & .select-info {
+                position: relative;
+                width: 100%;
+                margin-top: 0;
+                top: 0;
+            }
+
+            & .abitur-nav {
+                max-width: 100%;
+                display: flex;
+                padding-left: 0;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                &__item {
+                    width: 300px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .priem-comp {
+        &__group .abitur-nav {
+            gap: 20px;
+        }
+
+        &__title {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &__table {
+            overflow-x: auto;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .priem-comp {
+
+        .dropdown-list {
+            &__link {
+                width: 100%;
+                justify-content: space-between;
+
+                .angle {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
 .priem-header {
     padding: 50px;
     background-color: var(--buttons-links);
@@ -108,6 +173,70 @@
     }
 }
 
+@media (max-width: $first-bp) {
+    .priem-header {
+
+        &__svg {
+            right: 5%;
+        }
+    }
+}
+
+@media (max-width: $second-bp) {
+    .priem-header {
+        padding: 50px 30px;
+
+        &__svg {
+            width: 350px;
+            height: 350px;
+            right: 1%;
+
+            object {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+    .priem-header {
+      padding: 50px 15px;
+
+        &__svg {
+            display: none;
+        }
+
+        &__group {
+            width: 100%;
+        }
+
+        &__col {
+            &:first-child {
+                width: calc(50% - 10px);
+            }
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .priem-header {
+        &__group {
+            flex-wrap: wrap;
+        }
+
+        &__col {
+            width: 100%;
+
+            &:first-child {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+        }
+    }
+}
+
 .priem-ul-links {
     @extend .reset-list;
     margin-top: 7px;
@@ -123,6 +252,18 @@
 
 .priem-content {
     width: 1320px;
+}
+
+@media (max-width: $first-bp) {
+    .priem-content {
+      width: 1000px;
+    }
+}
+
+@media (max-width: $second-bp) {
+    .priem-content {
+      width: 100%;
+    }
 }
 
 .priem-score {

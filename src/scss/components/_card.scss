@@ -91,7 +91,7 @@
         width: 300px;
         height: 310px;
         padding: 20px 10px;
-    
+
         &__title {
             height: 59px;
         }
@@ -220,6 +220,42 @@
     }
 }
 
+@media (max-width: $first-bp) {
+
+    .places-card {
+      flex-wrap: wrap;
+
+      &__col-left {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      &__col-right {
+        width: 100%;
+      }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .places-card {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .places-card {
+
+        &__free,
+        &__paid {
+            overflow-x: auto;
+        }
+    }
+}
+
 .honored-card {
     margin-bottom: 100px;
 
@@ -265,6 +301,7 @@
         }
 
         &__img {
+            width: 100%;
             margin-bottom: 50px;
         }
     }
@@ -382,12 +419,12 @@
 }
 
 @media (max-width: $first-bp) {
-  
+
     .direction-card {
         &__img {
             display: none;
         }
-    
+
         &__info {
             width: 100%;
         }
@@ -395,12 +432,12 @@
 }
 
 @media (max-width: $second-bp) {
-    
+
     .direction-card {
 
         &__nums {
             width: auto;
-    
+
             &:first-child {
                 margin-right: 50px;
             }
@@ -412,8 +449,17 @@
     }
 }
 
+@media (max-width: $third-bp) {
+
+    .direction-card {
+        &__desc {
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width: $fourth-bp) {
-  
+
     .direction-card {
         &__info {
             padding: 30px 10px;
@@ -421,53 +467,19 @@
 
         &__row {
             margin-bottom: 50px;
-        }
-      
-        &__count {
-            margin-bottom: 10px;
-        }
-    
-        &__nums {
-            &:first-child {
-                margin-right: 30px;
-            }
-        }
-    
-        &__free {
-            margin-right: 30px;
-        }
-    
-        &__desc {
-            width: 100%;
-        }
-    
-        &__cols {
-            column-gap: 20px;
-        }
-    
-        &__edu,
-        &__skills,
-        &__subjects,
-        &__projects,
-        &__work,
-        &__profession {
-            width: 300px;
-        }
-    }
-}
-
-@media (max-width: $fifth-bp) {
-    .direction-card {
-        &__row {
             flex-wrap: wrap;
         }
 
         &__group {
             width: 100%;
-    
+
             &:first-child {
                 margin-bottom: 30px;
             }
+        }
+
+        &__count {
+            margin-bottom: 10px;
         }
 
         &__nums {
@@ -480,9 +492,22 @@
         &__free {
             margin-right: 10px;
         }
-        
+
         &__nums:nth-child(1) &__free {
             margin-right: 46px;
+        }
+
+        &__cols {
+            column-gap: 20px;
+        }
+
+        &__edu,
+        &__skills,
+        &__subjects,
+        &__projects,
+        &__work,
+        &__profession {
+            width: 300px;
         }
     }
 }
