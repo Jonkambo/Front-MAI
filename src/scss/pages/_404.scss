@@ -18,3 +18,53 @@
         margin-bottom: 50px;
     }
 }
+
+@media (max-width: $second-bp) {
+    .page-not-found {
+        .grid__col-right {
+            margin-left: 10px;
+            max-width: 700px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+    .page-not-found {
+        &__title {
+            margin-top: 0;
+        }
+
+        .grid {
+            &__col-left {
+                width: 600px;
+                margin: 0 auto;
+                margin-top: -60px;
+            }
+
+            &__col-right {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+    .page-not-found {
+        .grid {
+            &__col-left {
+                width: 100%;
+                margin-top: -20px;
+            }
+
+            &__col-right {
+                max-width: 100%;
+            }
+        }
+
+        &__img {
+            padding: 0;
+        }
+    }
+}
