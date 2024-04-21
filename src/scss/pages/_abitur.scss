@@ -381,6 +381,12 @@
     &__dropdown-list .dropdown-list__item {
         margin-bottom: 0;
     }
+
+    &_faq-page {
+        .abitur-faq__text {
+            padding-left: 0;
+        }
+    }
 }
 
 @media (max-width: $second-bp) {

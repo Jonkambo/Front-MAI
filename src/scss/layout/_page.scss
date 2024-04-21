@@ -125,6 +125,7 @@
 
             a {
                 @extend .reset-link;
+                display: inline !important;
                 color: var(--buttons-links);
             }
 
