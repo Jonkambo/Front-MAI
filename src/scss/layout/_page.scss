@@ -429,3 +429,18 @@
     }
 }
 
+@media (max-width: $third-bp) {
+    .ovz-room-page {
+        .grid {
+
+            &__col-left {
+                order: 2;
+            }
+
+            &__col-right {
+                order: 1;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
