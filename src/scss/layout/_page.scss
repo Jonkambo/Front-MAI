@@ -405,3 +405,27 @@
         }
     }
 }
+
+@media (max-width: $third-bp) {
+
+    .cources-page {
+
+        .page__text {
+            width: 100%;
+        }
+
+        .grid {
+            flex-direction: column;
+
+            &__col-left {
+                order: 2;
+            }
+
+            &__col-right {
+                order: 1;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+

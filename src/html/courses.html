@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & OpenGraph -->
+    <title>Часто задаваемые вопросы</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/assets/images/og.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="">
+
+    <!-- Favicon -->
+    @@include('layout/_favicon.html')
+
+    <!-- Preload Fonts -->
+    @@include('layout/_fonts.html')
+
+    <!-- Styles -->
+    @@include('layout/_styles.html')
+</head>
+<body>
+    <!-- Header -->
+    @@include('layout/_header.html')
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main class="main">
+        <section class="page cources-page">
+            <div class="container">
+                <ul class="breadcrums">
+                    <li class="breadcrums__item">
+                        <a class="breadcrums__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrums__item">
+                        <span class="breadcrums__divider">/</span>
+                    </li>
+                    <li class="breadcrums__item">
+                        <a class="breadcrums__link" href="#">Студентам</a>
+                    </li>
+                    <li class="breadcrums__item">
+                        <span class="breadcrums__divider">/</span>
+                    </li>
+                    <li class="breadcrums__item">
+                        <a class="breadcrums__link breadcrums__link_active" href="#">
+                            Подготовительные курсы
+                        </a>
+                    </li>
+                </ul>
+
+                <h1 class="page__title">
+                    Подготовительные курсы
+                </h1>
+            </div>
+
+            <div class="container">
+                <div class="grid">
+                    <div class="grid__col-left">
+                        <div class="container__left">
+                            <p class="page__text">Ступинский филиал МАИ объявляет набор на подготовительные курсы для подготовки к сдаче экзаменов в форме ЕГЭ.</p>
+                            <p class="page__text">Подготовительные курсы проводятся для школьников 11-х классов и выпускников техникумов по различным предметам для успешной сдачи ЕГЭ и участия в олимпиадах.</p>
+                            <p class="page__text">Занятия проводят опытные преподаватели - эксперты по проведению экзаменов в форме ЕГЭ.</p>
+
+                            <h3 class="page__subtitle">Расписание занятий</h3>
+                            <p class="page__text">Занятия проводятся 1 раз в неделю по 3 ак.часа по каждому предмету с 16:30.</p>
+                            <p class="page__text">Изучаемые предметы:</p>
+                            <ul class="page__list">
+                                <li>математика;</li>
+                                <li>физика;</li>
+                                <li>русский язык.</li>
+                            </ul>
+
+                            <h3 class="page__subtitle">Стоимость</h3>
+                            <p class="page__text">Стоимость одного предмета 3600 руб. в месяц (12 академических часов).</p>
+
+                            <h3 class="page__subtitle">Приём документов</h3>
+                            <p class="page__text">на подготовительные курсы проводится с 4 сентября по 30 сентября с 14:00 до 16:00 по будним дням.</p>
+                            <p class="page__text">Для заключения договора необходимо присутствие законного представителя (родителя) с паспортом.</p>
+                            <p class="page__text">При себе иметь 2 фотографии 3х4 (или 4х6) и паспорт.</p>
+
+                            <h3 class="page__subtitle">Контакты</h3>
+                            <p class="page__text">Телефон приёмной комиссии: <a href="tel:+74966411630" class="common-link">+7 (496) 641-16-30</a></p>
+                          </div>
+                    </div>
+                    <div class="grid__col-right">
+                        <div class="cources-page__img">
+                            <picture>
+                                <source srcset="./assets/images/pre-course-img.avif" type="image/avif">
+                                <source srcset="./assets/images/pre-course-img.webp" type="image/webp">
+                                <img src="./assets/images/pre-course-img.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End Main -->
+
+    <!-- Footer -->
+    @@include('layout/_footer.html')
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    @@include('layout/_scripts.html')
+</body>
+</html>
