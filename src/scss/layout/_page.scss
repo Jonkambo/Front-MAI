@@ -185,7 +185,7 @@
 }
 
 @media (max-width: $second-bp) {
-  
+
     .article-page {
         &__info {
             margin-left: 0;
@@ -197,7 +197,7 @@
         }
     }
 }
-  
+
 @media (max-width: $fourth-bp) {
 
     .article-page {
@@ -205,15 +205,15 @@
         &__title {
             padding-bottom: 25px;
         }
-    
+
         &__date {
             margin-bottom: 25px;
         }
-    
+
         &__main-img {
             margin-bottom: 50px;
         }
-    
+
         &__prev,
         &__next {
             padding: 22px 9px;
@@ -225,7 +225,7 @@
             img, picture {
                 margin-bottom: 50px;
             }
-        
+
             p, a, ul, ol {
                 &:last-child {
                 padding-bottom: 50px;
@@ -243,15 +243,35 @@
 
     &__img {
         display: block;
-        margin-bottom: 250px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        margin-bottom: 100px;
     }
 
     &__row {
         margin-bottom: 100px;
+    }
+
+    // .page {
+    //     &__subtitle:first-child {
+    //         margin-top: 100px;
+    //     }
+    // }
+}
+
+@media (max-width: $third-bp) {
+
+    .faculty-page {
+        &__img {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .faculty-page {
+        &__subimg {
+            width: 100%;
+        }
     }
 }
 
