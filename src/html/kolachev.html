@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & OpenGraph -->
+    <title>Часто задаваемые вопросы</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/assets/images/og.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="">
+
+    <!-- Favicon -->
+    @@include('layout/_favicon.html')
+
+    <!-- Preload Fonts -->
+    @@include('layout/_fonts.html')
+
+    <!-- Styles -->
+    @@include('layout/_styles.html')
+</head>
+<body>
+    <!-- Header -->
+    @@include('layout/_header.html')
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main class="main">
+        <section class="page kolachev-page">
+            <div class="container">
+                <h1 class="page__title">
+                    Шестая Всероссийская молодежная научно-практическая конференция «Колачевские чтения»
+                </h1>
+
+                <div class="grid">
+                    <div class="grid__col-left">
+                        <div class="page__submain-title">
+                            9 апреля 2021 г.
+                        </div>
+
+                        <p class="page__text">
+                            9 апреля 2021 года в Ступинском филиале МАИ пройдёт  шестая Всероссийская молодежная научно-практическая конференция «КОЛАЧЁВСКИЕ ЧТЕНИЯ», посвященная первому полёту человека в космос.
+                        </p>
+
+                        <p class="page__text">
+                            Место проведения Конференции Ступинский филиал МАИ. В случае неблагоприятной эпидемиологической обстановки конференция будет проведена в дистанционном режиме. Организатор: Ступинский филиал федерального государственного бюджетного образовательного учреждения высшего образования «Московский авиационный институт (национальный исследовательский университет)».
+                        </p>
+
+                        <p class="page__text">
+                            Для участия в конференции «Колачёвские чтения» необходимо до 30.03.2021 года (включительно) оформить заявку на участие и направить тезисы докладов на сайте <a href="https://kolachevconf.ru" class="common-link">kolachevconf.ru</a>
+                        </p>
+                    </div>
+                    <div class="grid__col-right">
+                        <div class="kolachev-page__img">
+                            <picture>
+                                <source srcset="./assets/images/kolachev.avif" type="image/avif">
+                                <source srcset="./assets/images/kolachev.webp" type="image/webp">
+                                <img src="./assets/images/kolachev.png" alt="Фотография Колачева">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End Main -->
+
+    <!-- Footer -->
+    @@include('layout/_footer.html')
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    @@include('layout/_scripts.html')
+</body>
+</html>
