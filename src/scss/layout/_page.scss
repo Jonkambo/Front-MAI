@@ -75,6 +75,12 @@
     }
 }
 
+@media (max-width: $first-bp) {
+    .page .container__grid .page__text {
+        width: 100%;
+    }
+}
+
 .article-page {
 
     &__return {
@@ -641,5 +647,12 @@
         &__video {
             height: auto;
         }
+    }
+}
+
+.experiment-resource-page {
+    &__img {
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
 }
