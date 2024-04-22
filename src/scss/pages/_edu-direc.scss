@@ -35,12 +35,7 @@
             max-width: 870px;
             width: 100%;
         }
-    }
-}
 
-@media (max-width: $third-bp) {
-
-    .edu-direc {
         &__group {
             flex-wrap: wrap;
         }
@@ -54,3 +49,20 @@
         }
     }
 }
+
+// @media (max-width: $third-bp) {
+
+//     .edu-direc {
+//         &__group {
+//             flex-wrap: wrap;
+//         }
+
+//         &__main-img {
+//             margin-bottom: 50px;
+//         }
+
+//         &__content {
+//             width: 100%;
+//         }
+//     }
+// }

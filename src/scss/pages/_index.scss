@@ -89,8 +89,13 @@
 @media (max-width: $second-bp) {
     .first-section {
 
+        &__slider {
+            height: calc(100% - 130px);
+        }
+
         &__main-img {
             max-width: 640px;
+            height: 100%;
         }
 
         &__sub-images {

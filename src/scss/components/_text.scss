@@ -45,13 +45,33 @@
     color: var(--text);
 }
 
-@media (max-width: $fourth-bp) {
+// @media (max-width: $fourth-bp) {
+//     .default-text, .light-text {
+//         font-size: 22px;
+//     }
+// }
+
+// @media (max-width: $fifth-bp) {
+//     .default-text, .light-text {
+//         font-size: 16px;
+//     }
+
+//     .regular-text {
+//         font-size: 14px;
+//     }
+
+//     .regular-small-text {
+//         font-size: 12px;
+//     }
+// }
+
+@media (max-width: $third-bp) {
     .default-text, .light-text {
         font-size: 22px;
     }
 }
 
-@media (max-width: $fifth-bp) {
+@media (max-width: $fourth-bp) {
     .default-text, .light-text {
         font-size: 16px;
     }

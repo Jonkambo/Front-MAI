@@ -264,7 +264,7 @@
     }
 }
 
-@media (max-width: $second-bp) {
+@media (max-width: $first-bp) {
 
     .footer-links {
 
@@ -272,7 +272,7 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .footer-links {
         display: flex;

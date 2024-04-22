@@ -32,7 +32,31 @@
     font-weight: 500;
 }
 
-@media (max-width: $fourth-bp) {
+// @media (max-width: $fourth-bp) {
+//     .h1 {
+//         font-size: 41px;
+//     }
+
+//     .h2 {
+//         font-size: 36px;
+//     }
+
+//     .h3 {
+//         font-size: 22px;
+//     }
+// }
+
+// @media (max-width: $fifth-bp) {
+//     .h1 {
+//         font-size: 30px;
+//     }
+
+//     .h2 {
+//         font-size: 26px;
+//     }
+// }
+
+@media (max-width: $third-bp) {
     .h1 {
         font-size: 41px;
     }
@@ -46,7 +70,7 @@
     }
 }
 
-@media (max-width: $fifth-bp) {
+@media (max-width: $fourth-bp) {
     .h1 {
         font-size: 30px;
     }

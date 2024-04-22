@@ -178,6 +178,7 @@
             position: relative;
             transition: .3s all ease-in-out;
             margin-left: 25px;
+            flex-shrink: 0;
 
             &::before, &::after {
                 content: "";

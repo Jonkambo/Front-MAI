@@ -43,6 +43,11 @@
 
 @media (max-width: $second-bp) {
     .abitur-header {
+        &__items {
+            padding: 20px;
+            width: 543px;
+        }
+
         &__picture img {
             width: 100%;
             height: 100%;
@@ -55,8 +60,6 @@
         flex-direction: column;
 
         &__items {
-            padding: 20px;
-            width: 543px;
             order: 2;
         }
 
@@ -142,7 +145,7 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .abitur-page .select-info {
         display: none;
@@ -234,7 +237,7 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
     .abitur-directions {
         &__cards {
             gap: 20px;
@@ -257,7 +260,7 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .select-info {
         position: relative;
@@ -325,14 +328,14 @@
     }
 }
 
-@media (max-width: $second-bp) {
+@media (max-width: $first-bp) {
 
     .abitur-nav {
-      padding-left: 30px;
+        padding-left: 30px;
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .abitur-nav {
         max-width: 100%;
@@ -354,7 +357,7 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
     .abitur-nav {
         column-gap: 20px;
 
