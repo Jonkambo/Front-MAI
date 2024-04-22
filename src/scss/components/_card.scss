@@ -35,6 +35,12 @@
     }
 }
 
+@media (max-width: $second-bp) {
+    .news-card {
+        width: 300px;
+    }
+}
+
 .abitur-directions-card {
     width: 420px;
     height: 300px;
@@ -278,12 +284,18 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .honored-card {
+        .grid {
+            &__col-right {
+                width: 460px;
+                margin-left: 20px;
+            }
 
-        & .grid {
-            flex-direction: row;
+            &__col-left {
+                width: 480px;
+            }
         }
 
         &__img {
@@ -292,13 +304,33 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
 
     .honored-card {
 
         & .grid {
             flex-direction: column-reverse;
+
+            &__col-right {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            &__col-left {
+                width: 100%;
+            }
         }
+
+        &__img {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .honored-card {
 
         &__img {
             width: 100%;
@@ -538,5 +570,64 @@
         width: 100%;
         height: 580px;
         background-color: var(--scroll);
+    }
+}
+
+.memory-card {
+    margin-bottom: 100px;
+
+    &__img {
+        width: 572px;
+    }
+}
+
+@media (max-width: $second-bp) {
+    .memory-card {
+        .grid {
+            &__col-right {
+                width: 460px;
+                margin-left: 20px;
+            }
+        }
+
+        &__img {
+            width: 460px;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .memory-card {
+        .grid {
+            &__col-left {
+                order: 2;
+            }
+
+            &__col-right {
+                margin-left: 0;
+                order: 1;
+            }
+        }
+
+        &__img {
+            width: 400px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .memory-card {
+        .grid {
+            &__col-right {
+                width: 100%;
+            }
+        }
+
+        &__img {
+            width: 100%;
+        }
     }
 }

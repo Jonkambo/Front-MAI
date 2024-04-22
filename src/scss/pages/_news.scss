@@ -23,30 +23,18 @@
 @media (max-width: $first-bp) {
 
     .cards {
-
         &__items {
             column-gap: 80px;
-        } 
+        }
     }
 }
 
 @media (max-width: $second-bp) {
 
     .cards {
-
         &__items {
-            column-gap: 30px;
-        } 
-    }
-}
-
-@media (max-width: $second-bp) {
-
-    .cards {
-
-        &__items {
-            column-gap: 10px;
-        } 
+            column-gap: 50px;
+        }
     }
 }
 
@@ -55,8 +43,8 @@
     .cards {
 
         &__items {
-            column-gap: 30px;
-        } 
+            column-gap: 20px;
+        }
     }
 }
 
@@ -66,7 +54,7 @@
 
         &__items {
             column-gap: 20px;
-        } 
+        }
     }
 
     .news-page {

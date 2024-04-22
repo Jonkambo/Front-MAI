@@ -32,6 +32,11 @@
         margin-bottom: 20px;
     }
 
+    &__subtext {
+        @extend .default-text;
+        margin-bottom: 100px;
+    }
+
     &__list {
         @extend .reset-list;
         margin-bottom: 20px;
