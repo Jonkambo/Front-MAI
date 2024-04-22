@@ -13,6 +13,11 @@
     &_flex {
         display: flex;
     }
+
+    &__grid {
+        width: 870px;
+        margin-left: 250px;
+    }
 }
 
 @media (max-width: $first-bp) {
