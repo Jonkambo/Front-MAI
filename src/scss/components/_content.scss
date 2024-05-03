@@ -82,6 +82,7 @@
         color: var(--buttons-links);
         margin-bottom: 25px;
         transition: .3s all ease-in-out;
+        display: inline;
 
         &:last-child {
             margin-bottom: 0;
@@ -96,6 +97,7 @@
         @extend .regular-text;
         margin-bottom: 50px;
         width: 100%;
+        border: none;
         border-collapse: collapse;
 
         &:last-child {
@@ -104,6 +106,14 @@
 
         tr:nth-child(2n - 1) {
             background: var(--light-background);
+        }
+
+        & th {
+            font-weight: 400;
+            padding: 16px 30px;
+            background: var(--dark-blue-background);
+            color: var(--bg-color);
+            text-align: left;
         }
 
         td {

@@ -408,7 +408,7 @@
         position: absolute;
         font-size: 16px;
         font-weight: normal;
-        bottom: 4px;
+        bottom: -1px;
         left: 0;
     }
 
@@ -554,17 +554,9 @@
 
 .military-department {
     padding: 100px 0;
-    background-color: var(--light-background);
 
-    &__title {
-        margin-bottom: 100px;
-    }
-
-    &__info {
-        margin-bottom: 25px;
-    }
-
-    &__btn {
+    button {
+        @extend .btn_transparent;
         margin-top: 50px;
     }
 }
