@@ -1,6 +1,6 @@
 .edu-direc {
 
-    &__title {
+    h1 {
         @extend .h1;
         margin: 50px 0;
     }
@@ -32,7 +32,6 @@
 
     .edu-direc {
         &__content {
-            max-width: 870px;
             width: 100%;
         }
 
@@ -42,10 +41,6 @@
 
         &__main-img {
             margin-bottom: 50px;
-        }
-
-        &__content {
-            width: 100%;
         }
     }
 }
