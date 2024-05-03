@@ -112,17 +112,17 @@
         }
     }
 
-    &__title {
+    h1 {
         @extend .h1;
         padding: 50px 0;
     }
 
-    &__date {
+    time {
         @extend .regular-text;
         font-weight: 300;
     }
 
-    &__main-img {
+    picture {
         margin-top: 50px;
         margin-bottom: 100px;
     }
