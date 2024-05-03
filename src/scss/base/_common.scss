@@ -58,16 +58,16 @@
 
 .breadcrums {
     @extend .reset-list;
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
 
     &__link {
         @extend .reset-link;
-        color: var(--buttons-links);
-        transition: .3s all ease-in-out;
+        color: var(--buttons-links) !important;
+        transition: .3s all ease-in-out !important;
 
         &:hover {
-            color: var(--hower-btn);
+            color: var(--hower-btn) !important;
         }
 
         &_active {
@@ -76,12 +76,20 @@
         }
     }
 
+    & > li {
+        padding-left: 0 !important;
+
+        &::before {
+            position: relative !important;
+        }
+    }
+
     &__divider {
-        margin: 0 5px;
+        margin: 0 5px !important;
     }
 
     &__item, &__link, &_divider {
-        display: inline;
+        display: inline !important;
     }
 }
 
