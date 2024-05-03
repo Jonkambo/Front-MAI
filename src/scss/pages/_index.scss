@@ -32,10 +32,15 @@
         margin-bottom: 50px;
     }
 
-    &__header {
+    h1 {
+        @extend .h1;
         margin-bottom: 25px;
         text-transform: uppercase;
         width: 100%;
+    }
+
+    p {
+        @extend .light-text;
     }
 
     &__buttons {
@@ -149,7 +154,7 @@
 
     .first-section {
 
-        &__header {
+        h1 {
             text-transform: none;
         }
 
@@ -170,9 +175,21 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .admission-rules {
+
+        .grid {
+            &__col-left {
+                width: 100%;
+            }
+
+            &__col-right {
+                position: absolute;
+                width: 0;
+                height: 0;
+            }
+        }
 
         &__img {
             position: absolute;
@@ -334,7 +351,8 @@
 
 .areas-study {
 
-    &__title {
+    h2 {
+        @extend .h2;
         margin-bottom: 100px;
     }
 
@@ -362,10 +380,22 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
     .areas-study {
 
-        &__title {
+        .grid {
+            &__col-left {
+                width: 100%;
+            }
+
+            &__col-right {
+                position: absolute;
+                width: 0;
+                height: 0;
+            }
+        }
+
+        h2 {
             margin-bottom: 50px;
         }
 
@@ -381,7 +411,7 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
     .areas-study {
 
         &__card {
@@ -464,7 +494,7 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
 
     .study-card {
 
@@ -478,7 +508,7 @@
     }
 }
 
-@media (max-width: $fifth-bp) {
+@media (max-width: $fourth-bp) {
 
     .study-card {
 
@@ -561,18 +591,24 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
 
     .military-department {
-        padding-left: 90px;
 
-        &__title {
-            margin-bottom: 50px;
-        }
+        .grid {
+            flex-direction: column;
+            padding-left: 90px;
 
-        &__info {
-            max-width: 670px;
-            width: 100%;
+            &__col-left, &__col-right {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            &__col-left {
+                &_pl {
+                    padding-left: 0;
+                }
+            }
         }
 
         & .grid__col-right {
@@ -581,17 +617,26 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
 
     .military-department {
         padding: 50px 0;
 
-        &__info {
-            width: 100%;
+        .grid {
+            padding-left: 0;
         }
 
-        &__btn {
+        button {
             margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .military-department {
+
+        button {
             width: 100%;
         }
     }
