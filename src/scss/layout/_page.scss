@@ -7,12 +7,12 @@
         padding-bottom: 100px;
     }
 
-    h2 {
+    &__submain-title {
         @extend .h2;
         margin: 50px 0;
     }
 
-    h3 {
+    &__subtitle {
         @extend .h3;
         margin-top: 100px;
         margin-bottom: 25px;
@@ -27,7 +27,7 @@
         }
     }
 
-    p {
+    &__text {
         @extend .regular-text;
         margin-bottom: 20px;
     }
@@ -37,7 +37,7 @@
         margin-bottom: 100px;
     }
 
-    ul {
+    &__list {
         @extend .reset-list;
         margin-bottom: 20px;
 
@@ -59,10 +59,6 @@
         }
     }
 
-    a {
-        @extend .common-link;
-    }
-
     &__row {
         margin-bottom: 50px;
 
@@ -71,7 +67,7 @@
         }
     }
 
-    ol {
+    &__ol-list {
         @extend .reset-list;
         list-style: auto;
         margin-left: 30px;
@@ -270,37 +266,37 @@
     &__row {
         margin-bottom: 100px;
 
-        // h3 {
-        //     @extend .h3;
-        //     margin-top: 100px;
-        //     margin-bottom: 25px;
-        //     font-weight: 500;
+        h3 {
+            @extend .h3;
+            margin-top: 100px;
+            margin-bottom: 25px;
+            font-weight: 500;
 
-        //     &:first-child {
-        //         margin-top: 0;
-        //     }
+            &:first-child {
+                margin-top: 0;
+            }
 
-        //     &:last-child {
-        //         margin-bottom: 0;
-        //     }
-        // }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
-        // p {
-        //     @extend .regular-text;
-        //     margin-bottom: 20px;
+        p {
+            @extend .regular-text;
+            margin-bottom: 20px;
 
-        //     & > strong {
-        //         @extend .text_bold;
-        //     }
-        // }
+            & > strong {
+                @extend .text_bold;
+            }
+        }
 
-        // a {
-        //     @extend .common-link;
-        // }
+        a {
+            @extend .common-link;
+        }
 
-        // ul {
-        //     @extend .page__list;
-        // }
+        ul {
+            @extend .page__list;
+        }
     }
 }
 
@@ -322,11 +318,37 @@
     }
 }
 
+.library {
+    h3 { @extend .page__subtitle; }
+    p { @extend .page__text; }
+    ul { @extend .page__list; }
+    a { @extend .common-link; }
+    ol { @extend .page__ol-list; }
+}
+
 .contacts {
     margin-bottom: 100px;
 
     &__map {
         height: 580px;
+    }
+
+    .grid__col-left {
+        & > h3 {
+            @extend .page__subtitle;
+        }
+
+        & > p {
+            @extend .page__text;
+
+            & > a {
+                @extend .common-link;
+            }
+        }
+
+        & > a {
+            @extend .common-link;
+        }
     }
 }
 
@@ -342,10 +364,14 @@
         &:last-child {
             margin-bottom: 0;
         }
-    }
 
-    &__title {
-        @extend .h4;
+        h4 {
+            @extend .h4;
+        }
+
+        a {
+            @extend .common-link;
+        }
     }
 
     &__dropdown-list {
