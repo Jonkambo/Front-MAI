@@ -267,11 +267,37 @@
         margin-bottom: 100px;
     }
 
-    // .page {
-    //     &__subtitle:first-child {
-    //         margin-top: 100px;
-    //     }
-    // }
+    h3 {
+        @extend .h3;
+        margin-top: 100px;
+        margin-bottom: 25px;
+        font-weight: 500;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        @extend .regular-text;
+        margin-bottom: 20px;
+
+        & > strong {
+            @extend .text_bold;
+        }
+    }
+
+    a {
+        @extend .common-link;
+    }
+
+    ul {
+        @extend .page__list;
+    }
 }
 
 @media (max-width: $third-bp) {
