@@ -48,18 +48,18 @@
     border: 1px solid var(--buttons-links);
     box-shadow: 0 8px 16px rgba(0,0,0,.15);
 
-    &__group-code {
+    & > span {
         @extend .regular-text;
         margin-bottom: 10px;
     }
 
-    &__title {
+    & > h4 {
         @extend .h4;
         height: 44px;
         margin-bottom: 8px;
     }
 
-    &__text {
+    & > p {
         @extend .regular-text;
         margin-bottom: 10px;
 
@@ -98,7 +98,7 @@
         height: 310px;
         padding: 20px 10px;
 
-        &__title {
+        & > h4 {
             height: 59px;
         }
     }
@@ -107,12 +107,12 @@
 .abitur-proceed-card {
     width: 420px;
 
-    &__title {
+    & > h4 {
         @extend .h4;
         margin-bottom: 25px;
     }
 
-    &__text {
+    & > p {
         @extend .regular-text;
         margin-bottom: 20px;
 
@@ -127,6 +127,10 @@
             }
         }
     }
+
+    & > ul {
+        @extend .common-ul-list;
+    }
 }
 
 @media (max-width: $third-bp) {
@@ -139,6 +143,7 @@
 @media (max-width: $fourth-bp) {
 
     .abitur-proceed-card {
+
         &__text {
             &:last-child {
                 margin-bottom: 0;
