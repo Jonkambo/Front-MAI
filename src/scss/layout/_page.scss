@@ -589,11 +589,11 @@
         }
     }
 
-    .important {
-        &__info-title {
-            width: 870px;
+    .container {
+        & > h3 {
             @extend .light-text;
-            padding-top: 0;
+            width: 870px;
+            margin-bottom: 40px;
         }
     }
 }
@@ -610,8 +610,8 @@
 @media (max-width: $third-bp) {
     .metod-compl-page {
 
-        .important {
-            &__info-title {
+        .container {
+            & > h3 {
                 width: 100%;
             }
         }
