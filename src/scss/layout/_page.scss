@@ -528,6 +528,26 @@
     }
 }
 
+.ovz-room-page {
+    .grid__col-left {
+        p {
+            @extend .page__text;
+        }
+
+        h3 {
+            @extend .page__subtitle;
+        }
+
+        a {
+            @extend .common-link;
+        }
+
+        ul {
+            @extend .page__list;
+        }
+    }
+}
+
 @media (max-width: $third-bp) {
     .ovz-room-page {
         .grid {
