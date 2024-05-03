@@ -749,7 +749,7 @@
 @media (max-width: $fourth-bp) {
 
     .history-page {
-        &__picture-small {
+        &__picture-small img {
             width: 100%;
         }
     }
@@ -767,6 +767,12 @@
             width: 100%;
         }
     }
+
+    .container__grid {
+        p {
+            @extend .page__text;
+        }
+    }
 }
 
 @media (max-width: $third-bp) {
@@ -778,8 +784,29 @@
 }
 
 .experiment-resource-page {
-    &__img {
+    // &__img {
+    //     margin-top: 50px;
+    //     margin-bottom: 100px;
+    // }
+
+    picture {
         margin-top: 50px;
         margin-bottom: 100px;
+    }
+
+    .container__grid {
+        p {
+            @extend .page__text;
+        }
+    }
+}
+
+@media (max-width: $first-bp) {
+    .experiment-resource-page {
+        .container__grid {
+            p {
+                width: 100%;
+            }
+        }
     }
 }
