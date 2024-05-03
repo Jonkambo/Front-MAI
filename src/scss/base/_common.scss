@@ -71,8 +71,8 @@
         }
 
         &_active {
-            color: var(--text);
-            pointer-events: none;
+            color: var(--text) !important;
+            pointer-events: none !important;
         }
     }
 
