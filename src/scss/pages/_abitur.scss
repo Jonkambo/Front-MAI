@@ -188,7 +188,7 @@
 @media (max-width: $second-bp) {
 
     .abitur-courses {
-        &__text {
+        & > p {
             width: 100%;
         }
     }
@@ -203,7 +203,7 @@
     }
 }
 
-@media (max-width: $fourth-bp) {
+@media (max-width: $third-bp) {
     .how-proceed {
         &__items {
             gap: 20px;
@@ -211,7 +211,7 @@
     }
 }
 
-@media (max-width: $fifth-bp) {
+@media (max-width: $fourth-bp) {
 
     .how-proceed {
         &__items {
