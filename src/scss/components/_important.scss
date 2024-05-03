@@ -22,7 +22,7 @@
         }
     }
 
-    a {
+    & a {
         @extend .reset-link;
         color: var(--buttons-links);
         transition: .3s all ease-in-out;
@@ -38,7 +38,7 @@
         }
     }
 
-    p {
+    & p {
         @extend .regular-text;
         padding-bottom: 20px;
         width: 870px;
@@ -84,7 +84,14 @@
 
     &__file-icon {
         width: 40px;
+        height: 100%;
         flex-shrink: 0;
+    }
+
+    &__doc-text {
+        @extend .regular-text;
+        padding: 0 !important;
+        margin-bottom: 15px !important;
     }
 
     &__doc-buttons {
@@ -93,9 +100,10 @@
 
     &__doc-link {
         @extend .reset-link, .regular-small-text;
-        display: flex;
+        display: flex !important;
         align-items: center;
         gap: 5px;
+        color: var(--text) !important;
         transition: .3s all ease-in-out;
 
         & svg {
@@ -104,7 +112,7 @@
         }
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--buttons-links) !important;
             transition: .3s all ease-in-out;
         }
 
@@ -124,18 +132,21 @@
     }
 
     &__table {
+
+        &_medium {
+            width: 1400px !important;
+        }
+
+        &_small {
+            width: 870px !important;
+        }
+    }
+
+    table {
         @extend .regular-text;
         border-bottom: 10px solid var(--dark-blue-background);
         width: 100%;
         border-collapse: collapse;
-
-        &_medium {
-            width: 1400px;
-        }
-
-        &_small {
-            width: 870px;
-        }
 
         &:last-child {
             margin-bottom: 0;
