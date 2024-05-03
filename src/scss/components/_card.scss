@@ -568,7 +568,7 @@
         margin-bottom: 0;
     }
 
-    &__title {
+    h3 {
         @extend .h3;
         margin-top: 100px;
         margin-bottom: 25px;
@@ -576,9 +576,13 @@
         &:first-child {
             margin-top: 0;
         }
+
+        & > a {
+            @extend .common-link;
+        }
     }
 
-    &__text {
+    p {
         @extend .default-text;
         margin-bottom: 100px;
     }
