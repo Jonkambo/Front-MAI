@@ -478,6 +478,13 @@
     }
 }
 
+.abitur-faq {
+    & a.dropdown-list__link:hover h4 {
+        transition: .3s all ease-in-out;
+        color: var(--buttons-links);
+    }
+}
+
 @media (max-width: $third-bp) {
 
     .cources-page {
@@ -516,8 +523,6 @@
         }
     }
 }
-
-
 
 .metod-compl-page {
 
