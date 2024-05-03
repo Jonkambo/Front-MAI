@@ -810,3 +810,30 @@
         }
     }
 }
+
+.memory-page {
+    h1+p {
+        @extend .page__subtext;
+        width: 1120px;
+    }
+}
+
+@media (max-width: $first-bp) {
+    .memory-page {
+        h1 {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: $second-bp) {
+    .memory-page {
+        h1 {
+            padding-bottom: 50px;
+        }
+
+        h1+p {
+            width: 100%;
+        }
+    }
+}

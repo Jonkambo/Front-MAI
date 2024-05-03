@@ -603,6 +603,14 @@
 .memory-card {
     margin-bottom: 100px;
 
+    h3 {
+        @extend .page__subtitle;
+    }
+
+    p {
+        @extend .page__text;
+    }
+
     &__img {
         width: 572px;
     }
@@ -610,15 +618,16 @@
 
 @media (max-width: $second-bp) {
     .memory-card {
+
+        picture {
+            width: 460px;
+        }
+
         .grid {
             &__col-right {
                 width: 460px;
                 margin-left: 20px;
             }
-        }
-
-        &__img {
-            width: 460px;
         }
     }
 }
@@ -637,7 +646,7 @@
             }
         }
 
-        &__img {
+        picture {
             width: 400px;
             margin-bottom: 30px;
         }
@@ -653,7 +662,7 @@
             }
         }
 
-        &__img {
+        picture {
             width: 100%;
         }
     }
