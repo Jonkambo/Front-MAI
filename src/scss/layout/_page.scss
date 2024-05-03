@@ -485,11 +485,31 @@
     }
 }
 
+.cources-page {
+    .grid__col-left {
+        p {
+            @extend .page__text;
+        }
+
+        a {
+            @extend .common-link;
+        }
+
+        h3 {
+            @extend .page__subtitle;
+        }
+
+        ul {
+            @extend .page__list;
+        }
+    }
+}
+
 @media (max-width: $third-bp) {
 
     .cources-page {
 
-        .page__text {
+        p {
             width: 100%;
         }
 
