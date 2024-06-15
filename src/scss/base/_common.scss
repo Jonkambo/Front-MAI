@@ -149,10 +149,15 @@
         padding: 16px 30px;
         color: var(--text);
     }
+
+    & a {
+        @extend .common-link;
+    }
 }
 
 .dropdown-list {
     @extend .reset-list;
+
 
     &__link {
         @extend .reset-link;
@@ -253,5 +258,103 @@
     &:hover {
         transition: .3s all ease-in-out;
         color: var(--hower-btn);
+    }
+}
+
+details {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+details[open] > summary {
+
+    & span {
+        transition: .3s all ease-in-out;
+        transform: rotate(-180deg);
+    }
+}
+
+summary {
+    cursor: pointer;
+    marker: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text);
+    transition: .3s all ease-in-out;
+
+    &:hover h4 {
+        color: var(--buttons-links);
+    }
+
+    & span.small-angle::after, & span.small-angle::before {
+        width: 10px;
+    }
+
+    & span.small-angle::after {
+        left: 7px;
+    }
+
+    & span.small-angle {
+        width: 15px;
+    }
+
+    & span {
+        width: 24px;
+        height: 1px;
+        display: block;
+        position: relative;
+        transition: .3s all ease-in-out;
+        margin-left: 25px;
+        flex-shrink: 0;
+        margin-bottom: 25px;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 14px;
+            height: 1px;
+            background: var(--text);
+            transform-origin: center center;
+            transition: .3s all ease-in-out;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            left: 0;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            left: 10px;
+        }
+    }
+
+    &:hover span::after, &:hover span::before {
+        background: var(--buttons-links);
+    }
+
+    & h4 {
+        @extend .h4;
+        transition: .3s all ease-in-out;
+        margin-bottom: 25px !important;
+    }
+
+    & h3 {
+        @extend .h3;
+    }
+
+    &_active {
+        color: var(--buttons-links) !important;
+
+        & span {
+            transition: .3s all ease-in-out;
+            transform: rotate(-180deg);
+        }
     }
 }

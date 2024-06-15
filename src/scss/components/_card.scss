@@ -168,9 +168,14 @@
         max-width: 318px;
         width: 100%;
         margin-right: 50px;
+        height: auto;
 
         & h3 {
             @extend .h3;
+        }
+
+        & p {
+            @extend .regular-text;
         }
     }
 

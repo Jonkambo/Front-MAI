@@ -61,7 +61,7 @@
 
     ul, ol {
         @extend .regular-text;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         padding-left: 16px;
 
         &:last-child {
@@ -69,11 +69,19 @@
         }
 
         li {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
 
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    ul {
+        list-style: disc;
+
+        li {
+            margin-bottom: 0;
         }
     }
 
