@@ -3,23 +3,25 @@ import A11yDialog from 'a11y-dialog';
 
 const requestDialogue = () => {
     const questionDialogue = document.querySelector('#questionDialogue');
+    const qiestionDialogueConfirm = document.querySelector('#questionDialogueConfirm');
     const questionForm = document.querySelector(".question-form");
     const questionFormName = questionForm.querySelector(".question-form__name");
     const questionFormEmail = questionForm.querySelector(".question-form__email");
     const questionFormText = questionForm.querySelector(".question-form__textarea");
 
-    if (!questionDialogue || !questionForm || !questionFormName || !questionFormEmail || !questionFormText) return;
+    if (!questionDialogue || !questionForm || !questionFormName || !questionFormEmail || !questionFormText || !qiestionDialogueConfirm) return;
 
     const dialog = new A11yDialog(questionDialogue);
+    const dialogConfirm = new A11yDialog(qiestionDialogueConfirm);
 
     function sendQuestion(event) {
         event.preventDefault();
 
         if (checkValidationInput()) {
-            dialog.close();
+            // do something
+            dialog.hide();
+            dialogConfirm.show();
         }
-
-        // do something
     }
 
     function checkValidationInput() {
