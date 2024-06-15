@@ -1,0 +1,8 @@
+const mainMenuAppear = () => {
+    const mainMenu = document.querySelector('.main-menu');
+    const mainMenuLeft = document.querySelector('.main-menu__left');
+    const mainMenuCenter = document.querySelector('.main-menu__center');
+    const mainMenuRight = document.querySelector('.main-menu__right');
+
+    
+}
