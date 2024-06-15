@@ -1,11 +1,11 @@
 import dropdownListAnimation from "./modules/dropdown-anim"
-import requestDialogue from "./modules/question-dialogue"
-// import selectInfo from "./modules/select-info"
+import "./modules/question-dialogue"
+import "./modules/select-info"
 
 const init = () => {
     dropdownListAnimation()
-    requestDialogue()
-    // selectInfo()
+    // requestDialogue()
+    // animatedPinnedMenu()
 }
 
 init()

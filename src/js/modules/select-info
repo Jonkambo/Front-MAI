@@ -1,0 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const pinnedMenu = document.querySelector("#pinned-menu");
+
+    if (!pinnedMenu) return;
+    const links = pinnedMenu.querySelectorAll(".pin-link");
+    const sections = document.querySelectorAll(".scroll-section");
+
+    function onScroll() {
+        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop - 50;
+            const sectionBottom = sectionTop + section.clientHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                links.forEach((link) => link.classList.remove("abitur-nav__link_active"));
+                links[index].classList.add("abitur-nav__link_active");
+            }
+        });
+    }
+
+    function scrollToSection(event) {
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+        const targetPosition = targetSection.offsetTop - 50;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+        });
+    }
+
+    // Attach scroll and click event listeners
+    window.addEventListener("scroll", onScroll);
+    links.forEach((link) => link.addEventListener("click", scrollToSection));
+});
