@@ -36,6 +36,21 @@
     margin-right: 80px;
 }
 
+.main, .header, .footer, .cookie-block {
+    animation: page_appearence .9s ease-in-out;
+
+}
+
+@keyframes page_appearence {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @media (max-width: $second-bp) {
 
     .main, .header, .footer {
