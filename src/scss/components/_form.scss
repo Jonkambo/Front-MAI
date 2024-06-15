@@ -41,6 +41,15 @@
     &__info {
         margin-top: 25px;
     }
+
+    &__text-error {
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        color: var(--important);
+        margin-left: 10px;
+        font-size: 12px;
+    }
 }
 
 .question-form {

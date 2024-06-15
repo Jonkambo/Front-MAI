@@ -8,7 +8,7 @@ const requestDialogue = () => {
     const questionFormEmail = questionForm.querySelector(".question-form__email");
     const questionFormText = questionForm.querySelector(".question-form__textarea");
 
-    if (!questionDialogue) return;
+    if (!questionDialogue || !questionForm || !questionFormName || !questionFormEmail || !questionFormText) return;
 
     const dialog = new A11yDialog(questionDialogue);
 
@@ -82,9 +82,9 @@ const requestDialogue = () => {
     });
 
     questionFormText.addEventListener("focus", () => {
-        questionFormText.classList.remove("form__textarea_error");
+        questionFormText.classList.remove("form__input_error");
         questionFormText.nextElementSibling.textContent = '';
     });
 };
 
-// export default requestDialogue;
+requestDialogue();

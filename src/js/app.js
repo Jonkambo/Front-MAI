@@ -3,8 +3,8 @@ import "./modules/question-dialogue"
 import "./modules/select-info"
 
 const init = () => {
-    dropdownListAnimation()
-    // requestDialogue()
+    dropdownListAnimation();
+    // requestDialogue();
     // animatedPinnedMenu()
 }
 
