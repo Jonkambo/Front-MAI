@@ -1,0 +1,52 @@
+<div class="question-dialogue" id="questionDialogue" aria-labelledby="questionDialogue" aria-hidden="true">
+
+    <div class="question-dialogue__overlay" data-a11y-dialog-hide></div>
+
+    <div class="question-dialogue__body" role="document">
+        <button class="question-dialogue__close" type="button" data-a11y-dialog-hide aria-label="Close dialogue">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.17774 7.99778L15.2527 1.92278C15.3893 1.76336 15.4606 1.5583 15.4525 1.34857C15.4444 1.13884 15.3575 0.939886 15.209 0.791474C15.0606 0.643062 14.8617 0.556118 14.652 0.548017C14.4422 0.539916 14.2372 0.611255 14.0777 0.747776L8.00274 6.82278L1.92774 0.739443C1.76833 0.602921 1.56326 0.531583 1.35353 0.539684C1.1438 0.547785 0.944855 0.634728 0.796442 0.78314C0.64803 0.931552 0.561086 1.1305 0.552985 1.34023C0.544884 1.54996 0.616223 1.75502 0.752745 1.91444L6.82774 7.99778L0.744412 14.0728C0.657177 14.1475 0.586327 14.2394 0.536307 14.3428C0.486288 14.4462 0.458179 14.5588 0.453746 14.6736C0.449313 14.7883 0.468651 14.9028 0.510547 15.0097C0.552442 15.1166 0.615991 15.2138 0.697203 15.295C0.778415 15.3762 0.875538 15.4397 0.982476 15.4816C1.08941 15.5235 1.20386 15.5429 1.31862 15.5384C1.43339 15.534 1.546 15.5059 1.64939 15.4559C1.75277 15.4059 1.84471 15.335 1.91941 15.2478L8.00274 9.17278L14.0777 15.2478C14.2372 15.3843 14.4422 15.4556 14.652 15.4475C14.8617 15.4394 15.0606 15.3525 15.209 15.2041C15.3575 15.0557 15.4444 14.8567 15.4525 14.647C15.4606 14.4373 15.3893 14.2322 15.2527 14.0728L9.17774 7.99778Z" fill="black"/>
+            </svg>
+        </button>
+
+        <h3 class="question-dialogue__title" id="request-modal-title">Здесь вы можете задать вопрос, сообщить о проблеме, написать свои предложения или получить консультацию</h3>
+
+        <p class="question-dialogue__text">По вопросам организации обучения вы также можете обратиться на выпускающую кафедру <span class="icon-arrow"></span> <a class="common-link" href="https://sfmai.ru/about/allfaculty" target="_blank">Кафедры</a></p>
+
+        <form action="https://sfmai.ru/feedback" class="question-form form" id="question-form" name="questionForm">
+            <div class="question-form__row">
+                <div class="question-form__col">
+                    <div class="form__group">
+                        <input type="text" class="question-form__name form__input" name="name" placeholder="Имя*">
+                        <span class="form__text-error"></span>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="question-form__phone form__input" name="phone" placeholder="Телефон*">
+                        <span class="form__text-error"></span>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="question-form__email form__input" name="email" placeholder="Почта*">
+                        <span class="form__text-error"></span>
+                    </div>
+                </div>
+                <div class="question-form__col">
+                    <div class="question-form__group">
+                        <textarea class="request-form__textarea form__textarea" name="message" placeholder="Сообщение*"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="question-form__row">
+                <div class="question-form__col">
+                    <div class="form__group">
+                        <button class="question-form__btn form__submit btn btn_transparent" type="submit">Отправить сообщение</button>
+                    </div>
+                </div>
+                <div class="question-form__col">
+                    <div class="form__group form__info">
+                        <p class="question-form__text">Нажимая на кнопку “Отправить сообщение”, вы даете согласие на обработку персональных данных в соответствии с <a href="#" class="common-link">политикой конфиденциальности</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

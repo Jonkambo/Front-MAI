@@ -1,0 +1,90 @@
+import A11yDialog from 'a11y-dialog';
+
+
+const requestDialogue = () => {
+    const questionDialogue = document.querySelector('#questionDialogue');
+    const questionForm = document.querySelector(".question-form");
+    const questionFormName = questionForm.querySelector(".question-form__name");
+    const questionFormEmail = questionForm.querySelector(".question-form__email");
+    const questionFormText = questionForm.querySelector(".question-form__textarea");
+
+    if (!questionDialogue) return;
+
+    const dialog = new A11yDialog(questionDialogue);
+
+    function sendQuestion(event) {
+        event.preventDefault();
+
+        if (checkValidationInput()) {
+            dialog.close();
+        }
+
+        // do something
+    }
+
+    function checkValidationInput() {
+        let valid = true;
+
+        clearFromErrors();
+
+        if (questionFormName.value === "") {
+            valid = false;
+            questionFormName.classList.add("form__input_error");
+            questionFormName.nextElementSibling.textContent = 'Поле "Имя" не должно быть пустым';
+        }
+
+        if (questionFormEmail.value === "") {
+            valid = false;
+            questionFormEmail.classList.add("form__input_error");
+            questionFormEmail.nextElementSibling.textContent = 'Поле "Почта" не должно быть пустым';
+
+        } else if (!validateEmail(questionFormEmail.value)) {
+            valid = false;
+            questionFormEmail.classList.add("form__input_error");
+            questionFormEmail.nextElementSibling.textContent = 'Неверно заполнено поле "Почта"';
+        }
+
+        if (questionFormText.value === "") {
+            valid = false;
+            questionFormText.classList.add("form__input_error");
+            questionFormText.nextElementSibling.textContent = 'Поле "Сообщение" не должно быть пустым';
+        }
+
+        return valid;
+    }
+
+    function validateEmail(email) {
+        const re = /^([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)$/;
+        return re.test(email);
+    }
+
+    function clearFromErrors() {
+        questionFormName.classList.remove("form__input_error");
+        questionFormName.nextElementSibling.textContent = '';
+
+        questionFormEmail.classList.remove("form__input_error");
+        questionFormEmail.nextElementSibling.textContent = '';
+
+        questionFormText.classList.remove("form__input_error");
+        questionFormText.nextElementSibling.textContent = '';
+    }
+
+    questionForm.addEventListener("submit", sendQuestion);
+
+    questionFormName.addEventListener("focus", () => {
+        questionFormName.classList.remove("form__input_error");
+        questionFormName.nextElementSibling.textContent = '';
+    });
+
+    questionFormEmail.addEventListener("focus", () => {
+        questionFormEmail.classList.remove("form__input_error");
+        questionFormEmail.nextElementSibling.textContent = '';
+    });
+
+    questionFormText.addEventListener("focus", () => {
+        questionFormText.classList.remove("form__textarea_error");
+        questionFormText.nextElementSibling.textContent = '';
+    });
+};
+
+export default requestDialogue;
