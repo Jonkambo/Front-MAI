@@ -348,13 +348,4 @@ summary {
     & h3 {
         @extend .h3;
     }
-
-    &_active {
-        color: var(--buttons-links) !important;
-
-        & span {
-            transition: .3s all ease-in-out;
-            transform: rotate(-180deg);
-        }
-    }
 }

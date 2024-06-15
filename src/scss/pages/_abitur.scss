@@ -363,7 +363,7 @@
 
 .abitur-faq {
 
-    &__text {
+    p {
         @extend .regular-text;
         margin-bottom: 20px;
         width: 870px;
@@ -375,8 +375,15 @@
         }
     }
 
-    &__dropdown-list .dropdown-list__item {
+    & > details {
         margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    summary:hover {
+        & > h4 {
+            color: var(--text);
+        }
     }
 
     &_faq-page {
@@ -391,10 +398,8 @@
 @media (max-width: $second-bp) {
 
     .abitur-faq {
-        &__dropdown-list {
-            .dropdown-list__link {
-                width: 860px;
-            }
+        summary {
+            width: 860px;
         }
     }
 }
@@ -403,13 +408,11 @@
 
     .abitur-faq {
 
-        &__dropdown-list {
-            .dropdown-list__link {
+        summary {
             width: 100%;
-            }
         }
 
-        &__text {
+        p {
             width: 100%;
             padding-left: 30px;
         }
@@ -418,19 +421,18 @@
 
 @media (max-width: $fourth-bp) {
     .abitur-faq {
-        &__dropdown-list {
-            .dropdown-list__link {
-                width: auto;
-                justify-content: space-between;
+        summary {
 
-                h4 {
-                    width: 256px;
-                }
+            width: auto;
+            justify-content: space-between;
 
-                .small-angle {
-                    width: 17px;
-                    margin-left: 0;
-                }
+            h4 {
+                width: 256px;
+            }
+
+            .small-angle {
+                width: 17px;
+                margin-left: 0;
             }
         }
     }
