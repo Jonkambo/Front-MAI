@@ -1,8 +1,208 @@
-const mainMenuAppear = () => {
+document.addEventListener('DOMContentLoaded', function() {
     const mainMenu = document.querySelector('.main-menu');
     const mainMenuLeft = document.querySelector('.main-menu__left');
     const mainMenuCenter = document.querySelector('.main-menu__center');
     const mainMenuRight = document.querySelector('.main-menu__right');
+    const mainMenuOpenBtn = document.querySelector('.main-menu-btn');
+    const navBtns = document.querySelectorAll('.nav__btn');
+    const nav = document.querySelector('.nav');
+    const questionDialogue = document.querySelector('#openQuestionDialogueBtn');
+    const openSubmenusArrow = document.querySelectorAll('.menu__open-submenu');
+    const openSubSubmenusArrow = document.querySelectorAll('.main-submenu__open-submenu');
+    const mainSubmenuWrapperSmall = document.querySelector('.main-submenu-wrapper_small');
+    const mainSubmenuWrapper = document.querySelector('.main-submenu-wrapper');
+    const submenuBackBtn = document.querySelector('.submenu-back');
 
-    
-}
+    if (!mainMenu || !mainMenuLeft || !mainMenuCenter || !mainMenuRight || !mainMenuOpenBtn) return;
+
+    const menuLinks = document.querySelectorAll('.menu__link');
+    const submenuLinks = document.querySelectorAll('.main-submenu__link');
+    const listSubmenus = document.querySelectorAll('.main-submenu');
+    const additionalSubmenus = document.querySelectorAll('.second-menu');
+    let isOpen = false;
+    let whereIsMainSubmenu = 0;
+    let currentWidth = window.innerWidth;
+
+    function toggleMainMenu() {
+        mainMenuOpenBtn.classList.toggle('main-menu-btn_active');
+
+        if (!isOpen) {
+            questionDialogue.addEventListener('click', toggleMainMenu);
+
+            mainMenu.classList.toggle('main-menu_active');
+            setTimeout(() => {
+                mainMenuRight.classList.toggle('main-menu__right_active');
+            }, 0);
+            setTimeout(() => {
+                mainMenuCenter.classList.toggle('main-menu__center_active');
+            }, 200);
+            setTimeout(() => {
+                mainMenuLeft.classList.toggle('main-menu__left_active');
+            }, 400);
+            isOpen = true;
+        } else {
+            questionDialogue.removeEventListener('click', toggleMainMenu);
+
+            mainMenuLeft.classList.remove('main-menu__left_active');
+            setTimeout(() => {
+                mainMenuCenter.classList.remove('main-menu__center_active');
+            }, 200);
+            setTimeout(() => {
+                mainMenuRight.classList.remove('main-menu__right_active');
+            }, 400);
+            setTimeout(() => {
+                mainMenu.classList.toggle('main-menu_active');
+            }, 600);
+            clearMainSubmenu();
+            isOpen = false;
+        }
+    }
+
+    function clearMainSubmenu() {
+        listSubmenus.forEach((submenuLink) => {
+            submenuLink.classList.remove('main-submenu_active');
+        });
+    }
+
+    function clearMainSubSubmenu() {
+        additionalSubmenus.forEach((subsubmenuLink) => {
+            subsubmenuLink.classList.remove('main-submenu_active');
+        });
+    }
+
+    function openSubmenus(selectedMenuLink) {
+        listSubmenus.forEach((submenuLink) => {
+            if (submenuLink.id === selectedMenuLink.dataset.id && submenuLink !== selectedMenuLink) {
+                submenuLink.classList.add('main-submenu_active');
+                return;
+            }
+        });
+    }
+
+    function toggleMainMenuMobile() {
+        mainMenuOpenBtn.classList.toggle('main-menu-btn_active');
+        mainMenuLeft.classList.toggle('main-menu__left_active');
+
+        navBtns.forEach((navBtn) => {
+            navBtn.classList.toggle('nav__btn_active');
+        });
+
+        if (!isOpen) {
+            mainMenu.classList.toggle('main-menu_active');
+            questionDialogue.addEventListener('click', toggleMainMenuMobile);
+            isOpen = true;
+        } else {
+            questionDialogue.removeEventListener('click', toggleMainMenuMobile);
+            mainMenuLeft.classList.remove('main-menu__left_active');
+            mainMenuCenter.classList.remove('main-menu__center_active');
+            mainMenuRight.classList.remove('main-menu__right_active');
+            setTimeout(() => {
+                mainMenu.classList.toggle('main-menu_active');
+            }, 200);
+
+            isOpen = false;
+            clearMainSubmenu();
+        }
+    }
+
+    function clearMainMenu() {
+        nav.classList.toggle('nav_inactive');
+        setTimeout(() => {
+            mainMenuLeft.classList.toggle('main-menu__left_active');
+        }, 200);
+    }
+
+    function openSubmenusMobile(selectedMenuLink) {
+        listSubmenus.forEach((submenuLink) => {
+            if (submenuLink.id === selectedMenuLink.dataset.id && submenuLink !== selectedMenuLink) {
+                window.openedSubmenu = document.querySelector('.main-submenu_active');
+                clearMainSubmenu();
+                submenuLink.classList.add('main-submenu_active');
+                return;
+            }
+        });
+    }
+
+    function openSubSubmenusMobile(selectedMenuLink) {
+        openSubmenusMobile(selectedMenuLink);
+        mainSubmenuWrapper.classList.toggle('main-submenu-wrapper_inactive');
+        mainSubmenuWrapperSmall.classList.toggle('main-submenu-wrapper_small_active');
+        whereIsMainSubmenu = 2;
+    }
+
+    function handleBackButton() {
+        if (whereIsMainSubmenu === 1) {
+            clearMainSubmenu();
+            mainMenuLeft.classList.toggle('main-menu__left_active');
+
+            setTimeout(() => {
+                mainMenuCenter.classList.remove('main-menu__center_active');
+            }, 200);
+
+            nav.classList.toggle('nav_inactive');
+        } else if (whereIsMainSubmenu === 2) {
+            clearMainSubmenu();
+            window.openedSubmenu.classList.toggle('main-submenu_active');
+            mainSubmenuWrapper.classList.remove('main-submenu-wrapper_inactive');
+            mainSubmenuWrapperSmall.classList.remove('main-submenu-wrapper_small_active');
+            whereIsMainSubmenu = 1;
+        }
+    }
+
+    function updateEventListeners() {
+        mainMenuOpenBtn.removeEventListener('click', toggleMainMenu);
+        mainMenuOpenBtn.removeEventListener('click', toggleMainMenuMobile);
+        menuLinks.forEach(menuLink => menuLink.removeEventListener('mouseenter', handleMenuLinkHover));
+        submenuLinks.forEach(submenuLink => submenuLink.removeEventListener('mouseenter', handleSubmenuLinkHover));
+        openSubmenusArrow.forEach(openSubmenuArrow => openSubmenuArrow.removeEventListener('click', handleOpenSubmenuClick));
+        openSubSubmenusArrow.forEach(openSubSubmenuArrow => openSubSubmenuArrow.removeEventListener('click', handleOpenSubSubmenuClick));
+        submenuBackBtn && submenuBackBtn.removeEventListener('click', handleBackButton);
+
+        if (window.innerWidth >= 1399.98) {
+            mainMenuOpenBtn.addEventListener('click', toggleMainMenu);
+
+            menuLinks.forEach(menuLink => menuLink.addEventListener('mouseenter', handleMenuLinkHover));
+            submenuLinks.forEach(submenuLink => submenuLink.addEventListener('mouseenter', handleSubmenuLinkHover));
+        } else {
+            mainMenuOpenBtn.addEventListener('click', toggleMainMenuMobile);
+
+            openSubmenusArrow.forEach(openSubmenuArrow => openSubmenuArrow.addEventListener('click', handleOpenSubmenuClick));
+            openSubSubmenusArrow.forEach(openSubSubmenuArrow => openSubSubmenuArrow.addEventListener('click', handleOpenSubSubmenuClick));
+            submenuBackBtn.addEventListener('click', handleBackButton);
+        }
+    }
+
+    function handleMenuLinkHover(event) {
+        clearMainSubmenu();
+        openSubmenus(event.currentTarget);
+    }
+
+    function handleSubmenuLinkHover(event) {
+        console.log(event.currentTarget);
+        if (!event.currentTarget.closest('.second-menu')) {
+            clearMainSubSubmenu();
+        }
+        openSubmenus(event.currentTarget);
+    }
+
+    function handleOpenSubmenuClick(event) {
+        mainMenuCenter.classList.toggle('main-menu__center_active');
+        clearMainMenu();
+        openSubmenusMobile(event.currentTarget);
+        whereIsMainSubmenu = 1;
+    }
+
+    function handleOpenSubSubmenuClick(event) {
+        openSubSubmenusMobile(event.currentTarget);
+    }
+
+    updateEventListeners();
+
+    window.addEventListener('resize', () => {
+        const newWidth = window.innerWidth;
+        if ((currentWidth < 1399.98 && newWidth >= 1399.98) || (currentWidth >= 1399.98 && newWidth < 1399.98)) {
+            currentWidth = newWidth;
+            updateEventListeners();
+        }
+    });
+});

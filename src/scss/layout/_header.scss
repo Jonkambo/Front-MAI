@@ -16,13 +16,28 @@
     }
 }
 
-@media (max-width: $third-bp) {
+@media (max-width: $second-bp) {
     .header {
+        padding-top: 25px;
+        margin-bottom: 10px;
+        z-index: 100;
 
         &__menu {
             display: none;
             position: absolute;
         }
+    }
+}
+
+@media (max-width: $third-bp) {
+    .header {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: $fourth-bp) {
+    .header {
+        padding-top: 10px;
     }
 }
 

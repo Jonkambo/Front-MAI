@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Attach scroll and click event listeners
     window.addEventListener("scroll", onScroll);
     links.forEach((link) => link.addEventListener("click", scrollToSection));
 });
