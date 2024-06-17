@@ -170,6 +170,19 @@
     }
 }
 
+.over-table {
+    overflow-x: auto;
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &_medium {
+        max-width: 1400px;
+    }
+}
+
 .common-link {
     @extend .reset-link;
     color: var(--buttons-links);
@@ -269,5 +282,14 @@ summary {
     & h3 {
         @extend .h3;
         margin-bottom: 25px !important;
+    }
+
+    & p {
+        text-decoration: underline;
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            color: var(--buttons-links);
+        }
     }
 }

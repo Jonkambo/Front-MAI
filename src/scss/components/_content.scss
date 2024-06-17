@@ -86,7 +86,7 @@
     }
 
     a {
-        @extend .reset-link, .regular-text;
+        @extend .reset-link;
         color: var(--buttons-links);
         margin-bottom: 25px;
         transition: .3s all ease-in-out;
@@ -118,20 +118,24 @@
             color: var(--bg-color);
         }
 
-        tr:nth-child(2n - 1) {
-            background: var(--light-background);
+        tbody {
+            tr:nth-child(2n - 1) {
+                background: var(--light-background);
+            }
         }
 
         & th {
             font-weight: 400;
-            padding: 16px 30px;
+            // padding: 16px 30px;
+            padding: 15px;
             background: var(--dark-blue-background);
             color: var(--bg-color);
             text-align: left;
         }
 
         td {
-            padding: 16px 30px;
+            // padding: 16px 30px;
+            padding: 15px;
         }
     }
 
@@ -141,6 +145,60 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    details {
+        details {
+            padding-left: 50px;
+
+            table {
+
+                tr {
+                    vertical-align: top;
+                }
+
+                tr:nth-child(2n-1) {
+                    background: var(--bg-color);
+                }
+
+                th {
+                    @extend .regular-text;
+                    padding-left: 0;
+                    width: 630px;
+                    background: var(--bg-color);
+                    font-weight: 600;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $second-bp) {
+    .content {
+
+        details {
+            details {
+                padding-left: 0;
+
+                table {
+
+                    tr {
+                        display: grid;
+                        padding: 20px 0;
+                    }
+
+                    th {
+                        width: 100%;
+                        padding: 0;
+                    }
+
+                    td {
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
 }
