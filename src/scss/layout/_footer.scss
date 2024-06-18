@@ -131,7 +131,7 @@
     &__link {
         margin-bottom: 30px;
         color: var(--bg-color);
-        font-weight: 500;
+        font-weight: var(--default-text-weight);
         height: 40px;
         transition: .3s all ease-in-out;
 
@@ -251,9 +251,9 @@
 
     &__link {
         color: var(--bg-color);
-        font-size: 14px;
-        line-height: 120%;
-        font-weight: 500;
+        font-size: var(--regular-text-small-size);
+        line-height: var(--link-lh);
+        font-weight: var(--default-text-weight);
         text-transform: uppercase;
         width: 300px;
         transition: .3s all ease-in-out;
@@ -267,7 +267,6 @@
 @media (max-width: $first-bp) {
 
     .footer-links {
-
         column-gap: 70px;
     }
 }
@@ -283,8 +282,6 @@
         }
     }
 }
-
-
 
 .copyright {
     display: flex;

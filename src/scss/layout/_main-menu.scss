@@ -241,7 +241,7 @@
             height: 35px;
             color: var(--bg-color);
             transition: .3s all ease-in-out;
-            font-size: 24px;
+            font-size: var(--pagination-text-size);
 
             &:hover {
                 color: var(--buttons-links);
@@ -262,7 +262,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 24px;
+        font-size: var(--pagination-text-size);
         color: var(--text);
         transform: rotate(180deg);
     }
@@ -311,7 +311,7 @@
             height: 35px;
             color: var(--text);
             transition: .3s all ease-in-out;
-            font-size: 24px;
+            font-size: var(--pagination-text-size);
 
             &:hover {
                 color: var(--buttons-links);

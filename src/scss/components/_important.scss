@@ -48,11 +48,11 @@
         }
 
         & > strong {
-            font-weight: normal;
+            font-weight: var(--regular-text-weight);
         }
 
         & > b {
-            font-weight: 500;
+            font-weight: var(--default-text-weight);
         }
     }
 
@@ -171,7 +171,7 @@
 
         & th, & td {
             @extend .regular-text;
-            font-weight: normal;
+            font-weight: var(--regular-text-weight);
             padding: 15px;
             text-align: left;
             word-wrap: break-word;

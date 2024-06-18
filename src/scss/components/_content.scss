@@ -55,7 +55,7 @@
         }
 
         strong {
-            font-weight: 500;
+            font-weight: var(--default-text-weight);
         }
     }
 
@@ -88,7 +88,7 @@
     a {
         @extend .reset-link;
         color: var(--buttons-links);
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
         transition: .3s all ease-in-out;
         display: inline;
 
@@ -125,7 +125,7 @@
         }
 
         & th {
-            font-weight: 400;
+            font-weight: var(--regular-text-weight);
             // padding: 16px 30px;
             padding: 15px;
             background: var(--dark-blue-background);
@@ -167,7 +167,7 @@
                     padding-left: 0;
                     width: 630px;
                     background: var(--bg-color);
-                    font-weight: 600;
+                    font-weight: var(--table-th-text-weight);
                     user-select: none;
                 }
             }

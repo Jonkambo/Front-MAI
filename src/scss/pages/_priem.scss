@@ -71,8 +71,8 @@
 
         &_selection {
             transition: .3s all ease-in-out;
-            font-weight: 500;
-            line-height: normal;
+            font-weight: var(--default-text-weight);
+            line-height: var(--link-lh);
 
             &::before {
                 content: "";
@@ -108,7 +108,7 @@
             margin: 0;
 
             & strong, & b {
-                font-weight: normal;
+                font-weight: var(--regular-text-weight);
             }
         }
     }
@@ -327,6 +327,6 @@
 }
 
 .dropdown-list+h4 {
-    font-weight: 500;
+    font-weight: var(--default-text-weight);
     margin-top: 25px;
 }

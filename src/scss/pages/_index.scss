@@ -430,14 +430,14 @@
     &__title {
         margin-bottom: 50px;
         padding-left: 130px;
-        line-height: 100%;
+        line-height: var(--text-nums-lh);
         position: relative;
     }
 
     &__id-class {
         position: absolute;
-        font-size: 16px;
-        font-weight: normal;
+        font-size: var(--regular-text-size);
+        font-weight: var(--regular-text-weight);
         bottom: -1px;
         left: 0;
     }
@@ -446,7 +446,7 @@
         margin-bottom: 10px;
 
         & > strong {
-            font-weight: 500;
+            font-weight: var(--default-text-weight);
         }
     }
 
@@ -513,7 +513,7 @@
     .study-card {
 
         &__title {
-            line-height: 120%;
+            line-height: var(--link-lh);
             margin-bottom: 30px;
         }
 

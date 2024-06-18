@@ -6,7 +6,7 @@
     }
 
     &__input {
-        font-size: 16px;
+        font-size: var(--regular-text-size);
         padding: 21px 30px;
         border: 1px solid var(--input-color);
         width: 100%;
@@ -20,7 +20,7 @@
     }
 
     &__textarea {
-        font-size: 16px;
+        font-size: var(--regular-text-size);
         padding: 19px 30px;
         border: 1px solid var(--input-color);
         width: 100%;
@@ -48,7 +48,7 @@
         left: 0;
         color: var(--important);
         margin-left: 10px;
-        font-size: 12px;
+        font-size: var(--error-text-size);
     }
 }
 
@@ -73,5 +73,22 @@
 
     &__btn {
         margin-top: 25px;
+    }
+}
+
+@media (max-width: $third-bp) {
+    .question-form {
+
+        &__row {
+            flex-wrap: wrap;
+        }
+
+        &__col {
+            width: 100%;
+        }
+
+        &__textarea {
+            margin-top: 25px;
+        }
     }
 }

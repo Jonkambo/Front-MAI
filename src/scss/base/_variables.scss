@@ -18,7 +18,60 @@ $fifth-bp: 319.98px;
     --scroll: #C4C4C4;
     --important: #f21f1f;
     --input-color: #808080;
+    --bold-weight: 700;
+    --btn-lh: 100%;
+    --btn-ls: .48px;
+    --link-lh: 120%;
+    --pagination-text-size: 24px;
+    --error-text-size: 12px;
+    --text-nums-size: 37px;
+    --text-nums-weight: 500;
+    --text-nums-lh: 100%;
+    --regular-text-size: 16px;
+    --regular-text-weight: 400;
+    --regular-text-lh: 140%;
+    --regular-text-small-size: 14px;
+    --default-text-weight: 500;
+    --default-text-size: 26px;
+    --list-text-lh: 300;
+    --table-td-text-size: 18px;
+    --table-th-text-weight: 600;
+    --table-td-text-weight: 700;
+    --h1-size: 66px;
+    --h1-weight: 500;
+    --h2-size: 41px;
+    --h2-weight: 500;
+    --h3-size: 26px;
+    --h3-lh: 140%;
+    --h3-weight: 500;
+    --h4-size: 16px;
+    --h4-lh: 140%;
+    --h4-weight: 500;
+
+    --letter-spacing: normal;
 
     // Fonts
     --main-font: "Roboto", "Arial", sans-serif;
+}
+
+@media (max-width: $third-bp) {
+
+    :root {
+        --text-nums-size: 30px;
+        --default-text-size: 22px;
+        --h1-size: 41px;
+        --h2-size: 36px;
+        --h3-size: 22px;
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    :root {
+        --regular-text-size: 14px;
+        --regular-text-small-size: 12px;
+        --default-text-size: 16px;
+        --h1-size: 30px;
+        --h2-size: 26px;
+    }
 }

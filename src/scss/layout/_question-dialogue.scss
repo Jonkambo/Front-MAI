@@ -69,3 +69,23 @@
         opacity: 1;
     }
 }
+
+@media (max-width: $third-bp) {
+    .modal {
+        align-items: flex-start;
+        padding-top: 50px;
+
+        &__body {
+            width: 640px;
+            padding: 65px 10px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+    .modal {
+        &__body {
+            width: 320px;
+        }
+    }
+}

@@ -37,20 +37,26 @@
 .menu-index {
 
     &__link {
-        font-weight: 500;
+        font-weight: var(--default-text-weight);
         transition: .3s all ease-in-out;
 
         &:hover {
             color: var(--buttons-links);
             transition: .3s all ease-in-out;
         }
+
+        // &:hover~.menu-index__item>.submenu, &:focus-visible .menu-index__item .submenu {
+        //     transition: .3s all ease-in-out;
+        //     opacity: 1;
+        //     pointer-events: auto;
+        // }
     }
 
     &__item {
         position: relative;
         transition: .3s all ease-in-out;
 
-        &:hover .submenu {
+        &:hover .submenu, &:focus-visible .submenu {
             transition: .3s all ease-in-out;
             opacity: 1;
             pointer-events: auto;

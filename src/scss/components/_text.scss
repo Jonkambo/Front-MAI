@@ -6,7 +6,7 @@
     }
 
     &_bold {
-        font-weight: 700;
+        font-weight: var(--bold-weight);
     }
 
     &_link {
@@ -17,70 +17,30 @@
 .default-text {
     margin: 0;
     font-family: Roboto;
-    font-size: 26px;
+    font-size: var(--default-text-size);
     color: var(--text);
-    font-weight: 500;
+    font-weight: var(--default-text-weight);
 }
 
 .light-text {
     margin: 0;
     font-family: Roboto;
-    font-size: 26px;
-    font-weight: 300;
+    font-size: var(--default-text-size);
+    font-weight: var(--list-text-lh);
     color: var(--text);
 }
 
 .regular-text {
     margin: 0;
     font-family: Roboto;
-    font-size: 16px;
-    line-height: 140%;
+    font-size: var(--regular-text-size);
+    line-height: var(--regular-text-lh);
     color: var(--text);
 }
 
 .regular-small-text {
     margin: 0;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: var(--regular-text-small-size);
     color: var(--text);
-}
-
-// @media (max-width: $fourth-bp) {
-//     .default-text, .light-text {
-//         font-size: 22px;
-//     }
-// }
-
-// @media (max-width: $fifth-bp) {
-//     .default-text, .light-text {
-//         font-size: 16px;
-//     }
-
-//     .regular-text {
-//         font-size: 14px;
-//     }
-
-//     .regular-small-text {
-//         font-size: 12px;
-//     }
-// }
-
-@media (max-width: $third-bp) {
-    .default-text, .light-text {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: $fourth-bp) {
-    .default-text, .light-text {
-        font-size: 16px;
-    }
-
-    .regular-text {
-        font-size: 14px;
-    }
-
-    .regular-small-text {
-        font-size: 12px;
-    }
 }

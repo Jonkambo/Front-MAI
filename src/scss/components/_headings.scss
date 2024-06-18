@@ -1,35 +1,35 @@
 .h1 {
     margin: 0;
     font-family: Roboto;
-    font-size: 66px;
+    font-size: var(--h1-size);
     color: var(--text);
-    font-weight: 500;
+    font-weight: var(--h1-weight);
 }
 
 .h2 {
     margin: 0;
     font-family: Roboto;
-    font-size: 41px;
+    font-size: var(--h2-size);
     color: var(--text);
-    font-weight: 500;
+    font-weight: var(--h2-weight);
 }
 
 .h3 {
     margin: 0;
     font-family: Roboto;
-    font-size: 26px;
+    font-size: var(--h3-size);
     color: var(--text);
-    line-height: 140%;
-    font-weight: 500;
+    line-height: var(--h3-lh);
+    font-weight: var(--h3-weight);
 }
 
 .h4 {
     margin: 0;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: var(--h4-size);
     color: var(--text);
-    line-height: 140%;
-    font-weight: 500;
+    line-height: var(--h4-lh);
+    font-weight: var(--h4-weight);
 }
 
 // @media (max-width: $fourth-bp) {
@@ -55,27 +55,3 @@
 //         font-size: 26px;
 //     }
 // }
-
-@media (max-width: $third-bp) {
-    .h1 {
-        font-size: 41px;
-    }
-
-    .h2 {
-        font-size: 36px;
-    }
-
-    .h3 {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: $fourth-bp) {
-    .h1 {
-        font-size: 30px;
-    }
-
-    .h2 {
-        font-size: 26px;
-    }
-}

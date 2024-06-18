@@ -1,5 +1,3 @@
-
-
 .abitur-header {
     margin: 50px 0;
     display: flex;
@@ -166,7 +164,7 @@
     //     }
     // }
 
-    & > p {
+    p {
         @extend .regular-text;
         margin-bottom: 20px;
         width: 870px;
@@ -177,7 +175,7 @@
         }
     }
 
-    & > a {
+    a {
         @extend .common-link;
     }
 
@@ -190,7 +188,7 @@
 @media (max-width: $second-bp) {
 
     .abitur-courses {
-        & > p {
+        p {
             width: 100%;
         }
     }
@@ -292,7 +290,7 @@
 
     &__link {
         @extend .reset-link, .regular-text;
-        font-weight: 500;
+        font-weight: var(--default-text-weight);
         color: var(--buttons-links);
         position: relative;
         display: inline;

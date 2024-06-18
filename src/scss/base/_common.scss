@@ -38,7 +38,6 @@
 
 .main, .header, .footer, .cookie-block {
     animation: page_appearence .9s ease-in-out;
-
 }
 
 @keyframes page_appearence {
@@ -59,16 +58,9 @@
 }
 
 .text-nums {
-    font-size: 37px;
-    font-weight: 500;
-    line-height: 100%;
-}
-
-@media (max-width: $third-bp) {
-
-    .text-nums {
-        font-size: 30px
-    }
+    font-size: var(--text-nums-size);
+    font-weight: var(--text-nums-weight);
+    line-height: var(--text-nums-lh);
 }
 
 .breadcrums {
@@ -137,9 +129,9 @@
 }
 
 .table {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 140%;
+    font-size: var(--regular-text-size);
+    font-weight: var(--regular-text-weight);
+    line-height: var(--regular-text-lh);
     width: 100%;
     border: none;
     border-collapse: collapse;
@@ -153,7 +145,7 @@
     }
 
     & th {
-        font-weight: 400;
+        font-weight: var(--regular-text-weight);
         padding: 16px 30px;
         background: var(--dark-blue-background);
         color: var(--bg-color);
