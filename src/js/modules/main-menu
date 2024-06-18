@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navBtns = document.querySelectorAll('.nav__btn');
     const nav = document.querySelector('.nav');
     const questionDialogue = document.querySelector('#openQuestionDialogueBtn');
+    const visuallyImparedBtn = document.querySelector('#openVisuallyImparedMenu');
     const openSubmenusArrow = document.querySelectorAll('.menu__open-submenu');
     const openSubSubmenusArrow = document.querySelectorAll('.main-submenu__open-submenu');
     const mainSubmenuWrapperSmall = document.querySelector('.main-submenu-wrapper_small');
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!isOpen) {
             questionDialogue.addEventListener('click', toggleMainMenu);
+            visuallyImparedBtn.addEventListener('click', toggleMainMenu);
 
             mainMenu.classList.toggle('main-menu_active');
             setTimeout(() => {
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isOpen = true;
         } else {
             questionDialogue.removeEventListener('click', toggleMainMenu);
+            visuallyImparedBtn.removeEventListener('click', toggleMainMenu);
 
             mainMenuLeft.classList.remove('main-menu__left_active');
             setTimeout(() => {
@@ -90,9 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isOpen) {
             mainMenu.classList.toggle('main-menu_active');
             questionDialogue.addEventListener('click', toggleMainMenuMobile);
+            visuallyImparedBtn.addEventListener('click', toggleMainMenuMobile);
+
             isOpen = true;
         } else {
             questionDialogue.removeEventListener('click', toggleMainMenuMobile);
+            visuallyImparedBtn.removeEventListener('click', toggleMainMenuMobile);
+
             mainMenuLeft.classList.remove('main-menu__left_active');
             mainMenuCenter.classList.remove('main-menu__center_active');
             mainMenuRight.classList.remove('main-menu__right_active');

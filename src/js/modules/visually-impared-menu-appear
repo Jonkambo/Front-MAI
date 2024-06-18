@@ -1,0 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const visuallyImparedMenu = document.querySelector(".visually-impared-menu");
+    const visuallyImparedMenuBtn = document.querySelector("#openVisuallyImparedMenu");
+    const visuallyImparedMenuClose = document.querySelector(".visually-impared-menu__close");
+
+    visuallyImparedMenuBtn.addEventListener("click", () => {
+        visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
+    });
+
+    visuallyImparedMenuClose.addEventListener("click", () => {
+        visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
+    });
+});
