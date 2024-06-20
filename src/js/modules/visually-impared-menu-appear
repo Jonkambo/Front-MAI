@@ -5,9 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     visuallyImparedMenuBtn.addEventListener("click", () => {
         visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 
     visuallyImparedMenuClose.addEventListener("click", () => {
         visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 });

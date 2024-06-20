@@ -61,6 +61,10 @@
             transition: .3s all ease-in-out;
         }
 
+        svg {
+            pointer-events: none;
+        }
+
         &_text-size {
 
             &_normal {

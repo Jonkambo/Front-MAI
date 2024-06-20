@@ -1,0 +1,287 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    let root = document.documentElement;
+    const fsBtns = document.querySelectorAll('.visually-impared-menu__button_text-size');
+    const colorBtns = document.querySelectorAll('.visually-impared-menu__button_color');
+    const lsBtns = document.querySelectorAll('.visually-impared-menu__button_letter-spacing');
+    const fontBtns = document.querySelectorAll('.visually-impared-menu__button_font');
+    const imgBtns = document.querySelectorAll('.visually-impared-menu__button_img');
+    const resetBtn = document.querySelector('.visually-impared-menu__reset');
+    const VIMenuCfg = JSON.parse(localStorage.getItem("viCfg")) || {
+        fontSize: "",
+        color: "",
+        letterSpacing: "",
+        font: "",
+        imgOn: "",
+    };
+
+    if (!localStorage.getItem("viCfg")) {
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+    }
+
+    function loadVIMode() {
+        changeFontSize(VIMenuCfg.fontSize);
+        changeColor(VIMenuCfg.color);
+        changeLS(VIMenuCfg.letterSpacing);
+        changeFont(VIMenuCfg.font);
+        toggleImgs(VIMenuCfg.imgOn);
+    }
+
+    function changeFontSize(fs) {
+        if (fs !== "") {
+            root.style.setProperty("--font-size", `${fs}em`);
+        }
+    }
+
+    function changeColor(color) {
+        console.log(color);
+        if (color === "normal") {
+            enableNormalColorMode();
+        } else if (color === "wb") {
+            enableWBColorMode();
+        } else if (color === "bw") {
+            enableBWColorMode();
+        } else if (color === "chrom") {
+            enableChromColorMode();
+        }
+    }
+
+    function enableNormalColorMode() {
+        document.body.style.backgroundColor = "#FFF";
+        root.style.setProperty("--bg-color", "#FFF");
+        root.style.setProperty("--buttons-links", "#008AD1");
+        root.style.setProperty("--hower-btn", "#115D85");
+        root.style.setProperty("--light-background", "#F1F8FB");
+        root.style.setProperty("--dark-blue-background", "#111A26");
+        root.style.setProperty("--text", "#121212");
+        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--important", "#f21f1f");
+        root.style.setProperty("--input-color", "#808080");
+
+        document.querySelectorAll("a").forEach((link) => {
+            link.style.textDecoration = "none";
+        });
+
+        document.querySelectorAll("img").forEach((img) => {
+            img.style.filter = "grayscale(0%)";
+        });
+
+        document.querySelectorAll(".logo").forEach((img) => {
+            img.style.filter = "grayscale(0%)";
+        });
+    }
+
+    function enableWBColorMode() {
+        document.body.style.backgroundColor = "#FFF";
+        root.style.setProperty("--bg-color", "#FFF");
+        root.style.setProperty("--buttons-links", "#000000");
+        root.style.setProperty("--hower-btn", "#000000");
+        root.style.setProperty("--light-background", "#F2F2F2");
+        root.style.setProperty("--dark-blue-background", "#ffffff");
+        root.style.setProperty("--text", "#000000");
+        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--important", "#000000");
+        root.style.setProperty("--input-color", "#808080");
+
+        document.querySelectorAll("a").forEach((link) => {
+            link.style.textDecoration = "underline";
+        });
+
+        document.querySelectorAll("img").forEach((img) => {
+            img.style.filter = "grayscale(100%)";
+        });
+
+        document.querySelectorAll(".logo").forEach((img) => {
+            img.style.filter = "grayscale(100%)";
+        });
+    }
+
+    function enableBWColorMode() {
+        document.body.style.backgroundColor = "#000000";
+        root.style.setProperty("--bg-color", "#000000");
+        root.style.setProperty("--buttons-links", "#ffffff");
+        root.style.setProperty("--hower-btn", "#ffffff");
+        root.style.setProperty("--light-background", "#333333");
+        root.style.setProperty("--dark-blue-background", "#000000");
+        root.style.setProperty("--text", "#ffffff");
+        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--important", "#ffffff");
+        root.style.setProperty("--input-color", "#808080");
+
+        document.querySelectorAll("a").forEach((link) => {
+            link.style.textDecoration = "underline";
+        });
+
+        document.querySelectorAll("img").forEach((img) => {
+            img.style.filter = "grayscale(100%)";
+        });
+
+        document.querySelectorAll(".logo").forEach((img) => {
+            img.style.filter = "grayscale(100%)";
+        });
+    }
+
+    function enableChromColorMode() {
+        document.body.style.backgroundColor = "#9dd1ff";
+        root.style.setProperty("--bg-color", "#9dd1ff");
+        root.style.setProperty("--buttons-links", "#14305e");
+        root.style.setProperty("--hower-btn", "#14305e");
+        root.style.setProperty("--light-background", "#F1F8FB");
+        root.style.setProperty("--dark-blue-background", "#9dd1ff");
+        root.style.setProperty("--text", "#14305e");
+        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--important", "#14305e");
+        root.style.setProperty("--input-color", "#9dd1ff");
+
+        document.querySelectorAll("a").forEach((link) => {
+            link.style.textDecoration = "underline";
+        });
+
+        document.querySelectorAll("img").forEach((img) => {
+            img.style.filter = "sepia(100%) hue-rotate(170deg) saturate(150%)";
+        });
+
+        document.querySelectorAll(".logo").forEach((img) => {
+            img.style.filter = "sepia(100%) hue-rotate(170deg) saturate(150%)";
+        });
+    }
+
+    function changeLS(ls) {
+        if (ls !== "") {
+            if (ls === "normal") {
+                root.style.setProperty("--letter-spacing", ls);
+            } else {
+                root.style.setProperty("--letter-spacing", `${ls}px`);
+            }
+        }
+    }
+
+    function changeFont(font) {
+        if (font !== "") {
+            root.style.setProperty("--main-font", font);
+        }
+    }
+
+    function toggleImgs(isOn) {
+
+        if (isOn === "on") {
+            document.querySelectorAll("img").forEach((img) => {
+                img.style.opacity = "1";
+            });
+
+            document.querySelectorAll(".logo").forEach((img) => {
+                img.style.opacity = "1";
+            });
+        } else if (isOn === "off") {
+            document.querySelectorAll("img").forEach((img) => {
+                img.style.opacity = "0";
+            });
+
+            document.querySelectorAll(".logo").forEach((img) => {
+                img.style.opacity = "0";
+            });
+        }
+    }
+
+    function changeModeFS(e) {
+        const fs = e.target.dataset.fs;
+
+        fsBtns.forEach((btn) => {
+            btn.classList.remove("visually-impared-menu__button_active");
+        });
+        e.target.classList.add("visually-impared-menu__button_active");
+
+        VIMenuCfg.fontSize = fs;
+        changeFontSize(fs);
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+    }
+
+    function changeModeColor(e) {
+        const color = e.target.dataset.color;
+
+        colorBtns.forEach((btn) => {
+            btn.classList.remove("visually-impared-menu__button_active");
+        });
+        e.target.classList.add("visually-impared-menu__button_active");
+
+        VIMenuCfg.color = color;
+        changeColor(color);
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+    }
+
+    function changeModeLS(e) {
+        const ls = e.target.dataset.ls;
+
+        lsBtns.forEach((btn) => {
+            btn.classList.remove("visually-impared-menu__button_active");
+        });
+        e.target.classList.add("visually-impared-menu__button_active");
+    
+        VIMenuCfg.letterSpacing = ls;
+        changeLS(ls);
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+    }
+
+    function changeModeFont(e) {
+        const font = e.target.dataset.font;
+
+        fontBtns.forEach((btn) => {
+            btn.classList.remove("visually-impared-menu__button_active");
+        });
+        e.target.classList.add("visually-impared-menu__button_active");
+
+        VIMenuCfg.font = font;
+        changeFont(font);
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+    }
+
+    function changeModeImg(e) {
+        const img = e.target.dataset.img;
+
+        imgBtns.forEach((btn) => {
+            btn.classList.remove("visually-impared-menu__button_active");
+        });
+        e.target.classList.add("visually-impared-menu__button_active");
+
+        VIMenuCfg.imgOn = img;
+        toggleImgs(img);
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+    }
+
+    function resetVIMode(event) {
+        event.preventDefault();
+
+        VIMenuCfg.fontSize = "";
+        VIMenuCfg.color = "";
+        VIMenuCfg.letterSpacing = "";
+        VIMenuCfg.font = "";
+        VIMenuCfg.imgOn = "";
+
+        localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
+        window.location.reload();
+    }
+
+    loadVIMode();
+
+    fsBtns.forEach((fsBtn) => {
+        fsBtn.addEventListener('click', changeModeFS);
+    });
+
+    colorBtns.forEach((colorBtn) => {
+        colorBtn.addEventListener('click', changeModeColor);
+    });
+    
+    lsBtns.forEach((lsBtn) => {
+        lsBtn.addEventListener('click', changeModeLS);
+    });
+
+    fontBtns.forEach((fontBtn) => {
+        fontBtn.addEventListener('click', changeModeFont);
+    });
+
+    imgBtns.forEach((imgBtn) => {
+        imgBtn.addEventListener('click', changeModeImg);
+    });
+
+    resetBtn.addEventListener('click', resetVIMode);
+});

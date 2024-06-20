@@ -8,43 +8,57 @@ $fifth-bp: 319.98px;
 // Units
 
 :root {
+    --font-size: 1em;
     // Colors
+
     --bg-color: #FFF;
-    --buttons-links: #008AD1;
-    --hower-btn: #115D85;
     --light-background: #F1F8FB;
     --dark-blue-background: #111A26;
+    --primary-background: #008AD1;
+    --buttons-links: #008AD1;
+    --hower-btn: #115D85;
+    --link-hover: #115D85;
     --text: #121212;
+    --text-light: #FFF;
+    --text-hover: #008AD1;
+    --text-disbled: #808080;
+    --btn-color: #FFF;
+    --btn-bg: #008AD1;
+    --btn-transparent: #008AD1;
     --scroll: #C4C4C4;
     --important: #f21f1f;
+    --input-focus: #008AD1;
     --input-color: #808080;
+    --form-error: #f21f1f;
+
+    // Text params
     --bold-weight: 700;
     --btn-lh: 100%;
-    --btn-ls: .48px;
+    --btn-ls: 0.03rem;
     --link-lh: 120%;
-    --pagination-text-size: 24px;
-    --error-text-size: 12px;
-    --text-nums-size: 37px;
+    --pagination-text-size: 1.5px;
+    --error-text-size: .75rem;
+    --text-nums-size: 2.3125rem;
     --text-nums-weight: 500;
     --text-nums-lh: 100%;
-    --regular-text-size: 16px;
+    --regular-text-size: 1rem;
     --regular-text-weight: 400;
     --regular-text-lh: 140%;
-    --regular-text-small-size: 14px;
+    --regular-text-small-size: .875rem;
     --default-text-weight: 500;
-    --default-text-size: 26px;
+    --default-text-size: 1.625rem;
     --list-text-lh: 300;
-    --table-td-text-size: 18px;
+    --table-td-text-size: 1.125rem;
     --table-th-text-weight: 600;
     --table-td-text-weight: 700;
-    --h1-size: 66px;
+    --h1-size: 4.125rem;
     --h1-weight: 500;
-    --h2-size: 41px;
+    --h2-size: 2.5625rem;
     --h2-weight: 500;
-    --h3-size: 26px;
+    --h3-size: 1.625rem;
     --h3-lh: 140%;
     --h3-weight: 500;
-    --h4-size: 16px;
+    --h4-size: 1rem;
     --h4-lh: 140%;
     --h4-weight: 500;
 
@@ -57,21 +71,21 @@ $fifth-bp: 319.98px;
 @media (max-width: $third-bp) {
 
     :root {
-        --text-nums-size: 30px;
-        --default-text-size: 22px;
-        --h1-size: 41px;
-        --h2-size: 36px;
-        --h3-size: 22px;
+        --text-nums-size: 1.875rem;
+        --default-text-size: 1.375rem;
+        --h1-size: 2.5625rem;
+        --h2-size: 2.25rem;
+        --h3-size: 1.375rem;
     }
 }
 
 @media (max-width: $fourth-bp) {
 
     :root {
-        --regular-text-size: 14px;
-        --regular-text-small-size: 12px;
-        --default-text-size: 16px;
-        --h1-size: 30px;
-        --h2-size: 26px;
+        --regular-text-size: .875rem;
+        --regular-text-small-size: .75rem;
+        --default-text-size: 1rem;
+        --h1-size: 1.875rem;
+        --h2-size: 1.625rem;
     }
 }

@@ -75,8 +75,10 @@
 
             &__text {
                 @extend .regular-text;
-
             }
+        }
+        
+        span {
             font-weight: var(--default-text-weight);
         }
 

@@ -16,7 +16,7 @@
 
 .default-text {
     margin: 0;
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-size: var(--default-text-size);
     color: var(--text);
     font-weight: var(--default-text-weight);
@@ -24,7 +24,7 @@
 
 .light-text {
     margin: 0;
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-size: var(--default-text-size);
     font-weight: var(--list-text-lh);
     color: var(--text);
@@ -32,7 +32,7 @@
 
 .regular-text {
     margin: 0;
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-size: var(--regular-text-size);
     line-height: var(--regular-text-lh);
     color: var(--text);
@@ -40,7 +40,7 @@
 
 .regular-small-text {
     margin: 0;
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-size: var(--regular-text-small-size);
     color: var(--text);
 }
