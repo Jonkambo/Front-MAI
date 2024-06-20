@@ -74,12 +74,13 @@
         transition: .3s all ease-in-out !important;
 
         &:hover {
-            color: var(--hower-btn) !important;
+            color: var(--link-hover) !important;
         }
 
         &_active {
             color: var(--text) !important;
             pointer-events: none !important;
+            text-decoration: none !important;
         }
     }
 
@@ -148,7 +149,7 @@
         font-weight: var(--regular-text-weight);
         padding: 16px 30px;
         background: var(--dark-blue-background);
-        color: var(--bg-color);
+        color: var(--text-light);
         text-align: left;
     }
 
@@ -183,7 +184,7 @@
 
     &:hover {
         transition: .3s all ease-in-out;
-        color: var(--hower-btn);
+        color: var(--link-hover);
     }
 }
 
@@ -214,7 +215,7 @@ summary {
     transition: .3s all ease-in-out;
 
     &:hover h4 {
-        color: var(--buttons-links);
+        color: var(--text-hover);
     }
 
     & span.small-angle::after, & span.small-angle::before {
@@ -262,7 +263,7 @@ summary {
     }
 
     &:hover span::after, &:hover span::before {
-        background: var(--buttons-links);
+        background: var(--text-hover);
     }
 
     & h4 {
@@ -281,7 +282,7 @@ summary {
         transition: .3s all ease-in-out;
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 }

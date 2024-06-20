@@ -47,7 +47,13 @@
 
         a {
             @extend .reset-link;
-            color: var(--buttons-links);
+            color: var(--text-hover);
+            transition: .3s all ease-in-out;
+
+            &:hover {
+                color: var(--hower-btn);
+                transition: .3s all ease-in-out;
+            }
         }
 
         b {
@@ -87,7 +93,7 @@
 
     a {
         @extend .reset-link;
-        color: var(--buttons-links);
+        color: var(--text-hover);
         // margin-bottom: 25px;
         transition: .3s all ease-in-out;
         display: inline;
@@ -115,7 +121,7 @@
         & thead {
             @extend .regular-text;
             background-color: var(--dark-blue-background);
-            color: var(--bg-color);
+            color: var(--text-light);
         }
 
         tbody {
@@ -129,7 +135,7 @@
             // padding: 16px 30px;
             padding: 15px;
             background: var(--dark-blue-background);
-            color: var(--bg-color);
+            color: var(--text-light);
             text-align: left;
         }
 

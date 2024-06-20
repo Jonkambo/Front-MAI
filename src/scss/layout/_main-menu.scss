@@ -89,7 +89,7 @@
         color: var(--text);
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 
@@ -128,7 +128,7 @@
         color: var(--text);
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 
@@ -156,16 +156,16 @@
 
     &__text {
         @extend .regular-text;
-        color: var(--bg-color);
+        color: var(--text-light);
         line-height: 170%;
 
         a {
             @extend .common-link;
-            color: var(--bg-color);
+            color: var(--text-light);
 
-            &:hover {
-                color: var(--buttons-links);
-            }
+            // &:hover {
+            //     color: var(--text-hover);
+            // }
         }
     }
 }
@@ -229,7 +229,7 @@
         }
 
         &__link {
-            color: var(--bg-color);
+            color: var(--text-light);
             width: 400px;
         }
 
@@ -239,12 +239,12 @@
             align-items: center;
             width: 35px;
             height: 35px;
-            color: var(--bg-color);
+            color: var(--text-light);
             transition: .3s all ease-in-out;
             font-size: var(--pagination-text-size);
 
             &:hover {
-                color: var(--buttons-links);
+                color: var(--text-hover);
             }
 
             &::before {
@@ -314,7 +314,7 @@
             font-size: var(--pagination-text-size);
 
             &:hover {
-                color: var(--buttons-links);
+                color: var(--text-hover);
             }
         }
     }

@@ -233,11 +233,11 @@
         transition: 0.3s all ease-in-out;
 
         &:hover > span {
-            color: var(--buttons-links);
+            color: var(--text-hover);
             transition: 0.3s all ease-in-out;
 
             & > svg {
-                fill: var(--buttons-links);
+                fill: var(--text-hover);
                 transition: 0.3s all ease-in-out;
             }
         }
@@ -451,7 +451,7 @@
     }
 
     &__link {
-        color: var(--buttons-links);
+        color: var(--text-hover);
         transition: .3s all ease-in-out;
 
         &:hover {
@@ -464,7 +464,6 @@
     }
 
     &__direction-info {
-
         margin: 50px 0 100px 0;
         color: var(--text);
     }

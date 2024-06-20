@@ -57,7 +57,7 @@
         }
 
         &_active, &:hover {
-            border-color: var(--buttons-links);
+            border-color: var(--btn-transparent);
             transition: .3s all ease-in-out;
         }
 
@@ -87,8 +87,8 @@
             }
 
             &_bw {
-                background: var(--text);
-                color: var(--bg-color);
+                background: #000;
+                color: #FFF;
             }
 
             &_chrom {
@@ -134,7 +134,7 @@
         @extend .reset-btn;
         font-weight: var(--default-text-weight);
         color: var(--text);
-        font-size: 26px;
+        font-size: 1.625rem;
     }
 
     &__close {

@@ -24,7 +24,7 @@
 
     & a {
         @extend .reset-link;
-        color: var(--buttons-links);
+        color: var(--text-hover);
         transition: .3s all ease-in-out;
 
         &:hover {
@@ -34,7 +34,7 @@
 
         &:hover > svg {
             transition: .3s all ease-in-out;
-            fill: var(--buttons-links);
+            fill: var(--text-hover);
         }
     }
 
@@ -119,12 +119,12 @@
         }
 
         &:hover {
-            color: var(--buttons-links) !important;
+            color: var(--text-hover) !important;
             transition: .3s all ease-in-out;
         }
 
         &:hover > svg {
-            fill: var(--buttons-links);
+            fill: var(--text-hover);
             transition: .3s all ease-in-out;
         }
     }
@@ -162,7 +162,7 @@
         & thead {
             @extend .regular-text;
             background-color: var(--dark-blue-background);
-            color: var(--bg-color);
+            color: var(--text-light);
         }
 
         & tr:nth-child(2n) {
@@ -178,7 +178,7 @@
         }
 
         & th {
-            color: var(--bg-color);
+            color: var(--text-light);
         }
     }
 }

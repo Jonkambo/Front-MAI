@@ -29,34 +29,63 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function changeFontSize(fs) {
         if (fs !== "") {
+
+            fsBtns.forEach(fsBtn => {
+                fsBtn.classList.remove("visually-impared-menu__button_active");
+    
+                if (fsBtn.dataset.fs === fs) {
+                    fsBtn.classList.add("visually-impared-menu__button_active");
+                }
+            });
+
             root.style.setProperty("--font-size", `${fs}em`);
         }
     }
 
     function changeColor(color) {
-        console.log(color);
-        if (color === "normal") {
-            enableNormalColorMode();
-        } else if (color === "wb") {
-            enableWBColorMode();
-        } else if (color === "bw") {
-            enableBWColorMode();
-        } else if (color === "chrom") {
-            enableChromColorMode();
+        
+        if (color !== "") {
+            colorBtns.forEach(colorBtn => {
+                colorBtn.classList.remove("visually-impared-menu__button_active");
+
+                if (colorBtn.dataset.color === color) {
+                    colorBtn.classList.add("visually-impared-menu__button_active");
+                }
+            });
+
+            if (color === "normal") {
+                enableNormalColorMode();
+            } else if (color === "wb") {
+                enableWBColorMode();
+            } else if (color === "bw") {
+                enableBWColorMode();
+            } else if (color === "chrom") {
+                enableChromColorMode();
+            }
         }
     }
 
     function enableNormalColorMode() {
         document.body.style.backgroundColor = "#FFF";
         root.style.setProperty("--bg-color", "#FFF");
-        root.style.setProperty("--buttons-links", "#008AD1");
-        root.style.setProperty("--hower-btn", "#115D85");
         root.style.setProperty("--light-background", "#F1F8FB");
         root.style.setProperty("--dark-blue-background", "#111A26");
+        // root.style.setProperty("--primary-background", "#008AD1");
+        root.style.setProperty("--buttons-links", "#008AD1");
+        root.style.setProperty("--link-hover", "#115D85");
         root.style.setProperty("--text", "#121212");
-        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--text-light", "#FFF");
+        root.style.setProperty("--text-hover", "#008AD1");
+        root.style.setProperty("--text-disbled", "#808080");
+        root.style.setProperty("--btn-color", "#FFF");
+        root.style.setProperty("--btn-bg", "#008AD1");
+        root.style.setProperty("--hower-btn", "#115D85");
+        root.style.setProperty("--btn-transparent", "#008AD1");
+        // root.style.setProperty("--scroll", "#C4C4C4");
         root.style.setProperty("--important", "#f21f1f");
+        root.style.setProperty("--input-focus", "#008AD1");
         root.style.setProperty("--input-color", "#808080");
+        root.style.setProperty("--form-error", "#f21f1f");
 
         document.querySelectorAll("a").forEach((link) => {
             link.style.textDecoration = "none";
@@ -74,14 +103,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function enableWBColorMode() {
         document.body.style.backgroundColor = "#FFF";
         root.style.setProperty("--bg-color", "#FFF");
-        root.style.setProperty("--buttons-links", "#000000");
-        root.style.setProperty("--hower-btn", "#000000");
         root.style.setProperty("--light-background", "#F2F2F2");
-        root.style.setProperty("--dark-blue-background", "#ffffff");
+        root.style.setProperty("--dark-blue-background", "#FFF");
+        root.style.setProperty("--buttons-links", "#000000");
+        root.style.setProperty("--link-hover", "#000000");
         root.style.setProperty("--text", "#000000");
-        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--text-light", "#000000");
+        root.style.setProperty("--text-hover", "#000000");
+        root.style.setProperty("--text-disbled", "#808080");
+        root.style.setProperty("--btn-color", "#FFF");
+        root.style.setProperty("--btn-bg", "#000000");
+        root.style.setProperty("--hower-btn", "#000000");
+        root.style.setProperty("--btn-transparent", "#000000");
         root.style.setProperty("--important", "#000000");
-        root.style.setProperty("--input-color", "#808080");
 
         document.querySelectorAll("a").forEach((link) => {
             link.style.textDecoration = "underline";
@@ -99,14 +133,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function enableBWColorMode() {
         document.body.style.backgroundColor = "#000000";
         root.style.setProperty("--bg-color", "#000000");
-        root.style.setProperty("--buttons-links", "#ffffff");
-        root.style.setProperty("--hower-btn", "#ffffff");
         root.style.setProperty("--light-background", "#333333");
         root.style.setProperty("--dark-blue-background", "#000000");
+        root.style.setProperty("--buttons-links", "#ffffff");
+        root.style.setProperty("--link-hover", "#ffffff");
         root.style.setProperty("--text", "#ffffff");
-        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--text-light", "#ffffff");
+        root.style.setProperty("--text-hover", "#ffffff");
+        root.style.setProperty("--text-disbled", "#808080");
+        root.style.setProperty("--btn-color", "#000000");
+        root.style.setProperty("--btn-bg", "#ffffff");
+        root.style.setProperty("--hower-btn", "#ffffff");
+        root.style.setProperty("--btn-transparent", "#ffffff");
         root.style.setProperty("--important", "#ffffff");
-        root.style.setProperty("--input-color", "#808080");
 
         document.querySelectorAll("a").forEach((link) => {
             link.style.textDecoration = "underline";
@@ -124,14 +163,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function enableChromColorMode() {
         document.body.style.backgroundColor = "#9dd1ff";
         root.style.setProperty("--bg-color", "#9dd1ff");
-        root.style.setProperty("--buttons-links", "#14305e");
-        root.style.setProperty("--hower-btn", "#14305e");
         root.style.setProperty("--light-background", "#F1F8FB");
         root.style.setProperty("--dark-blue-background", "#9dd1ff");
+        root.style.setProperty("--buttons-links", "#14305e");
+        root.style.setProperty("--link-hover", "#14305e");
         root.style.setProperty("--text", "#14305e");
-        root.style.setProperty("--scroll", "#C4C4C4");
+        root.style.setProperty("--text-light", "#14305e");
+        root.style.setProperty("--text-hover", "#14305e");
+        root.style.setProperty("--text-disbled", "#9dd1ff");
+        root.style.setProperty("--btn-color", "#ffffff");
+        root.style.setProperty("--btn-bg", "#14305E");
+        root.style.setProperty("--hower-btn", "#14305E");
+        root.style.setProperty("--btn-transparent", "#14305e");
         root.style.setProperty("--important", "#14305e");
-        root.style.setProperty("--input-color", "#9dd1ff");
 
         document.querySelectorAll("a").forEach((link) => {
             link.style.textDecoration = "underline";
@@ -148,6 +192,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function changeLS(ls) {
         if (ls !== "") {
+
+            lsBtns.forEach(lsBtn => {
+                lsBtn.classList.remove("visually-impared-menu__button_active");
+
+                if (lsBtn.dataset.ls === ls) {
+                    lsBtn.classList.add("visually-impared-menu__button_active");
+                }
+            });
+
             if (ls === "normal") {
                 root.style.setProperty("--letter-spacing", ls);
             } else {
@@ -158,38 +211,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function changeFont(font) {
         if (font !== "") {
+
+            fontBtns.forEach(fontBtn => {
+                fontBtn.classList.remove("visually-impared-menu__button_active");
+
+                if (fontBtn.dataset.font === font) {
+                    fontBtn.classList.add("visually-impared-menu__button_active");
+                }
+            });
+
             root.style.setProperty("--main-font", font);
         }
     }
 
     function toggleImgs(isOn) {
 
-        if (isOn === "on") {
-            document.querySelectorAll("img").forEach((img) => {
-                img.style.opacity = "1";
+        if (isOn !== "") {
+            imgBtns.forEach(imgBtn => {
+                imgBtn.classList.remove("visually-impared-menu__button_active");
+
+                if (imgBtn.dataset.img === isOn) {
+                    imgBtn.classList.add("visually-impared-menu__button_active");
+                }
             });
 
-            document.querySelectorAll(".logo").forEach((img) => {
-                img.style.opacity = "1";
-            });
-        } else if (isOn === "off") {
-            document.querySelectorAll("img").forEach((img) => {
-                img.style.opacity = "0";
-            });
+            if (isOn === "on") {
+                document.querySelectorAll("img").forEach((img) => {
+                    img.style.opacity = "1";
+                });
 
-            document.querySelectorAll(".logo").forEach((img) => {
-                img.style.opacity = "0";
-            });
+                document.querySelectorAll(".logo").forEach((img) => {
+                    img.style.opacity = "1";
+                });
+            } else if (isOn === "off") {
+                document.querySelectorAll("img").forEach((img) => {
+                    img.style.opacity = "0";
+                });
+
+                document.querySelectorAll(".logo").forEach((img) => {
+                    img.style.opacity = "0";
+                });
+            }
         }
     }
 
     function changeModeFS(e) {
         const fs = e.target.dataset.fs;
-
-        fsBtns.forEach((btn) => {
-            btn.classList.remove("visually-impared-menu__button_active");
-        });
-        e.target.classList.add("visually-impared-menu__button_active");
 
         VIMenuCfg.fontSize = fs;
         changeFontSize(fs);
@@ -199,11 +266,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function changeModeColor(e) {
         const color = e.target.dataset.color;
 
-        colorBtns.forEach((btn) => {
-            btn.classList.remove("visually-impared-menu__button_active");
-        });
-        e.target.classList.add("visually-impared-menu__button_active");
-
         VIMenuCfg.color = color;
         changeColor(color);
         localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
@@ -212,11 +274,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function changeModeLS(e) {
         const ls = e.target.dataset.ls;
 
-        lsBtns.forEach((btn) => {
-            btn.classList.remove("visually-impared-menu__button_active");
-        });
-        e.target.classList.add("visually-impared-menu__button_active");
-    
         VIMenuCfg.letterSpacing = ls;
         changeLS(ls);
         localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
@@ -225,11 +282,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function changeModeFont(e) {
         const font = e.target.dataset.font;
 
-        fontBtns.forEach((btn) => {
-            btn.classList.remove("visually-impared-menu__button_active");
-        });
-        e.target.classList.add("visually-impared-menu__button_active");
-
         VIMenuCfg.font = font;
         changeFont(font);
         localStorage.setItem("viCfg", JSON.stringify(VIMenuCfg));
@@ -237,11 +289,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function changeModeImg(e) {
         const img = e.target.dataset.img;
-
-        imgBtns.forEach((btn) => {
-            btn.classList.remove("visually-impared-menu__button_active");
-        });
-        e.target.classList.add("visually-impared-menu__button_active");
 
         VIMenuCfg.imgOn = img;
         toggleImgs(img);

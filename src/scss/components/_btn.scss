@@ -1,9 +1,9 @@
 .btn {
     @extend .reset-link, .reset-btn;
-    background-color: var(--buttons-links);
-    color: var(--bg-color);
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
     padding: 21px 49px;
-    border: 1px solid var(--buttons-links);
+    border: 1px solid var(--btn-bg);
     font-size: var(--regular-text-small-size);
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
@@ -21,24 +21,24 @@
     }
 
     &_light {
-        background-color: var(--bg-color);
-        color: var(--buttons-links);
+        background-color: var(--btn-color);
+        color: var(--btn-bg);
 
         &:hover {
-            background-color: var(--buttons-links);
-            color: var(--bg-color);
-            border-color: var(--buttons-links);
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+            border-color: var(--btn-bg);
         }
     }
 
     &_transparent {
         background: 0 0;
-        color: var(--buttons-links);
+        color: var(--btn-transparent);
 
         &:hover {
-            background: var(--buttons-links);
-            color: var(--bg-color);
-            border-color: var(--buttons-links);
+            background: var(--btn-bg);
+            color: var(--btn-color);
+            border-color: var(--btn-bg);
         }
     }
 }
@@ -65,12 +65,12 @@
         }
 
         &_active {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 
     &__page:hover {
-        color: var(--buttons-links);
+        color: var(--text-hover);
     }
 
     &__divider {
@@ -83,7 +83,7 @@
         align-items: center;
 
         &:hover {
-            fill: var(--buttons-links);
+            fill: var(--text-hover);
         }
     }
 
@@ -92,12 +92,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: var(--pagination-size);
+        font-size: var(--pagination-text-size);
         transition: .3s all ease-in-out;
 
         &:hover > svg {
             transition: .3s all ease-in-out;
-            fill: var(--buttons-links);
+            fill: var(--text-hover);
         }
     }
 

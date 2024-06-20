@@ -10,7 +10,7 @@
     }
 
     &__title {
-        color: var(--bg-color);
+        color: var(--text-light);
         margin-bottom: 50px;
     }
 
@@ -30,7 +30,7 @@
     }
 
     &__contacts-text {
-        color: var(--bg-color);
+        color: var(--text-light);
         margin-bottom: 25px;
 
         &:last-child {
@@ -38,12 +38,12 @@
         }
 
         & > a {
-            color: var(--bg-color);
+            color: var(--text-light);
         }
     }
 
     &__link {
-        color: var(--buttons-links);
+        color: var(--text-hover);
         margin-bottom: 25px;
         transition: .3s all ease-in-out;
 
@@ -121,7 +121,7 @@
     align-items: flex-start;
 
     &__item {
-        margin-right: 132px;
+        margin-right: 85px;
 
         &:last-child {
             margin-right: 0;
@@ -130,13 +130,14 @@
 
     &__link {
         margin-bottom: 30px;
-        color: var(--bg-color);
+        color: var(--text-light);
         font-weight: var(--default-text-weight);
-        height: 40px;
+        font-size: var(--regular-text-size);
+        min-height: 40px;
         transition: .3s all ease-in-out;
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 }
@@ -170,15 +171,6 @@
         width: 0;
     }
 }
-@media (max-width: $second-bp) {
-
-    .footer-menu {
-
-        &__item {
-            margin-right: 28px;
-        }
-    }
-}
 
 .footer-submenu {
     display: flex;
@@ -194,7 +186,8 @@
 
     &__link {
         margin-bottom: 30px;
-        color: var(--bg-color);
+        color: var(--text-light);
+        font-size: var(--regular-text-size);
         transition: .3s all ease-in-out;
 
         &:last-child {
@@ -202,7 +195,7 @@
         }
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 }
@@ -230,7 +223,7 @@
 
     &__link {
         margin-bottom: 30px;
-        color: var(--bg-color);
+        color: var(--text-light);
         transition: .3s all ease-in-out;
 
         &:last-child {
@@ -238,7 +231,7 @@
         }
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 }
@@ -250,16 +243,16 @@
     margin-top: 86px;
 
     &__link {
-        color: var(--bg-color);
+        width: 300px;
+        color: var(--text-light);
         font-size: var(--regular-text-small-size);
         line-height: var(--link-lh);
         font-weight: var(--default-text-weight);
         text-transform: uppercase;
-        width: 300px;
         transition: .3s all ease-in-out;
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 }
@@ -289,15 +282,15 @@
     margin-top: 120px;
 
     &__text {
-        color: var(--bg-color);
+        color: var(--text-light);
     }
 
     &__link {
-        color: var(--bg-color);
+        color: var(--text-light);
         transition: .3s all ease-in-out;
 
         &:hover {
-            color: var(--buttons-links);
+            color: var(--text-hover);
         }
     }
 }

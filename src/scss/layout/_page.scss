@@ -94,7 +94,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        color: var(--buttons-links);
+        color: var(--text-hover);
         transition: .3s all ease-in-out;
 
         &:hover {
@@ -142,7 +142,7 @@
             a {
                 @extend .reset-link;
                 display: inline !important;
-                color: var(--buttons-links);
+                color: var(--text-hover);
             }
 
             b {
@@ -174,7 +174,7 @@
 
         a {
             @extend .reset-link, .regular-text;
-            color: var(--buttons-links);
+            color: var(--text-hover);
             margin-bottom: 20px;
             transition: .3s all ease-in-out;
 
@@ -474,13 +474,6 @@
         &__text {
             width: 100%;
         }
-    }
-}
-
-.abitur-faq {
-    & a.dropdown-list__link:hover h4 {
-        transition: .3s all ease-in-out;
-        color: var(--buttons-links);
     }
 }
 
