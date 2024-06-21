@@ -106,6 +106,12 @@
     }
 }
 
+@media (max-width: $fourth-bp) {
+    .abitur-directions-card {
+        width: 100%;
+    }
+}
+
 .abitur-proceed-card {
     width: 420px;
 
@@ -145,6 +151,7 @@
 @media (max-width: $fourth-bp) {
 
     .abitur-proceed-card {
+        width: 100%;
 
         &__text {
             &:last-child {

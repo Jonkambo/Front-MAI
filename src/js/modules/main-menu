@@ -205,9 +205,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateEventListeners();
 
+    // window.addEventListener('resize', () => {
+    //     const newWidth = window.innerWidth;
+    //     if ((currentWidth < 1399.98 && newWidth >= 1399.98) || (currentWidth >= 1399.98 && newWidth < 1399.98)) {
+    //         currentWidth = newWidth;
+    //         updateEventListeners();
+    //     }
+    // });
+
     window.addEventListener('resize', () => {
         const newWidth = window.innerWidth;
         if ((currentWidth < 1399.98 && newWidth >= 1399.98) || (currentWidth >= 1399.98 && newWidth < 1399.98)) {
+            if (isOpen) {
+                if (newWidth >= 1399.98) {
+                        questionDialogue.removeEventListener('click', toggleMainMenuMobile);
+                        visuallyImparedBtn.removeEventListener('click', toggleMainMenuMobile);
+                        questionDialogue.addEventListener('click', toggleMainMenu);
+                        visuallyImparedBtn.addEventListener('click', toggleMainMenu);
+
+                        mainMenuLeft.classList.add('main-menu__left_active');
+                        mainMenuCenter.classList.add('main-menu__center_active');
+                        mainMenuRight.classList.add('main-menu__right_active');
+                } else {
+                    questionDialogue.addEventListener('click', toggleMainMenuMobile);
+                    visuallyImparedBtn.addEventListener('click', toggleMainMenuMobile);
+                    questionDialogue.removeEventListener('click', toggleMainMenu);
+                    visuallyImparedBtn.removeEventListener('click', toggleMainMenu);
+
+                    mainMenuCenter.classList.remove('main-menu__center_active');
+                    mainMenuRight.classList.remove('main-menu__right_active');
+                    navBtns.forEach(navBtn => navBtn.classList.add('nav__btn_active'));
+                }
+            }
             currentWidth = newWidth;
             updateEventListeners();
         }

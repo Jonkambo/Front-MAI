@@ -320,9 +320,21 @@
 .library {
     h3 { @extend .page__subtitle; }
     p { @extend .page__text; }
-    ul { @extend .page__list; }
+    ul {
+        @extend .page__list;
+        
+        li {
+            @extend .regular-text;
+        }
+    }
     a { @extend .common-link; }
-    ol { @extend .page__ol-list; }
+    ol {
+        @extend .page__ol-list; 
+        
+        li {
+            @extend .regular-text;
+        }
+    }
 }
 
 .contacts {
@@ -536,6 +548,10 @@
 
         ul {
             @extend .page__list;
+
+            li {
+                @extend .regular-text;
+            }
         }
     }
 }

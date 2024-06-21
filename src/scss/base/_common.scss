@@ -97,6 +97,7 @@
     }
 
     &__item, &__link, &_divider {
+        @extend .regular-text;
         display: inline !important;
     }
 }
