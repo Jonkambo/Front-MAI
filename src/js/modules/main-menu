@@ -1,4 +1,9 @@
+import A11yDialog from 'a11y-dialog';
+
 document.addEventListener('DOMContentLoaded', function() {
+    const menuDialogueId = document.querySelector('#mainMenuDialog');
+    const menuDialogue = new A11yDialog(menuDialogueId);
+
     const mainMenu = document.querySelector('.main-menu');
     const mainMenuLeft = document.querySelector('.main-menu__left');
     const mainMenuCenter = document.querySelector('.main-menu__center');
@@ -185,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleSubmenuLinkHover(event) {
-        console.log(event.currentTarget);
+        
         if (!event.currentTarget.closest('.second-menu')) {
             clearMainSubSubmenu();
         }

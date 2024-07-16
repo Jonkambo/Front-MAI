@@ -13,6 +13,7 @@
     opacity: 1;
 
     &[aria-hidden="true"] {
+        // display: none;
         opacity: 0;
         pointer-events: none;
         position: absolute;

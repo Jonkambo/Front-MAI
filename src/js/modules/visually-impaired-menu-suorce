@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function enableChromColorMode() {
         document.body.style.backgroundColor = "#9dd1ff";
         root.style.setProperty("--bg-color", "#9dd1ff");
-        root.style.setProperty("--light-background", "#F1F8FB");
+        root.style.setProperty("--light-background", "#008AD1");
         root.style.setProperty("--dark-blue-background", "#9dd1ff");
         root.style.setProperty("--buttons-links", "#14305e");
         root.style.setProperty("--link-hover", "#14305e");
