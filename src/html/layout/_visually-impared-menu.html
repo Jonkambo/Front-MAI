@@ -1,4 +1,4 @@
-<div class="visually-impared-menu">
+<div class="visually-impared-menu" id="visuallyImpairedDialog" aria-labelledby="visuallyImpairedDialog" role="dialog">
     <div class="container">
         <div class="visually-impared-menu__group">
             <h3 class="visually-impared-menu__main-title">Версия для слабовидящих</h3>
@@ -45,7 +45,7 @@
                 <button class="visually-impared-menu__reset">Сброс настроек</button>
             </div>
             <div class="visually-impared-menu__items">
-                <button class="visually-impared-menu__close">
+                <button class="visually-impared-menu__close"  data-a11y-dialog-hide aria-label="Закрыть меню для слабовидящих">
                     <span></span>
                 </button>
             </div>

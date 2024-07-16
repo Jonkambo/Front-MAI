@@ -1,7 +1,14 @@
+import A11yDialog from 'a11y-dialog';
+
+
 document.addEventListener("DOMContentLoaded", function () {
+
+    const visuallyImpairedMenuId = document.querySelector("#visuallyImpairedDialog");
     const visuallyImparedMenu = document.querySelector(".visually-impared-menu");
     const visuallyImparedMenuBtn = document.querySelector("#openVisuallyImparedMenu");
     const visuallyImparedMenuClose = document.querySelector(".visually-impared-menu__close");
+
+    const VIDialog = new A11yDialog(visuallyImpairedMenuId);
 
     visuallyImparedMenuBtn.addEventListener("click", () => {
         visuallyImparedMenu.classList.toggle("visually-impared-menu_active");

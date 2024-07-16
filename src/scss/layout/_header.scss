@@ -44,20 +44,19 @@
             color: var(--text-hover);
             transition: .3s all ease-in-out;
         }
-
-        // &:hover~.menu-index__item>.submenu, &:focus-visible .menu-index__item .submenu {
-        //     transition: .3s all ease-in-out;
-        //     opacity: 1;
-        //     pointer-events: auto;
-        // }
     }
 
     &__item {
         position: relative;
         transition: .3s all ease-in-out;
 
-        &:hover .submenu, &:focus-visible .submenu {
+        &:hover .submenu, &:focus-visible .submenu, .menu-index__link:focus + .submenu {
             transition: .3s all ease-in-out;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        &:focus-within .submenu {
             opacity: 1;
             pointer-events: auto;
         }

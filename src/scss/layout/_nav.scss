@@ -37,7 +37,7 @@
 
         &:hover > svg {
             transition: .3s all ease-in-out;
-            fill: var(--text-hover);
+            fill: var(--text-hover) !important;
         }
     }
 
@@ -51,7 +51,7 @@
 
         &:hover > svg {
             transition: .3s all ease-in-out;
-            fill: var(--text-hover);
+            fill: var(--text-hover) !important;
         }
     }
 }

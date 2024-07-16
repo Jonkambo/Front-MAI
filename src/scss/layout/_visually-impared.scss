@@ -5,13 +5,14 @@
     margin-top: -100px;
     transition: .3s all ease-in-out;
     background: var(--bg-color);
-    // display: none;
+    visibility: hidden;
 
     &_active {
-        // display: block;
+        visibility: visible;
         margin-top: 0 !important;
         opacity: 1 !important;
         pointer-events: auto !important;
+        transition: .3s all ease-in-out;
     }
 
     &__main-title {
@@ -58,7 +59,7 @@
             margin-right: 0;
         }
 
-        &_active, &:hover {
+        &_active, &:hover, &:focus {
             border-color: var(--btn-transparent);
             transition: .3s all ease-in-out;
         }
@@ -137,6 +138,12 @@
         font-weight: var(--default-text-weight);
         color: var(--text);
         font-size: 1.625rem;
+
+        &:focus {
+            border: 3px solid transparent;
+            border-color: var(--btn-transparent);
+            transition: .3s all ease-in-out;
+        }
     }
 
     &__close {
@@ -171,6 +178,12 @@
             &::after {
                 transform: rotate(-45deg);
             }
+        }
+
+        &:focus {
+            border: 3px solid transparent;
+            border-color: var(--btn-transparent);
+            transition: .3s all ease-in-out;
         }
     }
 }

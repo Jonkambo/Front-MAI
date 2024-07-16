@@ -11,12 +11,14 @@
     overflow-y: auto;
     transition: opacity .3s ease-in-out;
     opacity: 1;
+    visibility: visible;
 
     &[aria-hidden="true"] {
-        // display: none;
+        visibility: hidden;
         opacity: 0;
         pointer-events: none;
         position: absolute;
+        transition: .3s all ease-in-out;
     }
 
     &__overlay {
