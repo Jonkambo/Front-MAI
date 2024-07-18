@@ -46,7 +46,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #F1F8FB;
+        // background-color: #F1F8FB;
+        background-color: var(--light-background);
         font-weight: var(--default-text-weight);
         color: var(--text);
         border: 3px solid transparent;

@@ -1,7 +1,7 @@
 <div class="main-menu" id="mainMenuDialog" aria-labelledby="mainMenuDialog" role="dialog">
     
-    <div class="main-menu__container">
-        <div class="main-menu__left">
+    <div class="main-menu__container" tabindex="-1">
+        <div class="main-menu__left" tabindex="-1">
             <div class="main-menu__logo logo">
                 <a class="logo-link reset-link" href="/">
                     <picture>
@@ -15,19 +15,19 @@
             <ul class="menu" id="menu-1">
                 <li class="menu__item">
                     <a class="menu__link" data-id="menu-id-1" href="#">Абитуриентам</a>
-                    <span class="menu__open-submenu icon-arrow" data-id="menu-id-1"></span>
+                    <button class="menu__open-submenu icon-arrow" data-id="menu-id-1"></button>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" data-id="menu-id-2" href="#">Студентам</a>
-                    <span class="menu__open-submenu icon-arrow" data-id="menu-id-2"></span>
+                    <button class="menu__open-submenu icon-arrow" data-id="menu-id-2"></button>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" data-id="menu-id-3" href="#">О филиале</a>
-                    <span class="menu__open-submenu icon-arrow" data-id="menu-id-3"></span>
+                    <button class="menu__open-submenu icon-arrow" data-id="menu-id-3"></button>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" data-id="menu-id-4" href="#">Сведения об образовательной организации</a>
-                    <span class="menu__open-submenu icon-arrow" data-id="menu-id-4"></span>
+                    <button class="menu__open-submenu icon-arrow" data-id="menu-id-4"></button>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" data-id="menu-id-5" href="#">Новости</a>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
         </div>
-        <div class="main-menu__center">
+        <div class="main-menu__center" tabindex="-1">
             <button class="submenu-back"><span class="icon-arrow"></span></button>
             <div class="main-submenu-wrapper">
                 <ul class="main-submenu" id="menu-id-1">
@@ -98,7 +98,7 @@
                 <ul class="main-submenu" id="menu-id-3">
                     <li class="main-submenu__item">
                         <a class="main-submenu__link" href="#" data-id="menu-id-21">Кафедры</a>
-                        <span class="main-submenu__open-submenu icon-arrow" data-id="menu-id-21"></span>
+                        <button class="main-submenu__open-submenu icon-arrow" data-id="menu-id-21"></button>
                     </li>
                     <li class="main-submenu__item">
                         <a class="main-submenu__link" href="#" data-id="menu-id-22">Выборы и конкурс на замещение вакантных должностей ППС</a>
@@ -111,7 +111,7 @@
                     </li>
                     <li class="main-submenu__item">
                         <a class="main-submenu__link" href="#" data-id="menu-id-25">История</a>
-                        <span class="main-submenu__open-submenu icon-arrow" data-id="menu-id-25"></span>
+                        <button class="main-submenu__open-submenu icon-arrow" data-id="menu-id-25"></button>
                     </li>
                     <li class="main-submenu__item">
                         <a class="main-submenu__link" href="#" data-id="menu-id-51" target="_blank">Справочник сотрудника</a>
@@ -191,7 +191,7 @@
                 </ul>
             </div>
         </div>
-        <div class="main-menu__right">
+        <div class="main-menu__right" tabindex="-1">
             <div class="main-menu__contacts menu-info">
                 <div class="menu-info__group">
                     <p class="menu-info__text">Ступинский филиал МАИ</p>

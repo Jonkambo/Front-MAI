@@ -156,12 +156,14 @@
                 opacity: 0;
                 pointer-events: none;
                 transition: none;
+                visibility: hidden;
             }
 
             &_active {
                 opacity: 1 !important;
                 pointer-events: all !important;
                 transition: .3s all ease-in-out !important;
+                visibility: visible !important;
             }
         }
 
@@ -179,6 +181,7 @@
             height: 1px !important;
             width: 1px !important;
             overflow: hidden;
+            visibility: hidden;
         }
     }
 

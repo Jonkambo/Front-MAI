@@ -21,8 +21,16 @@ const requestDialogue = () => {
             // do something
             dialog.hide();
             dialogConfirm.show();
+
+            dialogConfirm.on('hide', function(event) {  
+                document.querySelector('#openQuestionDialogueBtn').focus();
+            });
         }
     }
+
+    dialog.on('hide', function(event) {
+        document.querySelector('#openQuestionDialogueBtn').focus();
+    });
 
     function checkValidationInput() {
         let valid = true;

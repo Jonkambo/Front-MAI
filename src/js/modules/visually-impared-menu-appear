@@ -10,7 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const VIDialog = new A11yDialog(visuallyImpairedMenuId);
 
+    function handleEscKey(event) {
+        if (event.key === "Escape") {
+            visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
+            document.removeEventListener('keydown', handleEscKey);
+            visuallyImparedMenuBtn.focus();
+        }
+    }
+
     visuallyImparedMenuBtn.addEventListener("click", () => {
+        document.addEventListener('keydown', handleEscKey);
+
         visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
 
         window.scrollTo({
@@ -21,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     visuallyImparedMenuClose.addEventListener("click", () => {
         visuallyImparedMenu.classList.toggle("visually-impared-menu_active");
+        document.removeEventListener('keydown', handleEscKey);
+        visuallyImparedMenuBtn.focus();
 
         window.scrollTo({
             top: 0,
