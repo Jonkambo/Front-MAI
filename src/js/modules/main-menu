@@ -98,6 +98,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function focusSubmenus(selectedMenuLink) {
+
+        if (selectedMenuLink.keyCode === 9 && !selectedMenuLink.shiftKey) {
+
+            listSubmenus.forEach((submenuLink) => {
+                if (submenuLink.id === selectedMenuLink.target.dataset.id && submenuLink !== selectedMenuLink) {
+                    
+                    const linkInsideSubmenu = submenuLink.querySelector('.main-submenu__link');
+                    selectedMenuLink.preventDefault();
+                    linkInsideSubmenu.focus();
+                } else if (selectedMenuLink.target === [...submenuLink.querySelectorAll('.main-submenu__link')].pop()) {
+                    
+                    if ([...additionalSubmenus].includes(submenuLink)) {
+
+                        submenuLinks.forEach(secondSubmenuLink => {
+                            if (submenuLink.id === secondSubmenuLink.dataset.id) {
+                                secondSubmenuLink.focus();
+                                clearMainSubSubmenu();
+                                return;
+                            }
+                        });
+                    } else {
+                        
+                        menuLinks.forEach(menuLink => {
+                            if (submenuLink.id === menuLink.dataset.id) {
+                                menuLink.focus();
+                                clearMainSubmenu();
+                                return;
+                            }
+                        });
+                    }
+                }
+            });
+        } else if (selectedMenuLink.keyCode === 9 && selectedMenuLink.shiftKey) {
+            listSubmenus.forEach((submenuLink) => {
+                 if (selectedMenuLink.target === submenuLink.querySelector('.main-submenu__link')) {
+                    
+                    if ([...additionalSubmenus].includes(submenuLink)) {
+
+                        submenuLinks.forEach(secondSubmenuLink => {
+                            if (submenuLink.id === secondSubmenuLink.dataset.id) {
+                                selectedMenuLink.preventDefault();
+                                secondSubmenuLink.focus();
+                                return;
+                            }
+                        });
+                    } else {
+                        
+                        menuLinks.forEach(menuLink => {
+                            if (submenuLink.id === menuLink.dataset.id) {
+                                selectedMenuLink.preventDefault();
+                                menuLink.focus();
+                                return;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    }
+
     function handleEscKeyMobile(event) {
         if (event.key === "Escape") {
             toggleMainMenuMobile();
@@ -186,7 +247,11 @@ document.addEventListener('DOMContentLoaded', function() {
         mainMenuOpenBtn.removeEventListener('click', toggleMainMenu);
         mainMenuOpenBtn.removeEventListener('click', toggleMainMenuMobile);
         menuLinks.forEach(menuLink => menuLink.removeEventListener('mouseenter', handleMenuLinkHover));
+        menuLinks.forEach(menuLink => menuLink.removeEventListener('focus', handleMenuLinkHover));
+        menuLinks.forEach(menuLink => menuLink.removeEventListener('keydown', focusSubmenus));
         submenuLinks.forEach(submenuLink => submenuLink.removeEventListener('mouseenter', handleSubmenuLinkHover));
+        submenuLinks.forEach(submenuLink => submenuLink.removeEventListener('focus', handleSubmenuLinkHover));
+        submenuLinks.forEach(menuLink => menuLink.removeEventListener('keydown', focusSubmenus));
         openSubmenusArrow.forEach(openSubmenuArrow => openSubmenuArrow.removeEventListener('click', handleOpenSubmenuClick));
         openSubSubmenusArrow.forEach(openSubSubmenuArrow => openSubSubmenuArrow.removeEventListener('click', handleOpenSubSubmenuClick));
         submenuBackBtn && submenuBackBtn.removeEventListener('click', handleBackButton);
@@ -195,7 +260,11 @@ document.addEventListener('DOMContentLoaded', function() {
             mainMenuOpenBtn.addEventListener('click', toggleMainMenu);
 
             menuLinks.forEach(menuLink => menuLink.addEventListener('mouseenter', handleMenuLinkHover));
+            menuLinks.forEach(menuLink => menuLink.addEventListener('focus', handleMenuLinkHover));
+            menuLinks.forEach(menuLink => menuLink.addEventListener('keydown', focusSubmenus));
             submenuLinks.forEach(submenuLink => submenuLink.addEventListener('mouseenter', handleSubmenuLinkHover));
+            submenuLinks.forEach(submenuLink => submenuLink.addEventListener('focus', handleSubmenuLinkHover));
+            submenuLinks.forEach(menuLink => menuLink.addEventListener('keydown', focusSubmenus));
         } else {
             mainMenuOpenBtn.addEventListener('click', toggleMainMenuMobile);
 
@@ -230,14 +299,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateEventListeners();
-
-    // window.addEventListener('resize', () => {
-    //     const newWidth = window.innerWidth;
-    //     if ((currentWidth < 1399.98 && newWidth >= 1399.98) || (currentWidth >= 1399.98 && newWidth < 1399.98)) {
-    //         currentWidth = newWidth;
-    //         updateEventListeners();
-    //     }
-    // });
 
     window.addEventListener('resize', () => {
         const newWidth = window.innerWidth;
