@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+    const slider = document.querySelector('.first-section__slider');
+    const sliderBtns = document.querySelectorAll('.first-section__sub-images');
+
+    sliderBtns.forEach((sliderBtn, i) => {
+        sliderBtn.addEventListener('click', (e) => {
+            slider.scrollTo({
+                left: i * (slider.clientWidth + 15),
+                behavior: "smooth", 
+            });
+        });
+    });
+});
