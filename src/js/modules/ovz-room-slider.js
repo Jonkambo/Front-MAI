@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.ovz-slider__slide');
     const slideNumber = document.querySelector('.ovz-slider__pagination p');
 
+    if (!slides) return;
+
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.remove('ovz-slider__slide_active');

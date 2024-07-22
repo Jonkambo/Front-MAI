@@ -37,9 +37,27 @@
     }
 }
 
+@media (max-width: $first-bp) {
+    .news-card {
+        width: 325px;
+    }
+}
 @media (max-width: $second-bp) {
     .news-card {
-        width: 300px;
+        width: 225px;
+    }
+}
+
+@media (max-width: $third-bp) {
+    .news-card {
+        // width: 300px;
+        width: 193px;
+    }
+}
+
+@media (max-width: $fourth-bp) {
+    .news-card {
+        width: 300px    ;
     }
 }
 

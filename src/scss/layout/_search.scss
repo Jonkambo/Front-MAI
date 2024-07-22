@@ -1,0 +1,243 @@
+.search {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 80px);
+    overflow: hidden;
+    visibility: hidden;
+    background-color: var(--dark-blue-background);
+    z-index: 10000;
+    transform-origin: right center;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+
+    &_active {
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+        transition: .3s all ease-in-out;
+    }
+
+    &__container {
+        display: flex;
+        height: auto;
+        min-height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: .3s all ease-in-out;
+
+        &_active {
+            visibility: visible;
+            opacity: 1;
+            transform: scaleX(1);
+            transition: .3s all ease-in-out;
+        }
+    }
+
+    &__left {
+        width: 600px;
+        height: 100vh;
+        padding: 50px;
+    }
+
+    &__logo {
+        width: 200px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: flex-start;
+        width: 1320px;
+        height: 100vh;
+        padding: 50px;
+    }
+
+    &__group {
+        margin-top: 210px;
+    }
+
+    &__title {
+        @extend .h3;
+
+        color: var(--text-light);
+    }
+
+    &__popular {
+        margin-top: 50px;
+    }
+
+    &__close {
+        @extend .reset-btn;
+
+        margin-top: 215px;
+        margin-left: 100px;
+        color: var(--text-light);
+        font-size: 22px;
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            color: var(--link-hover);
+        }
+
+        &:focus {
+            outline: 2px solid var(--text-light);
+            transition: .3s all ease-in-out;
+        }
+    }
+}
+
+@media (max-width: $first-bp) {
+
+    .search {
+
+        &__right {
+            width: 700px;
+        }        
+    }
+}
+
+@media (max-width: $second-bp) {
+
+    .search {
+        width: 100%;
+
+        &__left {
+            width: 500px;
+        }
+
+        &__right {
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .search {
+        
+        &__container {
+            display: block;
+        }
+
+        &__left {
+            height: auto;
+        }
+
+        &__right {
+            width: 700px;
+            height: auto;
+        }
+
+        &__group {
+            margin-top: 0;
+        }
+
+        &__close {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .search {
+
+        &__logo {
+            width: 100px;
+        }
+
+        &__left {
+            width: 320px;
+            padding: 25px 0;
+            margin: 0 auto;
+        }
+
+        &__right {
+            width: 320px;
+            padding: 25px 0;
+            margin: 0 auto;
+        }
+
+        &__close {
+            margin-left: 50px;
+        }
+    }
+}
+
+.search-form {
+    display: block;
+    margin-top: 115px;
+    width: 100%;
+
+    &__group {
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        width: 100%;
+        border: 1px solid var(--bg-color);
+    }
+
+    &__input {
+        @extend .regular-text;
+
+        width: 100%;
+        margin-right: 30px;
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        color: var(--text-light);
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+    }
+
+    &__submit-btn {
+        @extend .reset-btn;
+
+        color: var(--text-light);
+        margin-left: auto;
+        transition: .3s all ease-in-out;
+
+        &:hover svg {
+            fill: var(--text-hover);
+            transition: .3s all ease-in-out
+        }
+
+        &:focus {
+            outline: 2px solid var(--text-light);
+            transition: .3s all ease-in-out;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .search-form {
+        margin-top: 50px;
+    }
+}
+
+.popular-requests {
+    @extend .reset-list;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    &__link {
+        @extend .reset-link, .common-link;
+
+        color: var(--text-light);
+
+        &:hover {
+            color: var(--text-hover);
+        }
+    }
+}

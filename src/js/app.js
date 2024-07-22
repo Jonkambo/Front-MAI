@@ -8,6 +8,7 @@ import "./modules/cookies"
 import "./modules/esd-modal.js"
 import "./modules/ovz-room-slider.js"
 import "./modules/index-slider"
+import "./modules/search"
 
 const init = () => {
     dropdownListAnimation();

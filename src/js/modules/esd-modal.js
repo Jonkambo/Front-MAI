@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const esdDialog = new A11yDialog(esdModal);
     
+    if (!esdModal) return;
+
     esdButton.addEventListener('click', () => {
         esdValue.classList.toggle('esd-modal__esd-value_active');
     });

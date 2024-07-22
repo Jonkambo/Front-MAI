@@ -1,0 +1,37 @@
+import A11yDialog from 'a11y-dialog';
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const searchOpenBtn = document.querySelector('.search-btn');
+    const search = document.querySelector('#searchDialog');
+    const searchContainer = document.querySelector('.search__container');
+    const searchCloseBtn = document.querySelector('.search__close');
+    let isOpen = false;
+
+    if (!search) return;
+
+    const searchDialog = new A11yDialog(search);
+
+    function toggleSearchMenu() {
+        search.classList.toggle('search_active');
+        searchContainer.classList.toggle('search__container_active');
+        if (!isOpen) {
+            document.addEventListener('keydown', handleEscKey);
+            isOpen = !isOpen;
+        } else {
+            document.removeEventListener('keydown', handleEscKey);
+            isOpen = !isOpen;
+            searchOpenBtn.focus();
+        }
+    }
+
+    function handleEscKey(event) {
+        if (event.key === "Escape") {
+            toggleSearchMenu();
+        }
+    }
+
+    searchOpenBtn.addEventListener('click', toggleSearchMenu);
+    searchCloseBtn.addEventListener('click', toggleSearchMenu);
+});

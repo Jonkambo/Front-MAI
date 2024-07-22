@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.nav');
     const questionDialogue = document.querySelector('#openQuestionDialogueBtn');
     const visuallyImparedBtn = document.querySelector('#openVisuallyImparedMenu');
+    const searchOpenBtn = document.querySelector('.search-btn');
     const openSubmenusArrow = document.querySelectorAll('.menu__open-submenu');
     const openSubSubmenusArrow = document.querySelectorAll('.main-submenu__open-submenu');
     const mainSubmenuWrapperSmall = document.querySelector('.main-submenu-wrapper_small');
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let isOpen = false;
     let whereIsMainSubmenu = 0;
     let currentWidth = window.innerWidth;
-
+    
     function handleEscKey(event) {
         if (event.key === "Escape") {
             toggleMainMenu();
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isOpen) {
             questionDialogue.addEventListener('click', toggleMainMenu);
             visuallyImparedBtn.addEventListener('click', toggleMainMenu);
+            searchOpenBtn.addEventListener('click', toggleMainMenu);
             document.addEventListener('keydown', handleEscKey);
 
             mainMenu.classList.toggle('main-menu_active');
@@ -58,10 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             questionDialogue.removeEventListener('click', toggleMainMenu);
             visuallyImparedBtn.removeEventListener('click', toggleMainMenu);
+            searchOpenBtn.removeEventListener('click', toggleMainMenu);
             document.removeEventListener('keydown', handleEscKey);
-
+            
             mainMenuLeft.classList.remove('main-menu__left_active');
-
+            
             mainMenuOpenBtn.focus();
             setTimeout(() => {
                 mainMenuCenter.classList.remove('main-menu__center_active');
@@ -182,12 +185,14 @@ document.addEventListener('DOMContentLoaded', function() {
             mainMenu.classList.toggle('main-menu_active');
             questionDialogue.addEventListener('click', toggleMainMenuMobile);
             visuallyImparedBtn.addEventListener('click', toggleMainMenuMobile);
+            searchOpenBtn.addEventListener('click', toggleMainMenuMobile);
             document.addEventListener('keydown', handleEscKeyMobile);
 
             isOpen = true;
         } else {
             questionDialogue.removeEventListener('click', toggleMainMenuMobile);
             visuallyImparedBtn.removeEventListener('click', toggleMainMenuMobile);
+            searchOpenBtn.removeEventListener('click', toggleMainMenuMobile);
             document.removeEventListener('keydown', handleEscKeyMobile);
 
             mainMenuLeft.classList.remove('main-menu__left_active');
@@ -312,8 +317,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (newWidth >= 1399.98) {
                         questionDialogue.removeEventListener('click', toggleMainMenuMobile);
                         visuallyImparedBtn.removeEventListener('click', toggleMainMenuMobile);
+                        searchOpenBtn.removeEventListener('click', toggleMainMenuMobile);
                         questionDialogue.addEventListener('click', toggleMainMenu);
                         visuallyImparedBtn.addEventListener('click', toggleMainMenu);
+                        searchOpenBtn.addEventListener('click', toggleMainMenu);
 
                         mainMenuLeft.classList.add('main-menu__left_active');
                         mainMenuCenter.classList.add('main-menu__center_active');
@@ -321,8 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     questionDialogue.addEventListener('click', toggleMainMenuMobile);
                     visuallyImparedBtn.addEventListener('click', toggleMainMenuMobile);
+                    searchOpenBtn.addEventListener('click', toggleMainMenuMobile);
                     questionDialogue.removeEventListener('click', toggleMainMenu);
                     visuallyImparedBtn.removeEventListener('click', toggleMainMenu);
+                    searchOpenBtn.removeEventListener('click', toggleMainMenu);
 
                     mainMenuCenter.classList.remove('main-menu__center_active');
                     mainMenuRight.classList.remove('main-menu__right_active');
