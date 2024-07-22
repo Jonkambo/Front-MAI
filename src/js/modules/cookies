@@ -1,0 +1,23 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+    function getCookie(name) {
+        const regex = new RegExp(`(?:(?:^|;\\s*)${name}=([^;]*))`);
+        const match = document.cookie.match(regex);
+        return match ? decodeURIComponent(match[1]) : null;
+    }
+    
+    if (getCookie('accept_cookies') === null) {
+        const cookiesBlock = document.querySelector('.cookie-block');
+        const cookiesBtn = cookiesBlock.querySelector('.cookie-block__accept');
+
+        cookiesBlock.classList.add('cookie-block_active');
+
+        function acceptCookie(event) {
+            event.preventDefault();
+            document.cookie = "accept_cookies=true; path=/; max-age=2592000";
+            cookiesBlock.classList.remove('cookie-block_active');
+        }
+        
+        cookiesBtn.addEventListener('click', acceptCookie);
+    }
+});

@@ -556,6 +556,91 @@
     }
 }
 
+.ovz-slider {
+    position: relative;
+    overflow: hidden;
+
+    &__slide {
+        pointer-events: none;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s all ease-in-out;
+
+        &_active {
+            pointer-events: all;
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__text {
+        @extend .regular-text;
+        margin-top: 20px;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        p {
+            @extend .regular-text;
+            font-weight: 600;
+        }
+    }
+
+    &__prev-btn, &__next-btn {
+        @extend .reset-btn;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            span::before, span::after {
+                background-color: var(--text-hover);
+            }
+        }
+        
+        & span {
+            width: 100%;
+            height: 2px;
+            position: relative;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 14px;
+                height: 100%;
+                background-color: var(--text);
+                transition: .3s all ease-in-out;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__prev-btn span::after, &__prev-btn span::before {
+        transform-origin: left center;
+    }
+
+    &__next-btn span::after, &__next-btn span::before {
+        transform-origin: right center;
+        left: 9px;
+    }
+}
+
 @media (max-width: $third-bp) {
     .ovz-room-page {
         .grid {

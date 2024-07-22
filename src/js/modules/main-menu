@@ -92,6 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function openSubmenus(selectedMenuLink) {
         listSubmenus.forEach((submenuLink) => {
             if (submenuLink.id === selectedMenuLink.dataset.id && submenuLink !== selectedMenuLink) {
+                mainMenuCenter.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
                 submenuLink.classList.add('main-submenu_active');
                 return;
             }

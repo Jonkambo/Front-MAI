@@ -39,6 +39,11 @@
             transition: .3s all ease-in-out;
             fill: var(--text-hover) !important;
         }
+
+        &:focus {
+            outline: 2px solid #FFF;
+            transform: .3s all ease-in-out;
+        }
     }
 
     &__social-nav {
@@ -52,6 +57,11 @@
         &:hover > svg {
             transition: .3s all ease-in-out;
             fill: var(--text-hover) !important;
+        }
+
+        &:focus {
+            outline: 2px solid #FFF;
+            transform: .3s all ease-in-out;
         }
     }
 }

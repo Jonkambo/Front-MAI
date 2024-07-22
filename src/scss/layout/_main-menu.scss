@@ -47,6 +47,21 @@
         transform-origin: right center;
         transition: .2s all ease-in-out;
         visibility: hidden;
+        scrollbar-color: #008AD155 var(--dark-blue-background);
+        scrollbar-width: 2px;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--dark-blue-background);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #008AD155;
+        }
     }
 
     &__right {
@@ -175,13 +190,9 @@
         line-height: 170%;
 
         a {
-            @extend .common-link;
+            @extend .reset-link;
             color: var(--text-light);
             display: inline-block;
-
-            // &:hover {
-            //     color: var(--text-hover);
-            // }
         }
     }
 }
@@ -274,8 +285,7 @@
 
             &:focus {
                 transform: .3s all ease-in-out;
-                border: 2px solid #FFF;
-                border-radius: 25%;
+                outline: 2px solid #FFF;
             }
 
             &::before {
@@ -308,8 +318,7 @@
 
         &:focus {
             transform: .3s all ease-in-out;
-            border: 2px solid #000;
-            border-radius: 25%;
+            outline: 2px solid #000;
         }
     }
 
@@ -367,8 +376,7 @@
 
             &:focus {
                 transform: .3s all ease-in-out;
-                border: 2px solid #000;
-                border-radius: 25%;
+                outline: 2px solid #000;
             }
         }
     }

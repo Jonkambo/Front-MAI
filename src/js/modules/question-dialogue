@@ -18,9 +18,20 @@ const requestDialogue = () => {
         event.preventDefault();
 
         if (checkValidationInput()) {
-            // do something
-            dialog.hide();
-            dialogConfirm.show();
+
+            // add link
+            fetch('', {
+                method: 'POST',
+                body: new FormData(questionForm),
+                headers: {
+                    // add headers
+                },
+            }).then(function (response) {
+                if (response.data === "ok") {
+                    dialog.hide();
+                    dialogConfirm.show();
+                }
+            });
 
             dialogConfirm.on('hide', function(event) {  
                 document.querySelector('#openQuestionDialogueBtn').focus();
@@ -64,7 +75,8 @@ const requestDialogue = () => {
     }
 
     function validateEmail(email) {
-        const re = /^([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)$/;
+        // const re = /^([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)$/;
+        const re = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.\w+/;
         return re.test(email);
     }
 

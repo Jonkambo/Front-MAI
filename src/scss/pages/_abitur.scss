@@ -275,6 +275,21 @@
     margin-bottom: 50px;
     max-height: calc(100dvh - 100px);
     overflow-y: auto;
+    scrollbar-color: #008AD155 var(--light-background);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--light-background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #008AD155;
+    }
 
     &_edu-direc {
         padding-left: 0;
