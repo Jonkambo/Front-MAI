@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentSlide = 0;
     const slides = document.querySelectorAll('.ovz-slider__slide');
+    
+    if (!slides.length) return;
+    
     const slideNumber = document.querySelector('.ovz-slider__pagination p');
-
-    if (!slides) return;
 
     function showSlide(index) {
         slides.forEach((slide, i) => {

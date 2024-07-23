@@ -1,0 +1,104 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+    const selectors = document.querySelectorAll('.schedule-form__select');
+
+    function appendSelectors(selected) {
+
+        let newSelect = document.createElement('div');
+        newSelect.classList.add('custom-select');
+
+        if (selected.classList.contains('schedule-form__select_disabled')) {
+            newSelect.classList.add('custom-select_disabled');
+        }
+
+        let additionalHTML = `
+            <a class="custom-select__open" href="#">
+                <span class="custom-select__open-text">${selected[0].innerHTML}</span>
+                <span class="custom-select__open-arrow"></span>
+            </a>
+            <div class="custom-select__options">
+        `;
+
+        for (let i = 1; i < selected.options.length; i++) {
+            additionalHTML += `
+                <div class="custom-select__option" data-value="${selected.options[i].value}">${selected.options[i].innerHTML}</div>
+            `
+        }
+
+        additionalHTML += `
+            </div>
+        `
+
+        newSelect.innerHTML = additionalHTML;
+
+        selected.parentNode.insertBefore(newSelect, selected);
+    }
+
+    function openSelector(e) {
+        e.preventDefault();
+
+        if (!e.target.parentElement.classList.contains('custom-select_disabled')) {
+
+            document.querySelectorAll('.custom-select__open').forEach(elem => {
+
+                if (elem !== e.target) {
+                    elem.classList.remove('custom-select__open_active');
+                    elem.parentElement.classList.remove('custom-select_active');
+                    elem.nextElementSibling.classList.remove('custom-select__options_active')
+                }
+            });
+
+            e.target.classList.toggle('custom-select__open_active');
+            e.target.parentElement.classList.toggle('custom-select_active');
+            e.target.parentElement.classList.remove('custom-select_error');
+            e.target.nextElementSibling.classList.toggle('custom-select__options_active');
+            e.target.parentElement.nextElementSibling.nextElementSibling.innerHTML = '';
+        }
+    }
+
+    function closeSelector(selectorOpen) {
+        selectorOpen.classList.remove('custom-select__open_active');
+        selectorOpen.parentElement.classList.remove('custom-select_active');
+        selectorOpen.nextElementSibling.classList.remove('custom-select__options_active');
+    }
+
+    function selectSelector(e) {
+        e.preventDefault();
+        let selectorOpen = e.target.parentElement.previousElementSibling;
+        
+        selectorOpen.children[0].innerHTML = e.target.innerHTML;
+        
+        closeSelector(selectorOpen);
+    }
+
+    if (selectors.length !== 0) {
+        selectors.forEach(selector => {
+            appendSelectors(selector);
+        });
+
+        let selectorsOpen = document.querySelectorAll('.custom-select__open');
+        selectorsOpen.forEach(selectorOpen => {
+            selectorOpen.addEventListener('click', openSelector);
+        });
+    }
+
+    document.addEventListener('click', (e) => {
+        
+        if (!e.target.closest('.custom-select')) {
+            document.querySelectorAll('.custom-select__open').forEach(elem => {
+                elem.classList.remove('custom-select__open_active');
+                elem.parentElement.classList.remove('custom-select_active');
+                elem.nextElementSibling.classList.remove('custom-select__options_active');
+            });
+        }
+
+        if (e.target.closest('.custom-select__option')) {
+            selectSelector(e);
+        }
+    });
+
+    // document.querySelector('.schedule-form__submit').addEventListener('click', (e) => {
+
+
+    // });
+});

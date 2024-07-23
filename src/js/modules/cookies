@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return match ? decodeURIComponent(match[1]) : null;
     }
     
-    if (getCookie('accept_cookies') === null) {
+    if (getCookie('accepted_cookies') === null) {
         const cookiesBlock = document.querySelector('.cookie-block');
         const cookiesBtn = cookiesBlock.querySelector('.cookie-block__accept');
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function acceptCookie(event) {
             event.preventDefault();
-            document.cookie = "accept_cookies=true; path=/; max-age=2592000";
+            document.cookie = "accepted_cookies=true; path=/; max-age=2592000";
             cookiesBlock.classList.remove('cookie-block_active');
         }
         

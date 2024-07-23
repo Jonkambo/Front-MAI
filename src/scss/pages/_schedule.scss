@@ -1,0 +1,66 @@
+.schedule-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 5px 30px;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__fio {
+        display: none;
+    }
+
+    &__label {
+        @extend .default-text;
+
+        margin-bottom: 25px;
+    }
+
+    &__select {
+        display: none;
+    }
+
+    &__submit {
+        width: auto;
+        margin-bottom: 25px;
+        padding: 22px 50px;
+    }
+}
+
+@media (max-width: $first-bp) {
+
+    .schedule-form {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: $second-bp) {
+
+    .schedule-form {
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: $third-bp) {
+
+    .schedule-form {
+        
+        &__label {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: $fourth-bp) {
+
+    .schedule-form {
+        
+        &__group, &__submit {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & OpenGraph -->
+    <title>Часто задаваемые вопросы</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/assets/images/og.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="">
+
+    <!-- Favicon -->
+    @@include('layout/_favicon.html')
+
+    <!-- Preload Fonts -->
+    @@include('layout/_fonts.html')
+
+    <!-- Styles -->
+    @@include('layout/_styles.html')
+</head>
+<body>
+    <!-- Header -->
+    @@include('layout/_header.html')
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main class="main">
+        <section class="page search-result-page">
+            <div class="container">
+                <ul class="breadcrums">
+                    <li class="breadcrums__item">
+                        <a class="breadcrums__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrums__item">
+                        <span class="breadcrums__divider">/</span>
+                    </li>
+                    <li class="breadcrums__item">
+                        <a class="breadcrums__link breadcrums__link_active" href="#">
+                            Результаты поиска
+                        </a>
+                    </li>
+                </ul>
+
+                <h1>
+                    Результаты поиска
+                </h1>
+            </div>
+
+            <div class="container">
+                
+                <form class="search-form" action="#" method="get">
+                    <div class="search-form__group">
+                        <input class="search-form__input" type="search" name="search" placeholder="Введите запрос">
+                        <button class="search-form__submit-btn" type="submit">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.9386 18.9665L14.7466 13.7745C15.9943 12.2767 16.6165 10.3555 16.4837 8.41058C16.351 6.46569 15.4735 4.64685 14.0339 3.33244C12.5942 2.01803 10.7033 1.30924 8.75437 1.35352C6.80545 1.3978 4.94864 2.19175 3.57019 3.57019C2.19175 4.94864 1.3978 6.80545 1.35352 8.75437C1.30924 10.7033 2.01803 12.5942 3.33244 14.0339C4.64685 15.4735 6.46569 16.351 8.41058 16.4837C10.3555 16.6165 12.2767 15.9943 13.7745 14.7466L18.9665 19.9387L19.9386 18.9665ZM2.75115 8.93865C2.75115 7.71488 3.11404 6.51859 3.79393 5.50106C4.47382 4.48353 5.44018 3.69046 6.57079 3.22214C7.70141 2.75383 8.94551 2.63129 10.1458 2.87004C11.346 3.10879 12.4485 3.69809 13.3139 4.56342C14.1792 5.42876 14.7685 6.53127 15.0073 7.73153C15.246 8.93178 15.1235 10.1759 14.6552 11.3065C14.1868 12.4371 13.3938 13.4035 12.3762 14.0834C11.3587 14.7633 10.1624 15.1261 8.93865 15.1261C7.29818 15.1243 5.72542 14.4719 4.56543 13.3119C3.40545 12.1519 2.75297 10.5791 2.75115 8.93865Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+                <p class="search-result-page__searched">Найдено: <span>1</span></p>
+
+                <div class="filter-btns">
+                    <button type="button" class="filter-btns__btn btn_active" data-id="filtered-priem">приемная кампания</button>
+                    <button type="button" class="filter-btns__btn" data-id="filtered-news">новости</button>
+                    <button type="button" class="filter-btns__btn" data-id="filtered-sveden">основные сведения</button>
+                    <button type="button" class="filter-btns__btn" data-id="filtered-other">остальные страницы</button>
+                </div>
+
+                <div class="search-result">
+                    <div class="search-result-block search-result-block_active" id="filtered-priem">
+                        <div class="search-result-block__item">
+                            <a href="#" class="search-result-block__link">Приемная кампания 2024</a>
+                            <p class="search-result-block__desc"> График работы приемной комиссии: Понедельник &amp;ndash; пятница с 10:00 до 17:00 (приём документов с 10:00 до 16:00) Суббота с 10:00 до 14:00 Адрес: ...</p>
+                        </div>
+                    </div>
+                    <div class="search-result-block" id="filtered-news">
+                        <div class="search-result-block__item">
+                            <a href="#" class="search-result-block__link">День открытых дверей</a>
+                            <p class="search-result-block__desc">16 апреля 2022 года проведено одно из важных мероприятий для школьников, будущих абитуриентов, желающих поступить в Ступинский филиал МАИ – День от...</p>
+                        </div>
+                    </div>
+                    <div class="search-result-block" id="filtered-sveden">
+                        <div class="search-result-block__item">
+                            <a href="#" class="search-result-block__link">Структура и органы управления образовательной организацией</a>
+                            <p class="search-result-block__desc"> Наименование органа управления/ структурного подразделения ФИО руководителя структурного подразделения Должность руководителя структурного подразд...</p>
+                        </div>                                                     
+                    </div>
+                    <div class="search-result-block" id="filtered-other">
+                        <div class="search-result-block__item">
+                            <a href="#" class="search-result-block__link">Контакты Ступинского филиала МАИ</a>
+                            <p class="search-result-block__desc"> Адрес: Московская область, г.Ступино, ул.Пристанционная д.4 E-mail: sf-mai@mai.ru Приемная комиссия Приемная комиссия +7 (496) 641-16-30 Ответстве...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End Main -->
+
+    <!-- Footer -->
+    @@include('layout/_footer.html')
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    @@include('layout/_scripts.html')
+</body>
+</html>

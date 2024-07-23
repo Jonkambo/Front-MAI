@@ -699,3 +699,130 @@
         }
     }
 }
+
+.schedule-card {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &:nth-child(2n - 1) {
+        background-color: var(--light-background);
+    }
+
+    &__day {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+
+        span:first-child {
+            @extend .text-nums;
+        }
+    }
+
+    &__date {
+        @extend .regular-text;
+        margin-top: 15px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__time, &__type, &__name, &__teacher, &__place {
+        @extend .regular-text;
+    }
+
+    &__time {
+        width: 150px;
+    }
+
+    &__type {
+        width: 60px;
+    }
+
+    &__name {
+        width: 450px;
+    }
+
+    &__teacher {
+        width: 200px;
+    }
+}
+
+@media (max-width:$second-bp) {
+
+    .schedule-card {
+
+        &__name {
+            width: 360px;
+        }
+
+        &__teacher {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width:$third-bp) {
+
+    .schedule-card {
+        padding: 10px;
+
+        &__day {
+            width: 70px;
+        }
+
+        &__date {
+            font-size: .75rem;
+        }
+
+        &__time {
+            width: 110px;
+        }
+
+        &__type {
+            width: 45px;
+        }
+
+        &__name {
+            width: 175px;
+        }
+
+        &__teacher {
+            width: 140px;
+        }
+    }
+}
+
+@media (max-width:$fourth-bp) {
+
+    .schedule-card {
+
+        &__day {
+            width: 77px;
+        }
+
+        .schedule-card__group, .schedule-card__name, .schedule-card__place, .schedule-card__teacher, .schedule-card__time, .schedule-card__type {
+            width: 183px;
+        }
+
+        .schedule-card__name, .schedule-card__teacher, .schedule-card__time, .schedule-card__type {
+            margin-bottom: 10px;
+        }
+
+        &__time span {
+            font-weight: 700;
+        }
+
+        &__row {
+            flex-wrap: wrap;
+        }
+    }
+}

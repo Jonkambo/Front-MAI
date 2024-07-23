@@ -45,6 +45,11 @@
             border-color: var(--btn-bg);
         }
     }
+
+    &_active {
+        color: var(--btn-color) !important;
+        background-color: var(--btn-bg) !important;
+    }
 }
 
 .pagination {

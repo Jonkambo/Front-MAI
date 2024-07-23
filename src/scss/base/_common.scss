@@ -287,3 +287,126 @@ summary {
         }
     }
 }
+
+.custom-select {
+    position: relative;
+    background-color: var(--bg-color);
+    border: 1px solid var(--input-color);
+    width: 275px;
+    margin-bottom: 25px;
+
+    &_active {
+        border: 1px solid var(--input-focus);
+    }
+
+    &_disabled {
+        background-color: var(--disabled-background);
+        border: 1px solid var(--disabled-background);
+    }
+
+    &_error {
+        border: 1px solid var(--form-error);
+    }
+
+    &__open {
+        @extend .regular-text;
+
+        padding: 19px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+        text-decoration: none;
+
+        &_active .custom-select__open-arrow::before {
+            transform: rotate(135deg) !important;
+        }
+
+        &_active .custom-select__open-arrow::after {
+            transform: rotate(-135deg) !important;
+        }
+
+        span {
+            pointer-events: none;
+        }
+    }
+
+    &__open-arrow {
+        display: inline-block;
+        position: relative;
+        width: 14px;
+        height: 1px;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background-color: var(--text);
+            transition: .3s all ease-in-out;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            left: -1px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            right: -1px;
+        }
+    }
+
+    &__options {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        background-color: var(--bg-color);
+        border-bottom: 1px solid var(--input-focus);
+        border-left: 1px solid var(--input-focus);
+        border-right: 1px solid var(--input-focus);
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s all ease-in-out;
+        transform-origin: center top;
+        width: calc(100% + 2px);
+        max-height: 240px;
+        overflow-y: auto;
+        visibility: hidden;
+        z-index: 1000;
+
+        &_active {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+        }
+    }
+
+    &__option {
+        @extend .regular-text;
+
+        padding: 19px 30px;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+        white-space: nowrap;
+
+        &:hover {
+            color: var(--text-hover);
+        }
+    }
+}
+
+@media (max-width:$second-bp) {
+
+    .custom-select {
+        width: 243px;
+    }
+}
+
+@media (max-width:$fourth-bp) {
+
+    .custom-select {
+        width: 100%;
+    }
+}
